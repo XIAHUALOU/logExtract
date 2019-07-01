@@ -1,12 +1,11 @@
 from .basewoker import BaseWorker
-import os
-import time
 
 
 class Nginx(BaseWorker):
     def run(self):
         logs = self.read_from_file()
         for log in logs:
+            t, log = log
             times = 0
             count = 0
             official = []
@@ -34,7 +33,7 @@ class Nginx(BaseWorker):
             self.swap(clear, 2, 3)
             r = self.pd.DataFrame([official, clear]).T
             print(r)
-            self.to_csv(r)
+            self.to_csv(t, r)
 
     def to_excel(self):
         pass

@@ -1,3 +1,9 @@
+# -*- encoding: utf-8 -*-
+"""
+@Time    : 7/2/19 1:56 AM
+@Author  : xiahaulou
+@Email   : 390306467@qq.com
+"""
 from .basewoker import BaseWorker
 
 
@@ -32,8 +38,8 @@ class Nginx(BaseWorker):
             self.swap(clear, 1, 2)
             self.swap(clear, 2, 3)
             r = self.pd.DataFrame([official, clear]).T
-            print(r)
             self.to_csv(t, r)
+            print('task {} done, status:Sucess'.format(type(self).__name__))
 
     def to_excel(self):
         pass

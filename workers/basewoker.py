@@ -1,3 +1,9 @@
+# -*- encoding: utf-8 -*-
+"""
+@Time    : 7/1/19 1:26 AM
+@Author  : xiahaulou
+@Email   : 390306467@qq.com
+"""
 import abc
 import pandas as pd
 import numpy as np
@@ -44,6 +50,7 @@ class BaseWorker(metaclass=abc.ABCMeta):
         df.to_csv(os.path.join(micro_path, '{}.csv'.format(t)),
                   index=None, header=None, encoding='utf-8')
 
+    @property
     def datest_files(self):
         path = self.get_logfiles(os.path.join(os.getcwd(), 'data/log'), [])
         if sys.platform in ['win32', 'win64', 'cygwin']:
@@ -56,7 +63,7 @@ class BaseWorker(metaclass=abc.ABCMeta):
 
     def read_from_file(self):
         logs = []
-        files = self.datest_files()
+        files = self.datest_files
         try:
             for _ in files:
                 with open(_, 'r') as f:

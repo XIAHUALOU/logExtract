@@ -1,3 +1,9 @@
+# -*- encoding: utf-8 -*-
+"""
+@Time    : 7/1/19 1:26 AM
+@Author  : xiahaulou
+@Email   : 390306467@qq.com
+"""
 from libs import config
 import os
 import workers
@@ -16,9 +22,13 @@ class Startor:
         for work in self.workers:
             if not hasattr(workers, work):
                 continue
-            runner = getattr(getattr(workers, work), work)()
-            runner.run()
-            runner.to_excel()
+            try:
+                runner = getattr(getattr(workers, work), work)()
+                runner.run()
+                runner.to_excel()
+            except Exception as Ex:
+                print("task {} done Status: Failed".format(work))
+                continue
 
 
 if __name__ == '__main__':

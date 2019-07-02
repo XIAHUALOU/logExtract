@@ -10,8 +10,8 @@ has time property and number of tests
 
 Example: Nginx2019060101,in this case "20190601" is time,the last "01" is number of tests 
 ## config.ini
-####set up workers
+#### set up workers
 In config.ini,you can see workers option.you can set workers under it(example workers = Python,Ruby),
 Python and Ruby log will be extracted,All logs will be extracted,if u don't set anything
-####set up test times
+#### set up test times
 For instance,if u execute one script 5 times and generate 5 logs,then you should set times = 5 under test_times option

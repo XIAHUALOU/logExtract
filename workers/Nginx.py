@@ -4,12 +4,12 @@
 @Author  : xiahaulou
 @Email   : 390306467@qq.com
 """
-from .basewoker import BaseWorker
+from .Basewoker import BaseWorker
 
 
 class Nginx(BaseWorker):
     def run(self):
-        logs = self.read_from_file()
+        logs = self.read_from_file(mode=list)
         for log in logs:
             t, log = log
             times = 0
@@ -39,7 +39,7 @@ class Nginx(BaseWorker):
             self.swap(clear, 2, 3)
             r = self.pd.DataFrame([official, clear]).T
             self.to_csv(t, r)
-            print('task {} done, status:Sucess'.format(type(self).__name__))
+            self.status(t)
 
     def to_excel(self):
         pass

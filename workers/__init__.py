@@ -5,9 +5,9 @@
 @Email   : 390306467@qq.com
 """
 from . import Python
-from . import Tensflow
+from . import Tensorflow
 from . import Postgres
-from . import MariaDB
+from . import Mariadb
 from . import Nginx
-from . import Nodejs
+from . import Node
 from . import Redis

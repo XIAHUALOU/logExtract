@@ -4,6 +4,7 @@
 @Author  : xiahaulou
 @Email   : 390306467@qq.com
 """
+from libs import config
 import abc
 import pandas as pd
 import numpy as np
@@ -18,13 +19,10 @@ class BaseWorker(metaclass=abc.ABCMeta):
         self.pd = pd
         self.np = np
         self.re = re
+        self.times = config.config.getint('test_times', 'times')
 
     @abc.abstractclassmethod
     def run(self):
-        pass
-
-    @abc.abstractclassmethod
-    def read_from_file(self):
         pass
 
     @abc.abstractclassmethod
@@ -55,22 +53,28 @@ class BaseWorker(metaclass=abc.ABCMeta):
         path = self.get_logfiles(os.path.join(os.getcwd(), 'data/log'), [])
         if sys.platform in ['win32', 'win64', 'cygwin']:
             path = [_ for _ in path if _.split('\\')[-1].startswith(type(self).__name__.lower())]
-            path = sorted(path, key=lambda s: s.split('\\')[-1])
+            path = sorted(path, key=lambda s: s.split('\\')[-1], reverse=True)[:self.times]
         else:
             path = [_ for _ in path if _.split('/')[-1].startswith(type(self).__name__.lower())]
-            path = sorted(path, key=lambda s: s.split('/')[-1], reverse=True)[:5]
+            path = sorted(path, key=lambda s: s.split('/')[-1], reverse=True)[:self.times]
         return path
 
-    def read_from_file(self):
+    def read_from_file(self, mode=list):
         logs = []
         files = self.datest_files
         try:
             for _ in files:
                 with open(_, 'r') as f:
                     if sys.platform in ['win32', 'win64', 'cygwin']:
-                        logs.append((_.split('\\')[-1].split('.log')[0], f.readlines()))
+                        if mode is list:
+                            logs.append((_.split('\\')[-1].split('.log')[0], f.readlines()))
+                        elif mode is str:
+                            logs.append((_.split('\\')[-1].split('.log')[0], f.read()))
                     else:
-                        logs.append((_.split('/')[-1].split('.log')[0], f.readlines()))
+                        if mode is list:
+                            logs.append((_.split('/')[-1].split('.log')[0], f.readlines()))
+                        elif mode is str:
+                            logs.append((_.split('/')[-1].split('.log')[0], f.read()))
         except Exception as Ex:
             print(Ex)
         return logs
@@ -85,3 +89,6 @@ class BaseWorker(metaclass=abc.ABCMeta):
                 newDir = os.path.join(dir, s)
                 cls.get_logfiles(newDir, fileList)
         return fileList
+
+    def status(self, t):
+        print('task {} done, Status:Sucess'.format(t))

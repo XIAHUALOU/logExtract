@@ -13,7 +13,11 @@ class Startor:
     def __init__(self):
         if len(config.workers) == 0:
             workers = os.listdir(os.path.join(os.path.dirname(__file__), 'workers'))[:-2]
-            workers.remove('basewoker.py')
+            try:
+                workers.remove("__init__.py")
+                workers.remove('Basewoker.py')
+            except Exception as Ex:
+                pass
             self.workers = [worker.split('.')[0] for worker in workers]
         else:
             self.workers = config.workers
@@ -27,6 +31,7 @@ class Startor:
                 runner.run()
                 runner.to_excel()
             except Exception as Ex:
+                print(Ex)
                 print("task {} done Status: Failed".format(work))
                 continue
 

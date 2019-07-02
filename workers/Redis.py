@@ -24,8 +24,8 @@ class Redis(BaseWorker):
                     else:
                         clear.append(_r.split()[0])
                         count += 1
-            r = self.pd.DataFrame([official, clear]).T
-            self.to_csv(t, r)
+            self.merge(official)
+            self.merge(clear)
             self.status(t)
 
     def to_excel(self):

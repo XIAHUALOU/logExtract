@@ -1,0 +1,825 @@
+postgres/postgres.sh
+[postgres] 
+[postgres] == postgres unit test ==
+[postgres] [INFO] Test docker hub official image first:
+[postgres] 
+pgbench with BUFFER_TEST SINGLE_THREAD READ_WRITE
+pgbench_entry
+PGDATA=/var/lib/postgresql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST SINGLE_THREAD READ_WRITE
+posgresql user mode
+HOME=/var/lib/postgresql
+PGDATA=/var/lib/postgresql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+creating subdirectories ... ok
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting dynamic shared memory implementation ... posix
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    ./pg_ctl -D /var/lib/postgresql/data -l logfile start
+
+waiting for server to start....2019-06-12 08:16:57.788 UTC [32] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2019-06-12 08:16:57.788 UTC [32] LOG:  listening on IPv6 address "::", port 5432
+2019-06-12 08:16:57.791 UTC [32] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2019-06-12 08:16:57.806 UTC [33] LOG:  database system was shut down at 2019-06-12 08:16:57 UTC
+2019-06-12 08:16:57.810 UTC [32] LOG:  database system is ready to accept connections
+ done
+server started
+SYS_MEMORY=32938252 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+2019-06-12 08:17:17.911 UTC [34] LOG:  checkpoints are occurring too frequently (9 seconds apart)
+2019-06-12 08:17:17.911 UTC [34] HINT:  Consider increasing the configuration parameter "max_wal_size".
+PGBENCH_ARGS=-c 1 PGBENCH_MORE_ARGS=
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 98
+query mode: simple
+number of clients: 1
+number of threads: 1
+duration: 60 s
+number of transactions actually processed: 49205
+latency average = 1.219 ms
+tps = 820.070410 (including connections establishing)
+tps = 820.100256 (excluding connections establishing)
+waiting for server to shut down...2019-06-12 08:18:33.453 UTC [32] LOG:  received fast shutdown request
+.2019-06-12 08:18:33.455 UTC [32] LOG:  aborting any active transactions
+2019-06-12 08:18:33.457 UTC [32] LOG:  background worker "logical replication launcher" (PID 38) exited with exit code 1
+2019-06-12 08:18:33.648 UTC [34] LOG:  shutting down
+2019-06-12 08:18:33.675 UTC [32] LOG:  database system is shut down
+pgbench with BUFFER_TEST SINGLE_THREAD READ_ONLY
+pgbench_entry
+PGDATA=/var/lib/postgresql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST SINGLE_THREAD READ_ONLY
+posgresql user mode
+HOME=/var/lib/postgresql
+PGDATA=/var/lib/postgresql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+creating subdirectories ... ok
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting dynamic shared memory implementation ... posix
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    ./pg_ctl -D /var/lib/postgresql/data -l logfile start
+
+waiting for server to start....2019-06-12 08:18:35.941 UTC [32] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2019-06-12 08:18:35.941 UTC [32] LOG:  listening on IPv6 address "::", port 5432
+2019-06-12 08:18:35.944 UTC [32] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2019-06-12 08:18:35.959 UTC [33] LOG:  database system was shut down at 2019-06-12 08:18:35 UTC
+2019-06-12 08:18:35.964 UTC [32] LOG:  database system is ready to accept connections
+ done
+server started
+SYS_MEMORY=32938252 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+2019-06-12 08:18:55.903 UTC [34] LOG:  checkpoints are occurring too frequently (9 seconds apart)
+2019-06-12 08:18:55.903 UTC [34] HINT:  Consider increasing the configuration parameter "max_wal_size".
+PGBENCH_ARGS=-c 1 PGBENCH_MORE_ARGS=-S
+transaction type: <builtin: select only>
+scaling factor: 98
+query mode: simple
+number of clients: 1
+number of threads: 1
+duration: 60 s
+number of transactions actually processed: 649839
+latency average = 0.092 ms
+tps = 10830.623813 (including connections establishing)
+tps = 10831.007540 (excluding connections establishing)
+waiting for server to shut down...2019-06-12 08:20:11.308 UTC [32] LOG:  received fast shutdown request
+.2019-06-12 08:20:11.310 UTC [32] LOG:  aborting any active transactions
+2019-06-12 08:20:11.312 UTC [32] LOG:  background worker "logical replication launcher" (PID 38) exited with exit code 1
+2019-06-12 08:20:11.475 UTC [34] LOG:  shutting down
+2019-06-12 08:20:11.501 UTC [32] LOG:  database system is shut down
+pgbench with BUFFER_TEST NORMAL_LOAD READ_WRITE
+pgbench_entry
+PGDATA=/var/lib/postgresql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST NORMAL_LOAD READ_WRITE
+posgresql user mode
+HOME=/var/lib/postgresql
+PGDATA=/var/lib/postgresql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+creating subdirectories ... ok
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting dynamic shared memory implementation ... posix
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    ./pg_ctl -D /var/lib/postgresql/data -l logfile start
+
+waiting for server to start....2019-06-12 08:20:13.702 UTC [32] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2019-06-12 08:20:13.702 UTC [32] LOG:  listening on IPv6 address "::", port 5432
+2019-06-12 08:20:13.705 UTC [32] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2019-06-12 08:20:13.720 UTC [33] LOG:  database system was shut down at 2019-06-12 08:20:13 UTC
+2019-06-12 08:20:13.725 UTC [32] LOG:  database system is ready to accept connections
+ done
+server started
+SYS_MEMORY=32938252 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+2019-06-12 08:20:33.894 UTC [34] LOG:  checkpoints are occurring too frequently (10 seconds apart)
+2019-06-12 08:20:33.894 UTC [34] HINT:  Consider increasing the configuration parameter "max_wal_size".
+PGBENCH_ARGS=-j 16 -c 64 PGBENCH_MORE_ARGS=
+2019-06-12 08:20:50.702 UTC [34] LOG:  checkpoints are occurring too frequently (17 seconds apart)
+2019-06-12 08:20:50.702 UTC [34] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2019-06-12 08:21:02.410 UTC [34] LOG:  checkpoints are occurring too frequently (12 seconds apart)
+2019-06-12 08:21:02.410 UTC [34] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2019-06-12 08:21:13.507 UTC [34] LOG:  checkpoints are occurring too frequently (11 seconds apart)
+2019-06-12 08:21:13.507 UTC [34] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2019-06-12 08:21:25.064 UTC [34] LOG:  checkpoints are occurring too frequently (12 seconds apart)
+2019-06-12 08:21:25.064 UTC [34] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2019-06-12 08:21:37.089 UTC [34] LOG:  checkpoints are occurring too frequently (12 seconds apart)
+2019-06-12 08:21:37.089 UTC [34] HINT:  Consider increasing the configuration parameter "max_wal_size".
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 98
+query mode: simple
+number of clients: 64
+number of threads: 16
+duration: 60 s
+number of transactions actually processed: 457515
+latency average = 8.398 ms
+tps = 7621.088816 (including connections establishing)
+tps = 7622.254089 (excluding connections establishing)
+2019-06-12 08:21:49.246 UTC [32] LOG:  received fast shutdown request
+waiting for server to shut down....2019-06-12 08:21:49.248 UTC [32] LOG:  aborting any active transactions
+2019-06-12 08:21:49.250 UTC [32] LOG:  background worker "logical replication launcher" (PID 38) exited with exit code 1
+2019-06-12 08:21:49.443 UTC [34] LOG:  shutting down
+2019-06-12 08:21:49.472 UTC [32] LOG:  database system is shut down
+pgbench with BUFFER_TEST NORMAL_LOAD READ_ONLY
+pgbench_entry
+PGDATA=/var/lib/postgresql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST NORMAL_LOAD READ_ONLY
+posgresql user mode
+HOME=/var/lib/postgresql
+PGDATA=/var/lib/postgresql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+creating subdirectories ... ok
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting dynamic shared memory implementation ... posix
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    ./pg_ctl -D /var/lib/postgresql/data -l logfile start
+
+waiting for server to start....2019-06-12 08:21:51.659 UTC [32] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2019-06-12 08:21:51.659 UTC [32] LOG:  listening on IPv6 address "::", port 5432
+2019-06-12 08:21:51.662 UTC [32] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2019-06-12 08:21:51.677 UTC [33] LOG:  database system was shut down at 2019-06-12 08:21:51 UTC
+2019-06-12 08:21:51.681 UTC [32] LOG:  database system is ready to accept connections
+ done
+server started
+SYS_MEMORY=32938252 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+2019-06-12 08:22:11.936 UTC [34] LOG:  checkpoints are occurring too frequently (10 seconds apart)
+2019-06-12 08:22:11.936 UTC [34] HINT:  Consider increasing the configuration parameter "max_wal_size".
+PGBENCH_ARGS=-j 16 -c 64 PGBENCH_MORE_ARGS=-S
+transaction type: <builtin: select only>
+scaling factor: 98
+query mode: simple
+number of clients: 64
+number of threads: 16
+duration: 60 s
+number of transactions actually processed: 7723473
+latency average = 0.497 ms
+tps = 128705.187881 (including connections establishing)
+tps = 128726.539836 (excluding connections establishing)
+waiting for server to shut down...2019-06-12 08:23:27.364 UTC [32] LOG:  received fast shutdown request
+.2019-06-12 08:23:27.366 UTC [32] LOG:  aborting any active transactions
+2019-06-12 08:23:27.368 UTC [32] LOG:  background worker "logical replication launcher" (PID 38) exited with exit code 1
+2019-06-12 08:23:27.523 UTC [34] LOG:  shutting down
+2019-06-12 08:23:27.548 UTC [32] LOG:  database system is shut down
+pgbench with BUFFER_TEST HEAVY_CONTENTION READ_WRITE
+pgbench_entry
+PGDATA=/var/lib/postgresql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST HEAVY_CONTENTION READ_WRITE
+posgresql user mode
+HOME=/var/lib/postgresql
+PGDATA=/var/lib/postgresql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+creating subdirectories ... ok
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting dynamic shared memory implementation ... posix
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    ./pg_ctl -D /var/lib/postgresql/data -l logfile start
+
+waiting for server to start....2019-06-12 08:23:29.752 UTC [32] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2019-06-12 08:23:29.752 UTC [32] LOG:  listening on IPv6 address "::", port 5432
+2019-06-12 08:23:29.755 UTC [32] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2019-06-12 08:23:29.771 UTC [33] LOG:  database system was shut down at 2019-06-12 08:23:29 UTC
+2019-06-12 08:23:29.775 UTC [32] LOG:  database system is ready to accept connections
+ done
+server started
+SYS_MEMORY=32938252 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+2019-06-12 08:23:49.707 UTC [34] LOG:  checkpoints are occurring too frequently (9 seconds apart)
+2019-06-12 08:23:49.707 UTC [34] HINT:  Consider increasing the configuration parameter "max_wal_size".
+PGBENCH_ARGS=-j 32 -c 256 PGBENCH_MORE_ARGS=
+2019-06-12 08:24:05.501 UTC [187] FATAL:  sorry, too many clients already
+2019-06-12 08:24:05.503 UTC [188] FATAL:  sorry, too many clients already
+2019-06-12 08:24:05.505 UTC [193] FATAL:  sorry, too many clients already
+2019-06-12 08:24:05.507 UTC [198] FATAL:  sorry, too many clients already
+2019-06-12 08:24:05.508 UTC [201] FATAL:  sorry, too many clients already
+2019-06-12 08:24:05.511 UTC [207] FATAL:  sorry, too many clients already
+2019-06-12 08:24:05.512 UTC [210] FATAL:  sorry, too many clients already
+2019-06-12 08:24:05.551 UTC [214] FATAL:  sorry, too many clients already
+2019-06-12 08:24:05.553 UTC [219] FATAL:  sorry, too many clients already
+2019-06-12 08:24:05.556 UTC [224] FATAL:  sorry, too many clients already
+2019-06-12 08:24:05.559 UTC [230] FATAL:  sorry, too many clients already
+2019-06-12 08:24:05.561 UTC [235] FATAL:  sorry, too many clients already
+2019-06-12 08:24:05.564 UTC [240] FATAL:  sorry, too many clients already
+2019-06-12 08:24:05.567 UTC [246] FATAL:  sorry, too many clients already
+2019-06-12 08:24:05.567 UTC [247] FATAL:  sorry, too many clients already
+2019-06-12 08:24:05.573 UTC [259] FATAL:  sorry, too many clients already
+2019-06-12 08:24:05.577 UTC [266] FATAL:  sorry, too many clients already
+2019-06-12 08:24:05.581 UTC [274] FATAL:  sorry, too many clients already
+2019-06-12 08:24:05.583 UTC [280] FATAL:  sorry, too many clients already
+2019-06-12 08:24:05.590 UTC [289] FATAL:  sorry, too many clients already
+2019-06-12 08:24:05.591 UTC [286] FATAL:  sorry, too many clients already
+2019-06-12 08:24:07.111 UTC [34] LOG:  checkpoints are occurring too frequently (18 seconds apart)
+2019-06-12 08:24:07.111 UTC [34] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2019-06-12 08:24:18.927 UTC [34] LOG:  checkpoints are occurring too frequently (11 seconds apart)
+2019-06-12 08:24:18.927 UTC [34] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2019-06-12 08:24:31.970 UTC [34] LOG:  checkpoints are occurring too frequently (13 seconds apart)
+2019-06-12 08:24:31.970 UTC [34] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2019-06-12 08:24:43.031 UTC [34] LOG:  checkpoints are occurring too frequently (12 seconds apart)
+2019-06-12 08:24:43.031 UTC [34] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2019-06-12 08:24:54.382 UTC [34] LOG:  checkpoints are occurring too frequently (11 seconds apart)
+2019-06-12 08:24:54.382 UTC [34] HINT:  Consider increasing the configuration parameter "max_wal_size".
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 98
+query mode: simple
+number of clients: 256
+number of threads: 32
+duration: 60 s
+number of transactions actually processed: 429017
+latency average = 35.828 ms
+tps = 7145.274167 (including connections establishing)
+tps = 7146.022791 (excluding connections establishing)
+waiting for server to shut down...2019-06-12 08:25:05.629 UTC [32] LOG:  received fast shutdown request
+.2019-06-12 08:25:05.631 UTC [32] LOG:  aborting any active transactions
+2019-06-12 08:25:05.633 UTC [32] LOG:  background worker "logical replication launcher" (PID 38) exited with exit code 1
+2019-06-12 08:25:05.827 UTC [34] LOG:  shutting down
+2019-06-12 08:25:05.856 UTC [32] LOG:  database system is shut down
+pgbench with BUFFER_TEST HEAVY_CONTENTION READ_ONLY
+pgbench_entry
+PGDATA=/var/lib/postgresql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST HEAVY_CONTENTION READ_ONLY
+posgresql user mode
+HOME=/var/lib/postgresql
+PGDATA=/var/lib/postgresql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+creating subdirectories ... ok
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting dynamic shared memory implementation ... posix
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    ./pg_ctl -D /var/lib/postgresql/data -l logfile start
+
+waiting for server to start....2019-06-12 08:25:08.079 UTC [32] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2019-06-12 08:25:08.079 UTC [32] LOG:  listening on IPv6 address "::", port 5432
+2019-06-12 08:25:08.082 UTC [32] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2019-06-12 08:25:08.097 UTC [33] LOG:  database system was shut down at 2019-06-12 08:25:07 UTC
+2019-06-12 08:25:08.101 UTC [32] LOG:  database system is ready to accept connections
+ done
+server started
+SYS_MEMORY=32938252 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+2019-06-12 08:25:28.097 UTC [34] LOG:  checkpoints are occurring too frequently (10 seconds apart)
+2019-06-12 08:25:28.097 UTC [34] HINT:  Consider increasing the configuration parameter "max_wal_size".
+PGBENCH_ARGS=-j 32 -c 256 PGBENCH_MORE_ARGS=-S
+2019-06-12 08:25:43.558 UTC [186] FATAL:  sorry, too many clients already
+2019-06-12 08:25:43.560 UTC [188] FATAL:  sorry, too many clients already
+2019-06-12 08:25:43.562 UTC [192] FATAL:  sorry, too many clients already
+2019-06-12 08:25:43.564 UTC [196] FATAL:  sorry, too many clients already
+2019-06-12 08:25:43.564 UTC [197] FATAL:  sorry, too many clients already
+2019-06-12 08:25:43.568 UTC [204] FATAL:  sorry, too many clients already
+2019-06-12 08:25:43.570 UTC [208] FATAL:  sorry, too many clients already
+2019-06-12 08:25:43.570 UTC [209] FATAL:  sorry, too many clients already
+2019-06-12 08:25:43.612 UTC [216] FATAL:  sorry, too many clients already
+2019-06-12 08:25:43.613 UTC [220] FATAL:  sorry, too many clients already
+2019-06-12 08:25:43.616 UTC [225] FATAL:  sorry, too many clients already
+2019-06-12 08:25:43.618 UTC [231] FATAL:  sorry, too many clients already
+2019-06-12 08:25:43.621 UTC [236] FATAL:  sorry, too many clients already
+2019-06-12 08:25:43.623 UTC [242] FATAL:  sorry, too many clients already
+2019-06-12 08:25:43.625 UTC [246] FATAL:  sorry, too many clients already
+2019-06-12 08:25:43.628 UTC [251] FATAL:  sorry, too many clients already
+2019-06-12 08:25:43.630 UTC [257] FATAL:  sorry, too many clients already
+2019-06-12 08:25:43.634 UTC [263] FATAL:  sorry, too many clients already
+2019-06-12 08:25:43.637 UTC [271] FATAL:  sorry, too many clients already
+2019-06-12 08:25:43.647 UTC [279] FATAL:  sorry, too many clients already
+transaction type: <builtin: select only>
+scaling factor: 98
+query mode: simple
+number of clients: 256
+number of threads: 32
+duration: 60 s
+number of transactions actually processed: 8431192
+latency average = 1.824 ms
+tps = 140389.173352 (including connections establishing)
+tps = 140406.194964 (excluding connections establishing)
+waiting for server to shut down...2019-06-12 08:26:43.860 UTC [32] LOG:  received fast shutdown request
+.2019-06-12 08:26:43.862 UTC [32] LOG:  aborting any active transactions
+2019-06-12 08:26:43.864 UTC [32] LOG:  background worker "logical replication launcher" (PID 38) exited with exit code 1
+2019-06-12 08:26:43.864 UTC [34] LOG:  shutting down
+2019-06-12 08:26:43.887 UTC [32] LOG:  database system is shut down
+Default-Node-Server
+[postgres] [INFO] Test clear docker image:
+[postgres] 
+pgbench with BUFFER_TEST SINGLE_THREAD READ_WRITE
+pgbench_entry
+PGDATA=/var/lib/pgsql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST SINGLE_THREAD READ_WRITE
+posgresql user mode
+HOME=/
+PGDATA=/var/lib/pgsql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/pgsql/data ... ok
+creating subdirectories ... ok
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting dynamic shared memory implementation ... posix
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/pgsql/data -l logfile start
+
+server starting
+LOG:  database system was shut down at 2019-06-12 08:26:45 UTC
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+SYS_MEMORY=32938252 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+PGBENCH_ARGS=-c 1 PGBENCH_MORE_ARGS=
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 98
+query mode: simple
+number of clients: 1
+number of threads: 1
+duration: 60 s
+number of transactions actually processed: 44334
+latency average = 1.353 ms
+tps = 738.897389 (including connections establishing)
+tps = 738.919581 (excluding connections establishing)
+waiting for server to shut down....LOG:  received fast shutdown request
+LOG:  aborting any active transactions
+LOG:  shutting down
+LOG:  database system is shut down
+ done
+server stopped
+pgbench with BUFFER_TEST SINGLE_THREAD READ_ONLY
+pgbench_entry
+PGDATA=/var/lib/pgsql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST SINGLE_THREAD READ_ONLY
+posgresql user mode
+HOME=/
+PGDATA=/var/lib/pgsql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/pgsql/data ... ok
+creating subdirectories ... ok
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting dynamic shared memory implementation ... posix
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/pgsql/data -l logfile start
+
+server starting
+LOG:  database system was shut down at 2019-06-12 08:28:18 UTC
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+SYS_MEMORY=32938252 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+PGBENCH_ARGS=-c 1 PGBENCH_MORE_ARGS=-S
+transaction type: <builtin: select only>
+scaling factor: 98
+query mode: simple
+number of clients: 1
+number of threads: 1
+duration: 60 s
+number of transactions actually processed: 681742
+latency average = 0.088 ms
+tps = 11362.350759 (including connections establishing)
+tps = 11362.688231 (excluding connections establishing)
+waiting for server to shut down...LOG:  received fast shutdown request
+.LOG:  aborting any active transactions
+LOG:  shutting down
+LOG:  database system is shut down
+ done
+server stopped
+pgbench with BUFFER_TEST NORMAL_LOAD READ_WRITE
+pgbench_entry
+PGDATA=/var/lib/pgsql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST NORMAL_LOAD READ_WRITE
+posgresql user mode
+HOME=/
+PGDATA=/var/lib/pgsql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/pgsql/data ... ok
+creating subdirectories ... ok
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting dynamic shared memory implementation ... posix
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/pgsql/data -l logfile start
+
+server starting
+LOG:  database system was shut down at 2019-06-12 08:29:51 UTC
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+SYS_MEMORY=32938252 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+PGBENCH_ARGS=-j 16 -c 64 PGBENCH_MORE_ARGS=
+LOG:  checkpoints are occurring too frequently (24 seconds apart)
+HINT:  Consider increasing the configuration parameter "max_wal_size".
+LOG:  checkpoints are occurring too frequently (11 seconds apart)
+HINT:  Consider increasing the configuration parameter "max_wal_size".
+LOG:  checkpoints are occurring too frequently (7 seconds apart)
+HINT:  Consider increasing the configuration parameter "max_wal_size".
+LOG:  checkpoints are occurring too frequently (8 seconds apart)
+HINT:  Consider increasing the configuration parameter "max_wal_size".
+LOG:  checkpoints are occurring too frequently (7 seconds apart)
+HINT:  Consider increasing the configuration parameter "max_wal_size".
+LOG:  checkpoints are occurring too frequently (8 seconds apart)
+HINT:  Consider increasing the configuration parameter "max_wal_size".
+LOG:  checkpoints are occurring too frequently (8 seconds apart)
+HINT:  Consider increasing the configuration parameter "max_wal_size".
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 98
+query mode: simple
+number of clients: 64
+number of threads: 16
+duration: 60 s
+number of transactions actually processed: 316095
+latency average = 12.181 ms
+tps = 5253.911463 (including connections establishing)
+tps = 5254.274836 (excluding connections establishing)
+waiting for server to shut down....LOG:  received fast shutdown request
+LOG:  aborting any active transactions
+LOG:  shutting down
+LOG:  database system is shut down
+ done
+server stopped
+pgbench with BUFFER_TEST NORMAL_LOAD READ_ONLY
+pgbench_entry
+PGDATA=/var/lib/pgsql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST NORMAL_LOAD READ_ONLY
+posgresql user mode
+HOME=/
+PGDATA=/var/lib/pgsql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/pgsql/data ... ok
+creating subdirectories ... ok
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting dynamic shared memory implementation ... posix
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/pgsql/data -l logfile start
+
+server starting
+LOG:  database system was shut down at 2019-06-12 08:31:24 UTC
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+SYS_MEMORY=32938252 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+PGBENCH_ARGS=-j 16 -c 64 PGBENCH_MORE_ARGS=-S
+transaction type: <builtin: select only>
+scaling factor: 98
+query mode: simple
+number of clients: 64
+number of threads: 16
+duration: 60 s
+number of transactions actually processed: 7898374
+latency average = 0.486 ms
+tps = 131596.569681 (including connections establishing)
+tps = 131610.843217 (excluding connections establishing)
+waiting for server to shut down...LOG:  received fast shutdown request
+.LOG:  aborting any active transactions
+LOG:  shutting down
+LOG:  database system is shut down
+ done
+server stopped
+pgbench with BUFFER_TEST HEAVY_CONTENTION READ_WRITE
+pgbench_entry
+PGDATA=/var/lib/pgsql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST HEAVY_CONTENTION READ_WRITE
+posgresql user mode
+HOME=/
+PGDATA=/var/lib/pgsql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/pgsql/data ... ok
+creating subdirectories ... ok
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting dynamic shared memory implementation ... posix
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/pgsql/data -l logfile start
+
+server starting
+LOG:  database system was shut down at 2019-06-12 08:32:57 UTC
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+SYS_MEMORY=32938252 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+PGBENCH_ARGS=-j 32 -c 256 PGBENCH_MORE_ARGS=
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+LOG:  checkpoints are occurring too frequently (24 seconds apart)
+HINT:  Consider increasing the configuration parameter "max_wal_size".
+LOG:  checkpoints are occurring too frequently (10 seconds apart)
+HINT:  Consider increasing the configuration parameter "max_wal_size".
+LOG:  checkpoints are occurring too frequently (8 seconds apart)
+HINT:  Consider increasing the configuration parameter "max_wal_size".
+LOG:  checkpoints are occurring too frequently (7 seconds apart)
+HINT:  Consider increasing the configuration parameter "max_wal_size".
+LOG:  checkpoints are occurring too frequently (7 seconds apart)
+HINT:  Consider increasing the configuration parameter "max_wal_size".
+LOG:  checkpoints are occurring too frequently (8 seconds apart)
+HINT:  Consider increasing the configuration parameter "max_wal_size".
+LOG:  checkpoints are occurring too frequently (8 seconds apart)
+HINT:  Consider increasing the configuration parameter "max_wal_size".
+LOG:  checkpoints are occurring too frequently (7 seconds apart)
+HINT:  Consider increasing the configuration parameter "max_wal_size".
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 98
+query mode: simple
+number of clients: 256
+number of threads: 32
+duration: 60 s
+number of transactions actually processed: 337509
+latency average = 45.537 ms
+tps = 5621.758206 (including connections establishing)
+tps = 5621.965298 (excluding connections establishing)
+waiting for server to shut down...LOG:  received fast shutdown request
+.LOG:  aborting any active transactions
+LOG:  shutting down
+LOG:  database system is shut down
+ done
+server stopped
+pgbench with BUFFER_TEST HEAVY_CONTENTION READ_ONLY
+pgbench_entry
+PGDATA=/var/lib/pgsql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST HEAVY_CONTENTION READ_ONLY
+posgresql user mode
+HOME=/
+PGDATA=/var/lib/pgsql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/pgsql/data ... ok
+creating subdirectories ... ok
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting dynamic shared memory implementation ... posix
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/pgsql/data -l logfile start
+
+server starting
+LOG:  database system was shut down at 2019-06-12 08:34:30 UTC
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+SYS_MEMORY=32938252 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+PGBENCH_ARGS=-j 32 -c 256 PGBENCH_MORE_ARGS=-S
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+FATAL:  sorry, too many clients already
+transaction type: <builtin: select only>
+scaling factor: 98
+query mode: simple
+number of clients: 256
+number of threads: 32
+duration: 60 s
+number of transactions actually processed: 8810081
+latency average = 1.744 ms
+tps = 146750.871465 (including connections establishing)
+tps = 146757.326830 (excluding connections establishing)
+waiting for server to shut down...LOG:  received fast shutdown request
+.LOG:  aborting any active transactions
+LOG:  shutting down
+LOG:  database system is shut down
+ done
+server stopped
+Clr-Node-Server

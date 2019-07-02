@@ -12,10 +12,11 @@ import workers
 class Startor:
     def __init__(self):
         if len(config.workers) == 0:
-            workers = os.listdir(os.path.join(os.path.dirname(__file__), 'workers'))[:-2]
+            workers = os.listdir(os.path.join(os.path.dirname(__file__), 'workers'))
             try:
                 workers.remove("__init__.py")
                 workers.remove('Basewoker.py')
+                workers.remove('__pycache__')
             except Exception as Ex:
                 pass
             self.workers = [worker.split('.')[0] for worker in workers]
@@ -28,6 +29,7 @@ class Startor:
                 continue
             try:
                 runner = getattr(getattr(workers, work), work)()
+                setattr(runner, '{}_container'.format(work.lower()), [])
                 runner.run()
                 runner.to_excel()
             except Exception as Ex:

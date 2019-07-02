@@ -16,8 +16,8 @@ class Tensorflow(BaseWorker):
             for _ in log:
                 if _.strip().startswith("Total duration:"):
                     container.append(_.strip().split()[-2])
-            df = self.pd.DataFrame([[container[0], container[1]]])
-            self.to_csv(t, df)
+            self.merge([container[0]])
+            self.merge([container[1]])
             self.status(t)
 
     def to_excel(self):

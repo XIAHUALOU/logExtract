@@ -37,8 +37,8 @@ class Nginx(BaseWorker):
             self.swap(official, 2, 3)
             self.swap(clear, 1, 2)
             self.swap(clear, 2, 3)
-            r = self.pd.DataFrame([official, clear]).T
-            self.to_csv(t, r)
+            self.merge(official)
+            self.merge(clear)
             self.status(t)
 
     def to_excel(self):

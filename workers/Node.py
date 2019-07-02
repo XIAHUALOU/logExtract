@@ -16,8 +16,8 @@ class Node(BaseWorker):
             for _ in log:
                 if _.startswith("Score (version"):
                     scores.append(_.split()[-1])
-            df = self.pd.DataFrame([[scores[0], scores[1]]])
-            self.to_csv(t, df)
+            self.merge([scores[0]])
+            self.merge([scores[1]])
             self.status(t)
 
     def to_excel(self):

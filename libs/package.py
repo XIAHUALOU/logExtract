@@ -18,7 +18,7 @@ class ConfigPaser:
 
     @property
     def workers(self):
-        if len(self.config.options("workers")) > 0:
+        if len(self.config.options("workers")) > 0 and self.config.get("workers", "images"):
             return self.config.get("workers", "images").split(',')
         return []
 

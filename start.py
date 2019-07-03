@@ -14,9 +14,8 @@ class Startor:
         if len(config.workers) == 0:
             workers = os.listdir(os.path.join(os.path.dirname(__file__), 'workers'))
             try:
-                workers.remove("__init__.py")
-                workers.remove('Basewoker.py')
-                workers.remove('__pycache__')
+                on_remove = ["__init__.py", 'Basewoker.py', '__pycache__']
+                [workers.remove(_) for _ in on_remove]
             except Exception as Ex:
                 pass
             self.workers = [worker.split('.')[0] for worker in workers]

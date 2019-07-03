@@ -24,14 +24,26 @@ class BaseWorker(metaclass=abc.ABCMeta):
 
     @abc.abstractclassmethod
     def run(self):
+        '''
+        need each work rewrite this function
+        :return:
+        '''
         pass
 
     @abc.abstractclassmethod
     def to_excel(self):
+        '''
+        need each work rewrite this function
+        :return:
+        '''
         pass
 
     @staticmethod
     def swap(*args):
+        '''
+        :param args:list, index, index
+        :return:
+        '''
         data, pos_one, pos_two = args
         temp = data[pos_one]
         data[pos_one] = data[pos_two]
@@ -39,9 +51,17 @@ class BaseWorker(metaclass=abc.ABCMeta):
 
     @staticmethod
     def now():
+        '''
+        :return: return localtime
+        '''
         return time.strftime("%Y%m%d", time.localtime())
 
     def to_csv(self, t, df):
+        '''
+        :param t: logfile name
+        :param df: a dataframe
+        :return:
+        '''
         micro = type(self).__name__.lower()
         micro_path = os.path.join(os.getcwd(), 'data/csv/{}'.format(micro))
         if not os.path.exists(micro_path):
@@ -57,6 +77,9 @@ class BaseWorker(metaclass=abc.ABCMeta):
 
     @property
     def datest_logs(self):
+        '''
+        :return: if u set times = 5 in config.ini,it will return 5 datest logs for each worker,
+        '''
         path = self.get_logfiles(os.path.join(os.getcwd(), 'data/log'), [])
         if sys.platform in ['win32', 'win64', 'cygwin']:
             path = [_ for _ in path if _.split('\\')[-1].startswith(type(self).__name__.lower())]
@@ -69,6 +92,10 @@ class BaseWorker(metaclass=abc.ABCMeta):
         return path
 
     def read_from_file(self, mode=list):
+        '''
+        :param mode: default return log content as f.readlines,if accept str,or strbytes return log content as f.read()
+        :return:
+        '''
         logs = []
         files = self.datest_logs
         try:
@@ -82,7 +109,7 @@ class BaseWorker(metaclass=abc.ABCMeta):
                     else:
                         if mode is list:
                             logs.append((_.split('/')[-1].split('.log')[0], f.readlines()))
-                        elif mode is str:
+                        elif mode is str or isinstance(mode, str):
                             logs.append((_.split('/')[-1].split('.log')[0], f.read()))
         except Exception as Ex:
             print(Ex)
@@ -90,6 +117,11 @@ class BaseWorker(metaclass=abc.ABCMeta):
 
     @classmethod
     def get_logfiles(cls, dir, fileList):
+        '''
+        :param dir: logfiles's path
+        :param fileList: a empty list []
+        :return:
+        '''
         newDir = dir
         if os.path.isfile(dir):
             fileList.append(dir)

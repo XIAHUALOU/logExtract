@@ -74,6 +74,7 @@ class BaseWorker(metaclass=abc.ABCMeta):
             setattr(self, '{}_times'.format(type(self).__name__), len(path))
             return path[:len(path)]
         else:
+            setattr(self, '{}_times'.format(type(self).__name__), self.times)
             return path[:self.times]
 
     @property
@@ -88,7 +89,7 @@ class BaseWorker(metaclass=abc.ABCMeta):
             path = self.__ajust_index(path)
         else:
             path = [_ for _ in path if _.split('/')[-1].startswith(type(self).__name__.lower())]
-            path = sorted(path, key=lambda s: s.split('/')[-1], reverse=True)[:self.times]
+            path = sorted(path, key=lambda s: s.split('/')[-1], reverse=True)
             path = self.__ajust_index(path)
         return path
 
@@ -133,17 +134,16 @@ class BaseWorker(metaclass=abc.ABCMeta):
 
     def status(self, t):
         print('task {} done, Status:Sucess'.format(t))
-        pass
 
     def merge(self, data):
         '''
-        :param data: type list,docker data or clear data
+        :param data: type list,docker official data or clear data
         :return:
         '''
         container_name = '{}_container'.format(type(self).__name__.lower())
         _container = getattr(self, container_name)
         _container.append(data)
-        if len(_container) == self.times * 2 or hasattr(self, '{}_times'.format(type(self).__name__)):
+        if len(_container) == getattr(self, '{}_times'.format(type(self).__name__)) * 2:
             ret_index_odd = []
             ret_index_even = []
             for _ in range(len(_container)):

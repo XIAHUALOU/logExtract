@@ -71,6 +71,7 @@ class BaseWorker(metaclass=abc.ABCMeta):
 
     def __ajust_index(self, path):
         if len(path) < self.times:
+            setattr(self, '{}_times'.format(type(self).__name__), len(path))
             return path[:len(path)]
         else:
             return path[:self.times]
@@ -142,7 +143,7 @@ class BaseWorker(metaclass=abc.ABCMeta):
         container_name = '{}_container'.format(type(self).__name__.lower())
         _container = getattr(self, container_name)
         _container.append(data)
-        if len(_container) == self.times * 2:
+        if len(_container) == self.times * 2 or hasattr(self, '{}_times'.format(type(self).__name__)):
             ret_index_odd = []
             ret_index_even = []
             for _ in range(len(_container)):

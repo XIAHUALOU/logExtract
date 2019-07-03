@@ -122,7 +122,6 @@ class BaseWorker(metaclass=abc.ABCMeta):
         :param fileList: a empty list []
         :return:
         '''
-        newDir = dir
         if os.path.isfile(dir):
             fileList.append(dir)
         elif os.path.isdir(dir):

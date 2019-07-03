@@ -49,15 +49,23 @@ class BaseWorker(metaclass=abc.ABCMeta):
         df.to_csv(os.path.join(micro_path, '{}.csv'.format(t)),
                   index=None, header=None, encoding='utf-8')
 
+    def __ajust_index(self, path):
+        if len(path) < self.times:
+            return path[:len(path)]
+        else:
+            return path[:self.times]
+
     @property
     def datest_logs(self):
         path = self.get_logfiles(os.path.join(os.getcwd(), 'data/log'), [])
         if sys.platform in ['win32', 'win64', 'cygwin']:
             path = [_ for _ in path if _.split('\\')[-1].startswith(type(self).__name__.lower())]
-            path = sorted(path, key=lambda s: s.split('\\')[-1], reverse=True)[:self.times]
+            path = sorted(path, key=lambda s: s.split('\\')[-1], reverse=True)
+            path = self.__ajust_index(path)
         else:
             path = [_ for _ in path if _.split('/')[-1].startswith(type(self).__name__.lower())]
             path = sorted(path, key=lambda s: s.split('/')[-1], reverse=True)[:self.times]
+            path = self.__ajust_index(path)
         return path
 
     def read_from_file(self, mode=list):

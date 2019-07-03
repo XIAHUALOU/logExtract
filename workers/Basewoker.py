@@ -92,7 +92,7 @@ class BaseWorker(metaclass=abc.ABCMeta):
         return fileList
 
     def status(self, t):
-        # print('task {} done, Status:Sucess'.format(t))
+        print('task {} done, Status:Sucess'.format(t))
         pass
 
     def merge(self, data):
@@ -114,4 +114,5 @@ class BaseWorker(metaclass=abc.ABCMeta):
             ret_index_even.extend(ret_index_odd)
             _container.clear()
             df = self.pd.DataFrame(ret_index_even).T
+            print(df)
             self.to_csv('{}{}'.format(type(self).__name__.lower(), self.now()), df)

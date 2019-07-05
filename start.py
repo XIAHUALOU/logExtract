@@ -32,8 +32,7 @@ class Startor:
                 runner.run()
                 runner.to_excel()
             except Exception as Ex:
-                print(Ex)
-                print("task {} done Status: Failed".format(work))
+                print("\033[5;31;48mtask {} done Status: Failed {}\033[0m".format(work, Ex))
                 continue
 
 

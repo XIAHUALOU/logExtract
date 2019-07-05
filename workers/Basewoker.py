@@ -133,7 +133,7 @@ class BaseWorker(metaclass=abc.ABCMeta):
         return fileList
 
     def status(self, t):
-        print('task {} done, Status:Sucess'.format(t))
+        print('\033[5;36;48mtask {} done, Status:Sucess\033[0m'.format(t))
 
     def merge(self, data):
         '''

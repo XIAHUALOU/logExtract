@@ -1,0 +1,673 @@
+php/php.sh
+[php] 
+[php] == php unit test ==
+[php] [INFO] Test docker hub official image first:
+[php] 
+Get:1 http://security-cdn.debian.org/debian-security stretch/updates InRelease [94.3 kB]
+Ign:3 http://cdn-fastly.deb.debian.org/debian stretch InRelease
+Get:4 http://cdn-fastly.deb.debian.org/debian stretch-updates InRelease [91.0 kB]
+Get:5 http://cdn-fastly.deb.debian.org/debian buster InRelease [163 kB]
+Get:2 http://security-cdn.debian.org/debian-security buster/updates InRelease [39.1 kB]
+Get:8 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 Packages [495 kB]
+Get:6 http://cdn-fastly.deb.debian.org/debian buster-updates InRelease [46.8 kB]
+Get:7 http://cdn-fastly.deb.debian.org/debian stretch Release [118 kB]
+Get:9 http://cdn-fastly.deb.debian.org/debian stretch-updates/main amd64 Packages [27.2 kB]
+Get:10 http://cdn-fastly.deb.debian.org/debian buster/main amd64 Packages [7903 kB]
+Get:11 http://cdn-fastly.deb.debian.org/debian stretch Release.gpg [2434 B]
+Get:12 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 Packages [7082 kB]
+Get:13 http://security-cdn.debian.org/debian-security buster/updates/main amd64 Packages [1132 B]
+Fetched 16.1 MB in 1min 5s (247 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+  zip
+The following NEW packages will be installed:
+  unzip wget
+0 upgraded, 2 newly installed, 0 to remove and 1 not upgraded.
+Need to get 970 kB of archives.
+After this operation, 3360 kB of additional disk space will be used.
+Get:1 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 wget amd64 1.18-5+deb9u3 [800 kB]
+Get:2 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 unzip amd64 6.0-21+deb9u1 [170 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 970 kB in 40s (23.7 kB/s)
+Selecting previously unselected package wget.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 12306 files and directories currently installed.)
+Preparing to unpack .../wget_1.18-5+deb9u3_amd64.deb ...
+Unpacking wget (1.18-5+deb9u3) ...
+Selecting previously unselected package unzip.
+Preparing to unpack .../unzip_6.0-21+deb9u1_amd64.deb ...
+Unpacking unzip (6.0-21+deb9u1) ...
+Setting up unzip (6.0-21+deb9u1) ...
+Setting up wget (1.18-5+deb9u3) ...
+--2019-06-10 08:31:44--  http://phoronix-test-suite.com/benchmark-files/phpbench-081-patched1.zip
+Resolving phoronix-test-suite.com (phoronix-test-suite.com)... 162.252.83.89
+Connecting to phoronix-test-suite.com (phoronix-test-suite.com)|162.252.83.89|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 33055 (32K) [application/zip]
+Saving to: 'phpbench-081-patched1.zip'
+
+     0K .......... .......... .......... ..                   100%  138K=0.2s
+
+2019-06-10 08:31:45 (138 KB/s) - 'phpbench-081-patched1.zip' saved [33055/33055]
+
+Archive:  phpbench-081-patched1.zip
+   creating: phpbench-0.8.1-patched1/
+   creating: phpbench-0.8.1-patched1/tests/
+  inflating: phpbench-0.8.1-patched1/tests/test_comment_loop.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_empty_loop.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_local_scalar_assign.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_global_scalar_assign.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_is_type.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_local_array_assign.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_global_string_assign.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_local_string_assign.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_local_boolean_assign.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_local_integer_assign.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_constants.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_local_float_assign.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_string_append.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_preg_match.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_local_hash_assign.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_variable_variables.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_local_object_assign.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_get_class.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_ereg.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_references.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_increment.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_casting.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_compare_invert.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_ord.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_line.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_bitwise.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_if_constant.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_while.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_compare.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_compare_strict.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_compare_false.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_compare_unstrict.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_array_operators.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_ordered_functions.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_do_while.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_strlen.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_do_while_break.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_ordered_functions_references.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_isset.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_unordered_functions.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_empty.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_chr_var.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_is_object.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_is_array.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_foreach.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_crc32.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_md5.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_chr_fixed.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_time.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_microtime.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_chr_hardcoded.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_sha1.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_switch.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_mt_rand.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_rand.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_arithmetic.php  
+  inflating: phpbench-0.8.1-patched1/LICENSE  
+  inflating: phpbench-0.8.1-patched1/README  
+  inflating: phpbench-0.8.1-patched1/AUTHORS  
+  inflating: phpbench-0.8.1-patched1/ChangeLog  
+  inflating: phpbench-0.8.1-patched1/phpbench.php  
+
+PHPBench version 0.8.1
+
+-f <file name> : Output a summary as a CSV file.
+-h             : Help.
+-i <number>    : Number of iterations (default=100000).
+
+Scripts are loaded from the following directories: 
+  - /usr/local/lib/phpbench/tests
+  - /usr/local/share/phpbench/tests
+  - /usr/lib/phpbench/tests
+  - /usr/share/phpbench/tests
+  - /opt/phpbench/tests
+  - tests
+  - .
+
+Starting the benchmark with 100000 iterations.
+
+
+Warning: "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? in /phpbench-0.8.1-patched1/tests/test_switch.php on line 36
+Test [test_switch] enabled.
+Test [test_foreach] enabled.
+Test [test_while] enabled.
+Test [test_empty_loop] enabled.
+Test [test_local_hash_assign] enabled.
+Test [test_casting] enabled.
+Test [test_local_float_assign] enabled.
+Test [test_compare_invert] enabled.
+Test [test_preg_match] enabled.
+Test [test_comment_loop] enabled.
+Test [test_unordered_functions] enabled.
+Test [test_is_type] enabled.
+Test [test_compare] enabled.
+Test [test_ereg] enabled.
+Test [test_mt_rand] enabled.
+Test [test_compare_strict] enabled.
+Test [test_string_append] enabled.
+Test [test_array_operators] enabled.
+Test [test_is_object] enabled.
+Test [test_sha1] enabled.
+Test [test_local_boolean_assign] enabled.
+Test [test_rand] enabled.
+Test [test_references] enabled.
+Test [test_compare_false] enabled.
+Test [test_local_integer_assign] enabled.
+Test [test_global_string_assign] enabled.
+Test [test_crc32] enabled.
+Test [test_local_object_assign] enabled.
+Test [test_bitwise] enabled.
+Test [test_is_array] enabled.
+Test [test_constants] enabled.
+Test [test_empty] enabled.
+Test [test_md5] enabled.
+Test [test_compare_unstrict] enabled.
+Test [test_ordered_functions_references] enabled.
+Test [test_local_array_assign] enabled.
+Test [test_do_while] enabled.
+Test [test_arithmetic] enabled.
+Test [test_isset] enabled.
+Test [test_if_constant] enabled.
+Test [test_ordered_functions] enabled.
+Test [test_variable_variables] enabled.
+Test [test_get_class] enabled.
+Test [test_local_scalar_assign] enabled.
+Test [test_line] enabled.
+Test [test_ord] enabled.
+Test [test_microtime] enabled.
+Test [test_local_string_assign] enabled.
+Test [test_chr_fixed] enabled.
+Test [test_strlen] enabled.
+Test [test_do_while_break] enabled.
+Test [test_global_scalar_assign] enabled.
+Test [test_chr_var] enabled.
+Test [test_chr_hardcoded] enabled.
+Test [test_increment] enabled.
+Test [test_time] enabled.
+
+                   test_arithmetic	   0.0088 seconds.
+              test_array_operators	   0.0393 seconds.
+                      test_bitwise	   0.0054 seconds.
+                      test_casting	   0.2428 seconds.
+                    test_chr_fixed	   0.0735 seconds.
+                test_chr_hardcoded	   0.0737 seconds.
+                      test_chr_var	   0.1008 seconds.
+                 test_comment_loop	   0.0299 seconds.
+                      test_compare	   0.0234 seconds.
+                test_compare_false	   0.0013 seconds.
+               test_compare_invert	   0.0015 seconds.
+               test_compare_strict	   0.0023 seconds.
+             test_compare_unstrict	   0.0067 seconds.
+                    test_constants	   0.0114 seconds.
+                        test_crc32	   0.0075 seconds.
+                     test_do_while	   0.1159 seconds.
+               test_do_while_break	   0.0186 seconds.
+                        test_empty	   0.0015 seconds.
+                   test_empty_loop	   0.0298 seconds.
+                         test_ereg	   0.0218 seconds.
+                      test_foreach	   0.1894 seconds.
+                    test_get_class	   0.0054 seconds.
+         test_global_scalar_assign	   0.0253 seconds.
+         test_global_string_assign	   0.0447 seconds.
+                  test_if_constant	   0.0028 seconds.
+                    test_increment	   0.0082 seconds.
+                     test_is_array	   0.0012 seconds.
+                    test_is_object	   0.0012 seconds.
+                      test_is_type	   0.0035 seconds.
+                        test_isset	   0.0016 seconds.
+                         test_line	   0.0025 seconds.
+           test_local_array_assign	   0.0462 seconds.
+         test_local_boolean_assign	   0.0079 seconds.
+           test_local_float_assign	   0.0081 seconds.
+            test_local_hash_assign	   0.0078 seconds.
+         test_local_integer_assign	   0.0080 seconds.
+          test_local_object_assign	   0.0066 seconds.
+          test_local_scalar_assign	   0.0098 seconds.
+          test_local_string_assign	   0.0324 seconds.
+                          test_md5	   0.0263 seconds.
+                    test_microtime	   0.0726 seconds.
+                      test_mt_rand	   0.0037 seconds.
+                          test_ord	   0.1769 seconds.
+            test_ordered_functions	   0.0934 seconds.
+ test_ordered_functions_references	   0.2106 seconds.
+                   test_preg_match	   0.0170 seconds.
+                         test_rand	   0.0036 seconds.
+                   test_references	   0.0037 seconds.
+                         test_sha1	   0.0335 seconds.
+                test_string_append	   0.0263 seconds.
+                       test_strlen	   0.0019 seconds.
+                       test_switch	   0.0605 seconds.
+                         test_time	   0.0031 seconds.
+          test_unordered_functions	   0.1043 seconds.
+           test_variable_variables	   0.0111 seconds.
+                        test_while	   0.1160 seconds.
+
+System     : Linux 371f8fb86c00 4.15.0-48-generic #51-Ubuntu SMP Wed Apr 3 08:28:49 UTC 2019 x86_64
+PHP version: 7.3.6
+PHPBench   : 0.8.1
+Date       : June 10, 2019, 8:31 am
+Tests      : 56
+Iterations : 100000
+Total time : 2 seconds
+Score      : 455975 (higher is better)
+
+Default-Php-Server
+[php] [INFO] Test clear docker image:
+[php] 
+Set upstream mirror to https://cdn-alt.download.clearlinux.org/update
+Installed version: 29820
+Version URL:       https://cdn-alt.download.clearlinux.org/update
+Content URL:       https://cdn-alt.download.clearlinux.org/update
+Loading required manifests...
+Downloading packs (1.14 Mb) for:
+ - wget
+ - openssl
+ - unzip
+	...1%
+	...2%
+	...4%
+	...5%
+	...7%
+	...8%
+	...10%
+	...11%
+	...12%
+	...14%
+	...15%
+	...17%
+	...18%
+	...20%
+	...21%
+	...22%
+	...24%
+	...25%
+	...27%
+	...28%
+	...30%
+	...31%
+	...33%
+	...34%
+	...35%
+	...37%
+	...38%
+	...40%
+	...41%
+	...43%
+	...44%
+	...45%
+	...47%
+	...48%
+	...50%
+	...51%
+	...53%
+	...54%
+	...56%
+	...57%
+	...58%
+	...60%
+	...61%
+	...63%
+	...64%
+	...66%
+	...67%
+	...68%
+	...70%
+	...71%
+	...73%
+	...74%
+	...76%
+	...77%
+	...79%
+	...80%
+	...81%
+	...83%
+	...84%
+	...86%
+	...87%
+	...89%
+	...90%
+	...91%
+	...93%
+	...94%
+	...96%
+	...97%
+	...100%
+
+Finishing packs extraction...
+No extra files need to be downloaded
+Installing bundle(s) files...
+	...0%
+	...1%
+	...2%
+	...3%
+	...4%
+	...5%
+	...6%
+	...7%
+	...8%
+	...9%
+	...10%
+	...11%
+	...12%
+	...13%
+	...14%
+	...15%
+	...16%
+	...17%
+	...18%
+	...19%
+	...20%
+	...21%
+	...22%
+	...23%
+	...24%
+	...25%
+	...26%
+	...27%
+	...28%
+	...29%
+	...30%
+	...31%
+	...32%
+	...33%
+	...34%
+	...35%
+	...36%
+	...37%
+	...38%
+	...39%
+	...40%
+	...41%
+	...42%
+	...43%
+	...44%
+	...45%
+	...46%
+	...47%
+	...48%
+	...49%
+	...50%
+	...51%
+	...52%
+	...53%
+	...54%
+	...55%
+	...56%
+	...57%
+	...58%
+	...59%
+	...60%
+	...61%
+	...62%
+	...63%
+	...64%
+	...65%
+	...66%
+	...67%
+	...68%
+	...69%
+	...70%
+	...71%
+	...72%
+	...73%
+	...74%
+	...75%
+	...76%
+	...77%
+	...78%
+	...79%
+	...80%
+	...81%
+	...82%
+	...83%
+	...84%
+	...85%
+	...86%
+	...87%
+	...88%
+	...89%
+	...90%
+	...91%
+	...92%
+	...93%
+	...94%
+	...95%
+	...96%
+	...97%
+	...98%
+	...99%
+	...100%
+
+Calling post-update helper scripts.
+Successfully installed 2 bundles
+--2019-06-10 08:31:54--  http://phoronix-test-suite.com/benchmark-files/phpbench-081-patched1.zip
+Resolving phoronix-test-suite.com... 162.252.83.89
+Connecting to phoronix-test-suite.com|162.252.83.89|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 33055 (32K) [application/zip]
+Saving to: 'phpbench-081-patched1.zip'
+
+     0K .......... .......... .......... ..                   100%  146K=0.2s
+
+2019-06-10 08:31:55 (146 KB/s) - 'phpbench-081-patched1.zip' saved [33055/33055]
+
+Archive:  phpbench-081-patched1.zip
+   creating: phpbench-0.8.1-patched1/
+   creating: phpbench-0.8.1-patched1/tests/
+  inflating: phpbench-0.8.1-patched1/tests/test_comment_loop.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_empty_loop.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_local_scalar_assign.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_global_scalar_assign.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_is_type.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_local_array_assign.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_global_string_assign.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_local_string_assign.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_local_boolean_assign.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_local_integer_assign.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_constants.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_local_float_assign.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_string_append.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_preg_match.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_local_hash_assign.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_variable_variables.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_local_object_assign.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_get_class.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_ereg.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_references.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_increment.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_casting.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_compare_invert.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_ord.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_line.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_bitwise.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_if_constant.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_while.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_compare.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_compare_strict.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_compare_false.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_compare_unstrict.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_array_operators.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_ordered_functions.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_do_while.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_strlen.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_do_while_break.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_ordered_functions_references.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_isset.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_unordered_functions.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_empty.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_chr_var.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_is_object.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_is_array.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_foreach.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_crc32.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_md5.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_chr_fixed.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_time.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_microtime.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_chr_hardcoded.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_sha1.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_switch.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_mt_rand.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_rand.php  
+  inflating: phpbench-0.8.1-patched1/tests/test_arithmetic.php  
+  inflating: phpbench-0.8.1-patched1/LICENSE  
+  inflating: phpbench-0.8.1-patched1/README  
+  inflating: phpbench-0.8.1-patched1/AUTHORS  
+  inflating: phpbench-0.8.1-patched1/ChangeLog  
+  inflating: phpbench-0.8.1-patched1/phpbench.php  
+
+PHPBench version 0.8.1
+
+-f <file name> : Output a summary as a CSV file.
+-h             : Help.
+-i <number>    : Number of iterations (default=100000).
+
+Scripts are loaded from the following directories: 
+  - /usr/local/lib/phpbench/tests
+  - /usr/local/share/phpbench/tests
+  - /usr/lib/phpbench/tests
+  - /usr/share/phpbench/tests
+  - /opt/phpbench/tests
+  - tests
+  - .
+
+Starting the benchmark with 100000 iterations.
+
+
+Warning: "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? in /phpbench-0.8.1-patched1/tests/test_switch.php on line 36
+Test [test_switch] enabled.
+Test [test_foreach] enabled.
+Test [test_while] enabled.
+Test [test_empty_loop] enabled.
+Test [test_local_hash_assign] enabled.
+Test [test_casting] enabled.
+Test [test_local_float_assign] enabled.
+Test [test_compare_invert] enabled.
+Test [test_preg_match] enabled.
+Test [test_comment_loop] enabled.
+Test [test_unordered_functions] enabled.
+Test [test_is_type] enabled.
+Test [test_compare] enabled.
+Test [test_ereg] enabled.
+Test [test_mt_rand] enabled.
+Test [test_compare_strict] enabled.
+Test [test_string_append] enabled.
+Test [test_array_operators] enabled.
+Test [test_is_object] enabled.
+Test [test_sha1] enabled.
+Test [test_local_boolean_assign] enabled.
+Test [test_rand] enabled.
+Test [test_references] enabled.
+Test [test_compare_false] enabled.
+Test [test_local_integer_assign] enabled.
+Test [test_global_string_assign] enabled.
+Test [test_crc32] enabled.
+Test [test_local_object_assign] enabled.
+Test [test_bitwise] enabled.
+Test [test_is_array] enabled.
+Test [test_constants] enabled.
+Test [test_empty] enabled.
+Test [test_md5] enabled.
+Test [test_compare_unstrict] enabled.
+Test [test_ordered_functions_references] enabled.
+Test [test_local_array_assign] enabled.
+Test [test_do_while] enabled.
+Test [test_arithmetic] enabled.
+Test [test_isset] enabled.
+Test [test_if_constant] enabled.
+Test [test_ordered_functions] enabled.
+Test [test_variable_variables] enabled.
+Test [test_get_class] enabled.
+Test [test_local_scalar_assign] enabled.
+Test [test_line] enabled.
+Test [test_ord] enabled.
+Test [test_microtime] enabled.
+Test [test_local_string_assign] enabled.
+Test [test_chr_fixed] enabled.
+Test [test_strlen] enabled.
+Test [test_do_while_break] enabled.
+Test [test_global_scalar_assign] enabled.
+Test [test_chr_var] enabled.
+Test [test_chr_hardcoded] enabled.
+Test [test_increment] enabled.
+Test [test_time] enabled.
+
+                   test_arithmetic	   0.0016 seconds.
+              test_array_operators	   0.0010 seconds.
+                      test_bitwise	   0.0009 seconds.
+                      test_casting	   0.1927 seconds.
+                    test_chr_fixed	   0.0622 seconds.
+                test_chr_hardcoded	   0.0616 seconds.
+                      test_chr_var	   0.0900 seconds.
+                 test_comment_loop	   0.0279 seconds.
+                      test_compare	   0.0010 seconds.
+                test_compare_false	   0.0009 seconds.
+               test_compare_invert	   0.0010 seconds.
+               test_compare_strict	   0.0009 seconds.
+             test_compare_unstrict	   0.0010 seconds.
+                    test_constants	   0.0107 seconds.
+                        test_crc32	   0.0070 seconds.
+                     test_do_while	   0.0674 seconds.
+               test_do_while_break	   0.0092 seconds.
+                        test_empty	   0.0009 seconds.
+                   test_empty_loop	   0.0278 seconds.
+                         test_ereg	   0.0183 seconds.
+                      test_foreach	   0.1117 seconds.
+                    test_get_class	   0.0053 seconds.
+         test_global_scalar_assign	   0.0194 seconds.
+         test_global_string_assign	   0.0433 seconds.
+                  test_if_constant	   0.0010 seconds.
+                    test_increment	   0.0041 seconds.
+                     test_is_array	   0.0011 seconds.
+                    test_is_object	   0.0009 seconds.
+                      test_is_type	   0.0010 seconds.
+                        test_isset	   0.0010 seconds.
+                         test_line	   0.0010 seconds.
+           test_local_array_assign	   0.0028 seconds.
+         test_local_boolean_assign	   0.0010 seconds.
+           test_local_float_assign	   0.0010 seconds.
+            test_local_hash_assign	   0.0081 seconds.
+         test_local_integer_assign	   0.0010 seconds.
+          test_local_object_assign	   0.0063 seconds.
+          test_local_scalar_assign	   0.0009 seconds.
+          test_local_string_assign	   0.0010 seconds.
+                          test_md5	   0.0251 seconds.
+                    test_microtime	   0.0640 seconds.
+                      test_mt_rand	   0.0031 seconds.
+                          test_ord	   0.1263 seconds.
+            test_ordered_functions	   0.1009 seconds.
+ test_ordered_functions_references	   0.1921 seconds.
+                   test_preg_match	   0.0134 seconds.
+                         test_rand	   0.0032 seconds.
+                   test_references	   0.0036 seconds.
+                         test_sha1	   0.0297 seconds.
+                test_string_append	   0.0010 seconds.
+                       test_strlen	   0.0009 seconds.
+                       test_switch	   0.0573 seconds.
+                         test_time	   0.0032 seconds.
+          test_unordered_functions	   0.1003 seconds.
+           test_variable_variables	   0.0109 seconds.
+                        test_while	   0.0675 seconds.
+
+System     : Linux 1ab4f71d99ff 4.15.0-48-generic #51-Ubuntu SMP Wed Apr 3 08:28:49 UTC 2019 x86_64
+PHP version: 7.3.5
+PHPBench   : 0.8.1
+Date       : June 10, 2019, 8:31 am
+Tests      : 56
+Iterations : 100000
+Total time : 2 seconds
+Score      : 625720 (higher is better)
+
+Clr-Php-Server

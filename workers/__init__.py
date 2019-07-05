@@ -11,3 +11,9 @@ from . import Mariadb
 from . import Nginx
 from . import Node
 from . import Redis
+from . import Perl
+from . import Openjdk
+from . import Php
+from . import Golang
+from . import Memcached
+from . import Ruby

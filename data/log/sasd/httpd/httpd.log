@@ -1,0 +1,11 @@
+httpd/httpd.sh
+[httpd] 
+[httpd] == httpd unit test ==
+E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
+[httpd] [INFO] Test docker hub official image first:
+[httpd] 
+2b5d9bc661626112757291289cb6ffd2de94de1b6e836b3d5cac34a5789149a3
+httpd/httpd.sh: line 27: ab: command not found
+Makefile:14: recipe for target 'httpd' failed
+make: *** [httpd] Error 127

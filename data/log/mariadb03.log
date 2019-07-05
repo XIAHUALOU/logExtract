@@ -1,5 +1,5 @@
 mariadb/mariadb.sh
-[mariadb] 
+[mariadb]
 [mariadb] == mariadb unit test ==
 employees_db/._load_departments.dump
 employees_db/load_departments.dump
@@ -25,7 +25,7 @@ employees_db/Changelog
 employees_db/._README
 employees_db/README
 [mariadb] [INFO] Test docker hub official image first:
-[mariadb] 
+[mariadb]
 fd02afcbb9d9feda963bd68e79442410e5b5341de32eaa737182bacb4281ac99
 +-----------------------------+
 | INFO                        |
@@ -68,7 +68,7 @@ fd02afcbb9d9feda963bd68e79442410e5b5341de32eaa737182bacb4281ac99
 | LOADING salaries |
 +------------------+
 [mariadb] [INFO] Starting the mysqlslap test, it may take a while, please be patient ...:
-[mariadb] 
+[mariadb]
 Benchmark
 	Average number of seconds to run all queries: 1.483 seconds
 	Minimum number of seconds to run all queries: 0.481 seconds
@@ -79,7 +79,7 @@ Benchmark
 mariadbtest
 Default-Mariadb
 [mariadb] [INFO] Test clear docker image:
-[mariadb] 
+[mariadb]
 f05a7f0ef401988d58a4c627de55ef8854fbb1e3dcc92db3720a93ddba10e78b
 +-----------------------------+
 | INFO                        |
@@ -122,7 +122,7 @@ f05a7f0ef401988d58a4c627de55ef8854fbb1e3dcc92db3720a93ddba10e78b
 | LOADING salaries |
 +------------------+
 [mariadb] [INFO] Starting the mysqlslap test, it may take a while, please be patient ...:
-[mariadb] 
+[mariadb]
 Benchmark
 	Average number of seconds to run all queries: 0.523 seconds
 	Minimum number of seconds to run all queries: 0.481 seconds

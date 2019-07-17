@@ -29,11 +29,12 @@ class Startor:
             try:
                 runner = getattr(getattr(workers, work), work)()
                 setattr(runner, '{}_container'.format(work.lower()), [])
-                runner.run()
-                runner.to_excel()
             except Exception as Ex:
                 print("\033[5;31;48mtask {} done Status: Failed {}\033[0m".format(work, Ex))
                 continue
+            else:
+                runner.run()
+                runner.to_excel()
 
 
 if __name__ == '__main__':

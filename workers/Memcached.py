@@ -8,21 +8,24 @@ class Memcached(BaseWorker):
         # print(logs)
         for log in logs:
             t, log = log
-            patt = r'Ops/sec'
-            res = []
-            s1_list = []
-            s2_list = []
-            index_list = [i for i, x in enumerate(log) if x.find("Ops/sec") != -1]
-            list(map(lambda x: res.append(x), [log[index_list[0] + _] for _ in range(2, 6)]))
-            list(map(lambda x: res.append(x), [log[index_list[1] + _] for _ in range(2, 6)]))
+            try:
+                res = []
+                s1_list = []
+                s2_list = []
+                index_list = [i for i, x in enumerate(log) if x.find("Ops/sec") != -1]
+                list(map(lambda x: res.append(x), [log[index_list[0] + _] for _ in range(2, 6)]))
+                list(map(lambda x: res.append(x), [log[index_list[1] + _] for _ in range(2, 6)]))
 
-            list(map(lambda x: s1_list.append(res[x[0]].split()[x[1]]),
-                     [(0, 4), (0, 5), (1, 4), (1, 5), (3, 4), (3, 5)]))
-            list(map(lambda x: s2_list.append(res[x[0]].split()[x[1]]),
-                     [(4, 4), (4, 5), (5, 4), (5, 5), (7, 4), (7, 5)]))
-            self.merge(s1_list)
-            self.merge(s2_list)
-            self.status(t)
+                list(map(lambda x: s1_list.append(res[x[0]].split()[x[1]]),
+                         [(0, 4), (0, 5), (1, 4), (1, 5), (3, 4), (3, 5)]))
+                list(map(lambda x: s2_list.append(res[x[0]].split()[x[1]]),
+                         [(4, 4), (4, 5), (5, 4), (5, 5), (7, 4), (7, 5)]))
+                self.merge(s1_list)
+                self.merge(s2_list)
+                self.status(t)
+            except Exception as Ex:
+                self.failed(t, Ex)
+                continue
 
     def to_excel(self):
         pass

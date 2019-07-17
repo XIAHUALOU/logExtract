@@ -13,12 +13,16 @@ class Postgres(BaseWorker):
         container = []
         for log in logs:
             t, log = log
-            for _ in log:
-                if _.strip().endswith("(excluding connections establishing)"):
-                    container.append(_.strip().split()[2])
-            self.merge(container[0:6])
-            self.merge(container[6:12])
-            self.status(t)
+            try:
+                for _ in log:
+                    if _.strip().endswith("(excluding connections establishing)"):
+                        container.append(_.strip().split()[2])
+                self.merge(container[0:6])
+                self.merge(container[6:12])
+                self.status(t)
+            except Exception as Ex:
+                self.failed(t, Ex)
+                continue
 
     def to_excel(self):
         pass

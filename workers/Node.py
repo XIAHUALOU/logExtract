@@ -12,13 +12,17 @@ class Node(BaseWorker):
         logs = self.read_from_file(mode=list)
         for log in logs:
             t, log = log
-            scores = []
-            for _ in log:
-                if _.startswith("Score (version"):
-                    scores.append(_.split()[-1])
-            self.merge([scores[0]])
-            self.merge([scores[1]])
-            self.status(t)
+            try:
+                scores = []
+                for _ in log:
+                    if _.startswith("Score (version"):
+                        scores.append(_.split()[-1])
+                self.merge([scores[0]])
+                self.merge([scores[1]])
+                self.status(t)
+            except Exception as Ex:
+                self.failed(t, Ex)
+                continue
 
     def to_excel(self):
         pass

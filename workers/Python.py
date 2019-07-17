@@ -12,13 +12,17 @@ class Python(BaseWorker):
         logs = self.read_from_file(mode=list)
         for log in logs:
             t, log = log
-            for _ in log:
-                v = _.strip()
-                if v.startswith('Totals:'):
-                    v = v.split()[1:3]
-                    v = [_[:-2] for _ in v]
-                    self.merge(v)
-            self.status(t)
+            try:
+                for _ in log:
+                    v = _.strip()
+                    if v.startswith('Totals:'):
+                        v = v.split()[1:3]
+                        v = [_[:-2] for _ in v]
+                        self.merge(v)
+                self.status(t)
+            except Exception as Ex:
+                self.failed(t, Ex)
+                continue
 
     def to_excel(self):
         pass

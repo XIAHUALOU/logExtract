@@ -102,7 +102,7 @@ class BaseWorker(metaclass=abc.ABCMeta):
         files = self.datest_logs
         try:
             for _ in files:
-                with open(_, 'r') as f:
+                with open(_, 'r',encoding='utf8') as f:
                     if sys.platform in ['win32', 'win64', 'cygwin']:
                         if mode is list:
                             logs.append((_.split('\\')[-1].split('.log')[0], f.readlines()))
@@ -133,7 +133,12 @@ class BaseWorker(metaclass=abc.ABCMeta):
         return fileList
 
     def status(self, t):
-        print('\033[5;36;48mtask {} done, Status:Sucess\033[0m'.format(t))
+        print('\033[5;36;48mtask {}.log done, Status:Sucess\033[0m'.format(t))
+
+    def failed(self, t, error):
+        _c = getattr(self, '{}_times'.format(type(self).__name__)) - 1
+        setattr(self, '{}_times'.format(type(self).__name__), _c)
+        print("\033[5;31;48mtask {}.log done Status: Failed\nError Message: {}\n\033[0m".format(t, error))
 
     def merge(self, data):
         '''

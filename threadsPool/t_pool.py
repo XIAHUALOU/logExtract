@@ -73,7 +73,7 @@ class ThreadPool(object):
         """
         when all task finished,close all threads
         """
-        full_size = len(self.created_list)#按已创建的线程数量往线程队列加入终止符。
+        full_size = len(self.created_list)#put terminal event to task queue
         while full_size:
             self.q.put(self.StopEvent)
             full_size -= 1
@@ -86,7 +86,7 @@ class ThreadPool(object):
         while self.created_list:
             self.q.put(self.StopEvent)
 
-        self.q.empty()#清空任务队列
+        self.q.empty()#empty task queue
 
     def join(self):
         """

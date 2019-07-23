@@ -50,7 +50,7 @@ class ThreadPool(object):
             except Exception as e:
                 func_excute_status = False#set func executed status failure
                 result =None
-                print('func executed error', e)
+                print('{} executed error'.format(func.__name__), e)
 
             if func_excute_status: #
                 if callback is not None:#determine whetherif callback is None
@@ -106,29 +106,3 @@ class ThreadPool(object):
             yield
         finally:
             state_list.remove(worker_thread)
-
-
-
-
-
-
-if __name__ == '__main__':
-    def Foo(arg):
-        return arg
-        # time.sleep(0.1)
-
-    def Bar(res):
-        print(res)
-
-    pool=ThreadPool(5)
-    # pool.Deamon=True#需在pool.run之前设置
-    for i in range(1000):
-        pool.run(func=Foo,args=(i,),callback=Bar)
-    pool.close()
-    pool.join()
-    # pool.terminate()
-
-    print("任务队列里任务数%s" %pool.q.qsize())
-    print("当前存活子线程数量:%d" % threading.activeCount())
-    print("当前线程创建列表:%s" %pool.created_list)
-    print("当前线程创建列表:%s" %pool.free_list)

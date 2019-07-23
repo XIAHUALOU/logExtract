@@ -5,8 +5,10 @@
 @Email   : 390306467@qq.com
 """
 from libs import config
+from threadsPool.t_pool import ThreadPool
 import os
 import workers
+
 
 
 class Startor:
@@ -21,7 +23,7 @@ class Startor:
             self.workers = [worker.split('.')[0] for worker in workers]
         else:
             self.workers = config.workers
-
+        self.pool = ThreadPool(config.config.getint('threads', 'maximum'))
     def run(self):
         for work in self.workers:
             if not hasattr(workers, work):
@@ -33,9 +35,9 @@ class Startor:
                 print("\033[5;31;48mtask {} done Status: Failed {}\033[0m".format(work, Ex))
                 continue
             else:
-                runner.run()
-                runner.to_excel()
-
+                self.pool.run(runner.run,())
+        self.pool.close()
+        self.pool.join()
 
 if __name__ == '__main__':
     Startor().run()

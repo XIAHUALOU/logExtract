@@ -160,5 +160,6 @@ class BaseWorker(metaclass=abc.ABCMeta):
                     ret_index_odd.append(_container[_])
             ret_index_even.extend(ret_index_odd)
             _container.clear()
-            df = self.pd.DataFrame(ret_index_even).T
-            self.to_csv('{}{}'.format(type(self).__name__.lower(), self.now()), df)
+            if ret_index_even:
+                df = self.pd.DataFrame(ret_index_even).T
+                self.to_csv('{}{}'.format(type(self).__name__.lower(), self.now()), df)

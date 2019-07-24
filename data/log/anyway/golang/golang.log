@@ -1,374 +1,0 @@
-golang/golang.sh
-[golang] 
-[golang] == golang unit test ==
-[golang] [INFO] Test docker hub official image first:
-[golang] 
---2019-06-10 08:07:53--  http://www.phoronix-test-suite.com/benchmark-files/golang-benchmarks-121017.tar.gz
-Resolving www.phoronix-test-suite.com (www.phoronix-test-suite.com)... 162.252.83.89
-Connecting to www.phoronix-test-suite.com (www.phoronix-test-suite.com)|162.252.83.89|:80... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 950608 (928K) [application/x-gzip]
-Saving to: 'golang-benchmarks-121017.tar.gz'
-
-     0K .......... .......... .......... .......... ..........  5%  120K 7s
-    50K .......... .......... .......... .......... .......... 10%  241K 5s
-   100K .......... .......... .......... .......... .......... 16% 13.0M 3s
-   150K .......... .......... .......... .......... .......... 21% 13.0M 2s
-   200K .......... .......... .......... .......... .......... 26%  247K 2s
-   250K .......... .......... .......... .......... .......... 32% 17.7M 2s
-   300K .......... .......... .......... .......... .......... 37% 16.2M 1s
-   350K .......... .......... .......... .......... .......... 43% 19.3M 1s
-   400K .......... .......... .......... .......... .......... 48%  248K 1s
-   450K .......... .......... .......... .......... .......... 53% 15.9M 1s
-   500K .......... .......... .......... .......... .......... 59% 9.75M 1s
-   550K .......... .......... .......... .......... .......... 64% 17.9M 1s
-   600K .......... .......... .......... .......... .......... 70% 20.2M 0s
-   650K .......... .......... .......... .......... .......... 75% 18.7M 0s
-   700K .......... .......... .......... .......... .......... 80% 21.0M 0s
-   750K .......... .......... .......... .......... .......... 86% 20.9M 0s
-   800K .......... .......... .......... .......... .......... 91%  268K 0s
-   850K .......... .......... .......... .......... .......... 96% 21.3M 0s
-   900K .......... .......... ........                        100% 24.9M=1.3s
-
-2019-06-10 08:07:55 (740 KB/s) - 'golang-benchmarks-121017.tar.gz' saved [950608/950608]
-
-pkg: golang.org/x/benchmarks
-goos: linux
-goarch: amd64
-
-# sections=/tmp/1.size.txt
-BenchmarkBuild-16        1	29058273700 ns/op	  14613543 binary-size	29058273700 build-ns/op	 218001408 build-peak-RSS-bytes	29373985000 build-user+sys-ns/op
-2019/06/10 08:08:25 Failed to execute 'perf record [go build -o goperf -a -p 1 cmd/go]': exec: "perf": executable file not found in $PATH
-pkg: golang.org/x/benchmarks
-goos: linux
-goarch: amd64
-
-consumption=1733KB npkg=15
-2019/06/10 08:08:26 Benchmarking 1 iterations
-2019/06/10 08:08:26 Benchmarking 100 iterations
-2019/06/10 08:08:26 Benchmarking 5000 iterations
-# memprof=/tmp/11.prof.txt
-# cpuprof=/tmp/10.prof.txt
-BenchmarkGarbage/benchmem-MB=64-16     5000	   1939987 ns/op	  14391296 GC-bytes-from-system	    212801 STW-ns/GC	      5405 STW-ns/op	   2782842 allocated-bytes/op	     66273 allocs/op	 358777080 bytes-from-system	 332857344 heap-bytes-from-system	   8841464 other-bytes-from-system	 285982720 peak-RSS-bytes	 395370496 peak-VM-bytes	   2686976 stack-bytes-from-system	  30367548 user+sys-ns/op
-2019/06/10 08:08:37 Benchmarking 1 iterations
-pkg: golang.org/x/benchmarks
-goos: linux
-goarch: amd64
-
-2019/06/10 08:08:37 Benchmarking 100 iterations
-2019/06/10 08:08:37 Benchmarking 10000 iterations
-2019/06/10 08:08:37 Benchmarking 1000000 iterations
-# cpuprof=/tmp/13.prof.txt
-# memprof=/tmp/14.prof.txt
-BenchmarkHTTP-16  1000000	      6178 ns/op	   2402304 GC-bytes-from-system	    210761 P50-ns/op	   1330513 P95-ns/op	   2229395 P99-ns/op	    144434 STW-ns/GC	        71 STW-ns/op	      4807 allocated-bytes/op	        61 allocs/op	  75432184 bytes-from-system	  63864832 heap-bytes-from-system	   5921016 other-bytes-from-system	  34263040 peak-RSS-bytes	1547059200 peak-VM-bytes	   3244032 stack-bytes-from-system	     84860 user+sys-ns/op
-2019/06/10 08:08:44 Benchmarking 1 iterations
-pkg: golang.org/x/benchmarks
-goos: linux
-goarch: amd64
-
-2019/06/10 08:08:44 Benchmarking 100 iterations
-2019/06/10 08:08:45 Benchmarking 1000 iterations
-# memprof=/tmp/11.prof.txt
-# cpuprof=/tmp/10.prof.txt
-BenchmarkJSON-16     1000	   8286179 ns/op	  12883968 GC-bytes-from-system	    319676 STW-ns/GC	     30688 STW-ns/op	   8111423 allocated-bytes/op	     92686 allocs/op	 354246904 bytes-from-system	 334397440 heap-bytes-from-system	   5818616 other-bytes-from-system	 297775104 peak-RSS-bytes	 390795264 peak-VM-bytes	   1146880 stack-bytes-from-system	 130746403 user+sys-ns/op
-Default-Golang-Server
-[golang] [INFO] Test clear docker image:
-[golang] 
-Set upstream mirror to https://cdn-alt.download.clearlinux.org/update
-Installed version: 29820
-Version URL:       https://cdn-alt.download.clearlinux.org/update
-Content URL:       https://cdn-alt.download.clearlinux.org/update
-Loading required manifests...
-Downloading packs (196.71 Mb) for:
- - wget
- - openssl
- - linux-tools
- - python3-basic
- - c-basic
- - perl-basic
- - nasm
- - binutils
- - bison
- - flex
- - glibc-locale
- - llvm
- - make
-	...0%
-	...1%
-	...2%
-	...3%
-	...4%
-	...5%
-	...6%
-	...7%
-	...8%
-	...9%
-	...10%
-	...11%
-	...12%
-	...13%
-	...14%
-	...15%
-	...16%
-	...17%
-	...18%
-	...19%
-	...20%
-	...21%
-	...22%
-	...23%
-	...24%
-	...25%
-	...26%
-	...27%
-	...28%
-	...29%
-	...30%
-	...31%
-	...32%
-	...33%
-	...34%
-	...35%
-	...36%
-	...37%
-	...38%
-	...39%
-	...40%
-	...41%
-	...42%
-	...43%
-	...44%
-	...45%
-	...46%
-	...47%
-	...48%
-	...49%
-	...50%
-	...51%
-	...52%
-	...53%
-	...54%
-	...55%
-	...56%
-	...57%
-	...58%
-	...59%
-	...60%
-	...61%
-	...62%
-	...63%
-	...64%
-	...65%
-	...66%
-	...67%
-	...68%
-	...69%
-	...70%
-	...71%
-	...72%
-	...73%
-	...74%
-	...75%
-	...76%
-	...77%
-	...78%
-	...79%
-	...80%
-	...81%
-	...82%
-	...83%
-	...84%
-	...85%
-	...86%
-	...87%
-	...88%
-	...89%
-	...90%
-	...91%
-	...92%
-	...93%
-	...94%
-	...95%
-	...96%
-	...97%
-	...98%
-	...99%
-	...100%
-
-Finishing packs extraction...
-No extra files need to be downloaded
-Installing bundle(s) files...
-	...0%
-	...1%
-	...2%
-	...3%
-	...4%
-	...5%
-	...6%
-	...7%
-	...8%
-	...9%
-	...10%
-	...11%
-	...12%
-	...13%
-	...14%
-	...15%
-	...16%
-	...17%
-	...18%
-	...19%
-	...20%
-	...21%
-	...22%
-	...23%
-	...24%
-	...25%
-	...26%
-	...27%
-	...28%
-	...29%
-	...30%
-	...31%
-	...32%
-	...33%
-	...34%
-	...35%
-	...36%
-	...37%
-	...38%
-	...39%
-	...40%
-	...41%
-	...42%
-	...43%
-	...44%
-	...45%
-	...46%
-	...47%
-	...48%
-	...49%
-	...50%
-	...51%
-	...52%
-	...53%
-	...54%
-	...55%
-	...56%
-	...57%
-	...58%
-	...59%
-	...60%
-	...61%
-	...62%
-	...63%
-	...64%
-	...65%
-	...66%
-	...67%
-	...68%
-	...69%
-	...70%
-	...71%
-	...72%
-	...73%
-	...74%
-	...75%
-	...76%
-	...77%
-	...78%
-	...79%
-	...80%
-	...81%
-	...82%
-	...83%
-	...84%
-	...85%
-	...86%
-	...87%
-	...88%
-	...89%
-	...90%
-	...91%
-	...92%
-	...93%
-	...94%
-	...95%
-	...96%
-	...97%
-	...98%
-	...99%
-	...100%
-
-Calling post-update helper scripts.
-Successfully installed 3 bundles
---2019-06-10 08:10:01--  http://www.phoronix-test-suite.com/benchmark-files/golang-benchmarks-121017.tar.gz
-Resolving www.phoronix-test-suite.com... 162.252.83.89
-Connecting to www.phoronix-test-suite.com|162.252.83.89|:80... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 950608 (928K) [application/x-gzip]
-Saving to: 'golang-benchmarks-121017.tar.gz'
-
-     0K .......... .......... .......... .......... ..........  5%  117K 8s
-    50K .......... .......... .......... .......... .......... 10%  241K 5s
-   100K .......... .......... .......... .......... .......... 16% 23.5M 3s
-   150K .......... .......... .......... .......... .......... 21% 20.2M 2s
-   200K .......... .......... .......... .......... .......... 26%  242K 2s
-   250K .......... .......... .......... .......... .......... 32% 18.6M 2s
-   300K .......... .......... .......... .......... .......... 37% 16.6M 1s
-   350K .......... .......... .......... .......... .......... 43% 17.4M 1s
-   400K .......... .......... .......... .......... .......... 48%  252K 1s
-   450K .......... .......... .......... .......... .......... 53% 23.0M 1s
-   500K .......... .......... .......... .......... .......... 59% 22.0M 1s
-   550K .......... .......... .......... .......... .......... 64% 18.6M 1s
-   600K .......... .......... .......... .......... .......... 70% 19.0M 0s
-   650K .......... .......... .......... .......... .......... 75% 21.6M 0s
-   700K .......... .......... .......... .......... .......... 80% 19.4M 0s
-   750K .......... .......... .......... .......... .......... 86% 19.7M 0s
-   800K .......... .......... .......... .......... .......... 91% 18.3M 0s
-   850K .......... .......... .......... .......... .......... 96%  255K 0s
-   900K .......... .......... ........                        100% 29.4M=1.3s
-
-2019-06-10 08:10:03 (731 KB/s) - 'golang-benchmarks-121017.tar.gz' saved [950608/950608]
-
-pkg: golang.org/x/benchmarks
-goos: linux
-goarch: amd64
-
-# sections=/tmp/1.size.txt
-# processes=/tmp/2.perf.txt
-# cpuprof=/tmp/3.perf.txt
-BenchmarkBuild-16        1	28879996825 ns/op	  14613637 binary-size	28879996825 build-ns/op	 222154752 build-peak-RSS-bytes	29190008000 build-user+sys-ns/op
-pkg: golang.org/x/benchmarks
-goos: linux
-goarch: amd64
-
-consumption=1733KB npkg=15
-2019/06/10 08:11:05 Benchmarking 1 iterations
-2019/06/10 08:11:05 Benchmarking 100 iterations
-2019/06/10 08:11:05 Benchmarking 5000 iterations
-# memprof=/tmp/11.prof.txt
-# cpuprof=/tmp/10.prof.txt
-BenchmarkGarbage/benchmem-MB=64-16     5000	   1946928 ns/op	  14526464 GC-bytes-from-system	    213956 STW-ns/GC	      5434 STW-ns/op	   2782838 allocated-bytes/op	     66273 allocs/op	 359956728 bytes-from-system	 332562432 heap-bytes-from-system	   9885944 other-bytes-from-system	 288903168 peak-RSS-bytes	 396550144 peak-VM-bytes	   2981888 stack-bytes-from-system	  30501627 user+sys-ns/op
-2019/06/10 08:11:16 Benchmarking 1 iterations
-pkg: golang.org/x/benchmarks
-goos: linux
-goarch: amd64
-
-2019/06/10 08:11:16 Benchmarking 100 iterations
-2019/06/10 08:11:16 Benchmarking 10000 iterations
-2019/06/10 08:11:16 Benchmarking 1000000 iterations
-# memprof=/tmp/14.prof.txt
-# cpuprof=/tmp/13.prof.txt
-BenchmarkHTTP-16  1000000	      6133 ns/op	   2500608 GC-bytes-from-system	    292533 P50-ns/op	   1097149 P95-ns/op	   1942845 P99-ns/op	    152529 STW-ns/GC	        75 STW-ns/op	      4808 allocated-bytes/op	        61 allocs/op	  75432184 bytes-from-system	  63733760 heap-bytes-from-system	   5921016 other-bytes-from-system	  35225600 peak-RSS-bytes	2835894272 peak-VM-bytes	   3276800 stack-bytes-from-system	     83741 user+sys-ns/op
-pkg: golang.org/x/benchmarks
-goos: linux
-goarch: amd64
-
-2019/06/10 08:11:23 Benchmarking 1 iterations
-2019/06/10 08:11:23 Benchmarking 100 iterations
-2019/06/10 08:11:24 Benchmarking 1000 iterations
-# memprof=/tmp/11.prof.txt
-# cpuprof=/tmp/10.prof.txt
-BenchmarkJSON-16     1000	   8143808 ns/op	  12347392 GC-bytes-from-system	    346545 STW-ns/GC	     34307 STW-ns/op	   8060062 allocated-bytes/op	     92685 allocs/op	 353984760 bytes-from-system	 334430208 heap-bytes-from-system	   6093048 other-bytes-from-system	 292524032 peak-RSS-bytes	 390533120 peak-VM-bytes	   1114112 stack-bytes-from-system	 128872760 user+sys-ns/op
-Clr-Golang-Server

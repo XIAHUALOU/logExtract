@@ -19,6 +19,10 @@ class Openjdk(BaseWorker):
                         test_list.append(log[log.index(line) + 1])
                 list(map(lambda x: s1_list.append(test_list[0].split()[x]), [3, 5]))
                 list(map(lambda x: s2_list.append(test_list[1].split()[x]), [3, 5]))
+                if len(s1_list) != 2 or len(s2_list) !=2:
+                    self.failed(t, 'error logfile')
+                    self.merge(None)
+                    continue
                 self.merge(s1_list)
                 self.merge(s2_list)
                 self.status(t)

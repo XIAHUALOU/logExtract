@@ -14,6 +14,10 @@ class Php(BaseWorker):
                     result = self.re.findall(pattern, line)
                     if (result):
                         test_list.append(self.re.findall("\d+", line)[0])
+                if len(test_list) != 2:
+                    self.failed(t, 'error logfile')
+                    self.merge(None)
+                    continue
                 self.merge([test_list[0]])
                 self.merge([test_list[1]])
                 self.status(t)

@@ -1,270 +1,0 @@
-perl/perl.sh
-[perl] 
-[perl] == perl unit test ==
-[perl] [INFO] Test docker hub official image first:
-[perl] 
-Host: 1442ea03409e
-Perl: /usr/local/bin/perl
-Test-File: benchmarks/app/podhtml.b
-Test-Name: Run pod2html on perlfunc
-Test-Result: perlbench-results/1442ea03409e/perls/385d440a4a090bc283f66a0b41fafb76/tests/20190619T024005.pb
-Host: 1442ea03409e
-Perl: /usr/local/bin/perl
-Test-File: benchmarks/startup/noprog.b
-Test-Name: How long does it take to start the interpreter
-Test-Result: perlbench-results/1442ea03409e/perls/385d440a4a090bc283f66a0b41fafb76/tests/20190619T024120.pb
-Date: 2019-06-19 02:40:05 (02:41:20)
-PerlBench-Version: 0.93
-Test: benchmarks/app/podhtml.b md5:ee2f3b4f2eecc05245ef158f263d3f24
-Perl: /usr/local/bin/perl 5.030000
-Hostname: 1442ea03409e
-System-Uptime: 02:41:20 up 15 days, 1 min, 0 users, load average: 1.90, 2.09, 1.56
-Cycles: 6
-Loop-Overhead: -0.2%
-Samples: 56
-Min: 0.184166916666667
-Med: 0.185207416666667
-Max: 0.191574
-Avg: 0.185683470238095
-Std-Dev: 0.00150256379512841
-Date: 2019-06-19 02:41:20 (02:42:14)
-PerlBench-Version: 0.93
-Test: benchmarks/startup/noprog.b md5:e983ca4f46f3a89d56c58b494ea0a96f
-Perl: /usr/local/bin/perl 5.030000
-Hostname: 1442ea03409e
-System-Uptime: 02:42:14 up 15 days, 2 min, 0 users, load average: 2.00, 2.09, 1.59
-Cycles: 535
-Loop-Overhead: 1.0%
-Samples: 56
-Min: 0.00169300722555447
-Med: 0.00174435769284419
-Max: 0.00181989320686288
-Avg: 0.00173750713494859
-Std-Dev: 2.52847135501541e-05
-[perl] [INFO] Test clear docker image:
-[perl] 
-Set upstream mirror to https://cdn-alt.download.clearlinux.org/update
-Installed version: 29970
-Version URL:       https://cdn-alt.download.clearlinux.org/update
-Content URL:       https://cdn-alt.download.clearlinux.org/update
-Loading required manifests...
-Downloading packs (1.14 Mb) for:
- - wget
- - openssl
- - unzip
-	...1%
-	...2%
-	...4%
-	...5%
-	...7%
-	...8%
-	...9%
-	...11%
-	...12%
-	...14%
-	...15%
-	...17%
-	...18%
-	...20%
-	...22%
-	...23%
-	...24%
-	...26%
-	...27%
-	...28%
-	...30%
-	...31%
-	...32%
-	...34%
-	...35%
-	...36%
-	...38%
-	...39%
-	...41%
-	...42%
-	...44%
-	...45%
-	...46%
-	...48%
-	...49%
-	...51%
-	...53%
-	...54%
-	...55%
-	...56%
-	...58%
-	...59%
-	...61%
-	...62%
-	...64%
-	...65%
-	...66%
-	...68%
-	...69%
-	...71%
-	...73%
-	...74%
-	...76%
-	...77%
-	...78%
-	...80%
-	...81%
-	...83%
-	...84%
-	...86%
-	...87%
-	...89%
-	...90%
-	...91%
-	...93%
-	...94%
-	...96%
-	...97%
-	...99%
-	...100%
-
-Finishing packs extraction...
-No extra files need to be downloaded
-Installing bundle(s) files...
-	...0%
-	...1%
-	...2%
-	...3%
-	...4%
-	...5%
-	...6%
-	...7%
-	...8%
-	...9%
-	...10%
-	...11%
-	...12%
-	...13%
-	...14%
-	...15%
-	...16%
-	...17%
-	...18%
-	...19%
-	...20%
-	...21%
-	...22%
-	...23%
-	...24%
-	...25%
-	...26%
-	...27%
-	...28%
-	...29%
-	...30%
-	...31%
-	...32%
-	...33%
-	...34%
-	...35%
-	...36%
-	...37%
-	...38%
-	...39%
-	...40%
-	...41%
-	...42%
-	...43%
-	...44%
-	...45%
-	...46%
-	...47%
-	...48%
-	...49%
-	...50%
-	...51%
-	...52%
-	...53%
-	...54%
-	...55%
-	...56%
-	...57%
-	...58%
-	...59%
-	...60%
-	...61%
-	...62%
-	...63%
-	...64%
-	...65%
-	...66%
-	...67%
-	...68%
-	...69%
-	...70%
-	...71%
-	...72%
-	...73%
-	...74%
-	...75%
-	...76%
-	...77%
-	...78%
-	...79%
-	...80%
-	...81%
-	...82%
-	...83%
-	...84%
-	...85%
-	...86%
-	...87%
-	...88%
-	...89%
-	...90%
-	...91%
-	...92%
-	...93%
-	...94%
-	...95%
-	...96%
-	...97%
-	...98%
-	...99%
-	...100%
-
-Calling post-update helper scripts.
-Successfully installed 2 bundles
-Host: 797724ee3ba9
-Perl: /usr/bin/perl
-Test-File: benchmarks/app/podhtml.b
-Test-Name: Run pod2html on perlfunc
-Test-Result: perlbench-results/797724ee3ba9/perls/bbb7fb6156d9004ddbd9195e157bf732/tests/20190619T024228.pb
-Host: 797724ee3ba9
-Perl: /usr/bin/perl
-Test-File: benchmarks/startup/noprog.b
-Test-Name: How long does it take to start the interpreter
-Test-Result: perlbench-results/797724ee3ba9/perls/bbb7fb6156d9004ddbd9195e157bf732/tests/20190619T024344.pb
-Date: 2019-06-19 02:42:28 (02:43:44)
-PerlBench-Version: 0.93
-Test: benchmarks/app/podhtml.b md5:ee2f3b4f2eecc05245ef158f263d3f24
-Perl: /usr/bin/perl 5.028002
-Hostname: 797724ee3ba9
-System-Uptime: 02:43:44 up 15 days 0:04, 0 users, load average: 1.94, 2.02, 1.62
-Cycles: 8
-Loop-Overhead: -0.3%
-Samples: 56
-Min: 0.1459455625
-Med: 0.1471495
-Max: 0.1480425
-Avg: 0.147145736607143
-Std-Dev: 0.000388347976023446
-Date: 2019-06-19 02:43:44 (02:44:37)
-PerlBench-Version: 0.93
-Test: benchmarks/startup/noprog.b md5:e983ca4f46f3a89d56c58b494ea0a96f
-Perl: /usr/bin/perl 5.028002
-Hostname: 797724ee3ba9
-System-Uptime: 02:44:37 up 15 days 0:05, 0 users, load average: 2.09, 2.05, 1.65
-Cycles: 579
-Loop-Overhead: -0.5%
-Samples: 56
-Min: 0.0015830799207909
-Med: 0.00160204537847656
-Max: 0.00162035486123519
-Avg: 0.00160111207337902
-Std-Dev: 7.67992036392682e-06

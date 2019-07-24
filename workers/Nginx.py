@@ -34,6 +34,10 @@ class Nginx(BaseWorker):
                         else:
                             official.append(v)
                 times += 1
+                if len(official) != 5 or len(clear) != 5:
+                    self.failed(t, 'error logfile')
+                    self.merge(None)
+                    continue
                 self.swap(official, 1, 2)
                 self.swap(official, 2, 3)
                 self.swap(clear, 1, 2)

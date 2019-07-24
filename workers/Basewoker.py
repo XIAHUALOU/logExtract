@@ -133,12 +133,12 @@ class BaseWorker(metaclass=abc.ABCMeta):
         return fileList
 
     def status(self, t):
-        print('\033[5;36;48mtask {}.log done, Status:Sucess\033[0m'.format(t))
+        print('task {}.log done, Status:Success'.format(t))
 
     def failed(self, t, error):
         _c = getattr(self, '{}_times'.format(type(self).__name__)) - 1
         setattr(self, '{}_times'.format(type(self).__name__), _c)
-        print("\033[5;31;48mtask {}.log done Status: Failed\nError Message: {}\n\033[0m".format(t, error))
+        print("task {}.log done Status: Failed,Error Message: {}\n".format(t, error))
 
     def merge(self, data):
         '''
@@ -148,6 +148,8 @@ class BaseWorker(metaclass=abc.ABCMeta):
         container_name = '{}_container'.format(type(self).__name__.lower())
         _container = getattr(self, container_name)
         _container.append(data)
+        if _container[-1] is None:
+            _container.pop()
         if len(_container) == getattr(self, '{}_times'.format(type(self).__name__)) * 2:
             ret_index_odd = []
             ret_index_even = []

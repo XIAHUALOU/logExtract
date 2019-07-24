@@ -1,505 +1,0 @@
-node/node.sh
-[node] 
-[node] == node unit test ==
-[node] [INFO] Test docker hub official image first:
-[node] 
-Ign:1 http://deb.debian.org/debian stretch InRelease
-Get:2 http://deb.debian.org/debian stretch-updates InRelease [91.0 kB]
-Get:3 http://security.debian.org/debian-security stretch/updates InRelease [94.3 kB]
-Get:4 http://deb.debian.org/debian stretch Release [118 kB]
-Get:5 http://security.debian.org/debian-security stretch/updates/main amd64 Packages [495 kB]
-Get:6 http://deb.debian.org/debian stretch-updates/main amd64 Packages [27.2 kB]
-Get:7 http://deb.debian.org/debian stretch Release.gpg [2434 B]
-Get:8 http://deb.debian.org/debian stretch/main amd64 Packages [7082 kB]
-Fetched 7910 kB in 3min 45s (35.1 kB/s)
-Reading package lists...
-Reading package lists...
-Building dependency tree...
-Reading state information...
-0 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
-Reading package lists...
-Building dependency tree...
-Reading state information...
-unzip is already the newest version (6.0-21+deb9u1).
-wget is already the newest version (1.18-5+deb9u3).
-0 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
-Archive:  benchmark-octane-20181001.zip
-ecbfa1b33ddc294401f97f2cf87c94434fefb097
-   creating: benchmark-octane-master/
- extracting: benchmark-octane-master/.gitignore  
-  inflating: benchmark-octane-master/README.md  
-   creating: benchmark-octane-master/bin/
- extracting: benchmark-octane-master/bin/benchmark-octane  
- extracting: benchmark-octane-master/index.js  
-   creating: benchmark-octane-master/lib/
-  inflating: benchmark-octane-master/lib/octane.js  
-   creating: benchmark-octane-master/lib/octane/
-  inflating: benchmark-octane-master/lib/octane/base.js  
-  inflating: benchmark-octane-master/lib/octane/box2d.js  
-  inflating: benchmark-octane-master/lib/octane/code-load.js  
-  inflating: benchmark-octane-master/lib/octane/crypto.js  
-   creating: benchmark-octane-master/lib/octane/css/
-  inflating: benchmark-octane-master/lib/octane/css/bootstrap-responsive.css  
-  inflating: benchmark-octane-master/lib/octane/css/bootstrap.css  
-  inflating: benchmark-octane-master/lib/octane/css/docs.css  
-  inflating: benchmark-octane-master/lib/octane/deltablue.js  
-  inflating: benchmark-octane-master/lib/octane/earley-boyer.js  
-  inflating: benchmark-octane-master/lib/octane/gbemu-part1.js  
-  inflating: benchmark-octane-master/lib/octane/gbemu-part2.js  
-   creating: benchmark-octane-master/lib/octane/ico/
- extracting: benchmark-octane-master/lib/octane/ico/apple-touch-icon-114-precomposed.png  
- extracting: benchmark-octane-master/lib/octane/ico/apple-touch-icon-144-precomposed.png  
- extracting: benchmark-octane-master/lib/octane/ico/apple-touch-icon-57-precomposed.png  
- extracting: benchmark-octane-master/lib/octane/ico/apple-touch-icon-72-precomposed.png  
-  inflating: benchmark-octane-master/lib/octane/ico/favicon.ico  
-  inflating: benchmark-octane-master/lib/octane/index.html  
-   creating: benchmark-octane-master/lib/octane/js/
-  inflating: benchmark-octane-master/lib/octane/js/bootstrap-collapse.js  
-  inflating: benchmark-octane-master/lib/octane/js/bootstrap-transition.js  
-  inflating: benchmark-octane-master/lib/octane/js/jquery.js  
-  inflating: benchmark-octane-master/lib/octane/mandreel.js  
-  inflating: benchmark-octane-master/lib/octane/navier-stokes.js  
-  inflating: benchmark-octane-master/lib/octane/pdfjs.js  
-  inflating: benchmark-octane-master/lib/octane/raytrace.js  
-  inflating: benchmark-octane-master/lib/octane/regexp.js  
-  inflating: benchmark-octane-master/lib/octane/richards.js  
-  inflating: benchmark-octane-master/lib/octane/run.js  
-  inflating: benchmark-octane-master/lib/octane/splay.js  
-  inflating: benchmark-octane-master/lib/octane/typescript-compiler.js  
-  inflating: benchmark-octane-master/lib/octane/typescript-input.js  
-  inflating: benchmark-octane-master/lib/octane/typescript.js  
-  inflating: benchmark-octane-master/lib/octane/zlib-data.js  
-  inflating: benchmark-octane-master/lib/octane/zlib.js  
-  inflating: benchmark-octane-master/package.json  
-  inflating: benchmark-octane-master/run.js  
-    hostname     : e93aa14d291a
-    node version : v12.4.0
-      V8 version : 7.4.288.27-node.18
- platform & arch : linux x64
-
- config : {
-  target_defaults: {
-    cflags: [],
-    default_configuration: [32m'Release'[39m,
-    defines: [],
-    include_dirs: [],
-    libraries: []
-  },
-  variables: {
-    asan: [33m0[39m,
-    build_v8_with_gn: [33mfalse[39m,
-    coverage: [33mfalse[39m,
-    debug_nghttp2: [33mfalse[39m,
-    enable_lto: [33mfalse[39m,
-    enable_pgo_generate: [33mfalse[39m,
-    enable_pgo_use: [33mfalse[39m,
-    force_dynamic_crt: [33m0[39m,
-    gas_version: [32m'2.27'[39m,
-    host_arch: [32m'x64'[39m,
-    icu_data_in: [32m'../../deps/icu-small/source/data/in/icudt64l.dat'[39m,
-    icu_endianness: [32m'l'[39m,
-    icu_gyp_path: [32m'tools/icu/icu-generic.gyp'[39m,
-    icu_locales: [32m'en,root'[39m,
-    icu_path: [32m'deps/icu-small'[39m,
-    icu_small: [33mtrue[39m,
-    icu_ver_major: [32m'64'[39m,
-    llvm_version: [33m0[39m,
-    node_byteorder: [32m'little'[39m,
-    node_code_cache_path: [32m'yes'[39m,
-    node_debug_lib: [33mfalse[39m,
-    node_enable_d8: [33mfalse[39m,
-    node_enable_v8_vtunejit: [33mfalse[39m,
-    node_install_npm: [33mtrue[39m,
-    node_module_version: [33m72[39m,
-    node_no_browser_globals: [33mfalse[39m,
-    node_prefix: [32m'/'[39m,
-    node_release_urlbase: [32m'https://nodejs.org/download/release/'[39m,
-    node_report: [33mtrue[39m,
-    node_shared: [33mfalse[39m,
-    node_shared_cares: [33mfalse[39m,
-    node_shared_http_parser: [33mfalse[39m,
-    node_shared_libuv: [33mfalse[39m,
-    node_shared_nghttp2: [33mfalse[39m,
-    node_shared_openssl: [33mfalse[39m,
-    node_shared_zlib: [33mfalse[39m,
-    node_tag: [32m''[39m,
-    node_target_type: [32m'executable'[39m,
-    node_use_bundled_v8: [33mtrue[39m,
-    node_use_dtrace: [33mfalse[39m,
-    node_use_etw: [33mfalse[39m,
-    node_use_large_pages: [33mfalse[39m,
-    node_use_node_snapshot: [33mfalse[39m,
-    node_use_openssl: [33mtrue[39m,
-    node_use_v8_platform: [33mtrue[39m,
-    node_with_ltcg: [33mfalse[39m,
-    node_without_node_options: [33mfalse[39m,
-    openssl_fips: [32m''[39m,
-    openssl_is_fips: [33mfalse[39m,
-    shlib_suffix: [32m'so.72'[39m,
-    target_arch: [32m'x64'[39m,
-    v8_enable_gdbjit: [33m0[39m,
-    v8_enable_i18n_support: [33m1[39m,
-    v8_enable_inspector: [33m1[39m,
-    v8_no_strict_aliasing: [33m1[39m,
-    v8_optimized_debug: [33m1[39m,
-    v8_promise_internal_field_count: [33m1[39m,
-    v8_random_seed: [33m0[39m,
-    v8_trace_maps: [33m0[39m,
-    v8_use_siphash: [33m1[39m,
-    v8_use_snapshot: [33m1[39m,
-    want_separate_host_toolset: [33m0[39m
-  }
-}
-
-Richards            : 23666
-DeltaBlue           : 51327
-Crypto              : 27205
-RayTrace            : 57423
-EarleyBoyer         : 38042
-RegExp              : 5390
-Splay               : 20308
-SplayLatency        : 39565
-NavierStokes        : 24906
-PdfJS               : 26272
-Mandreel            : 29245
-MandreelLatency     : 34145
-Gameboy             : 33703
-CodeLoad            : 22907
-Box2D               : 46675
-zlib                : 55589
-Typescript          : 37601
-----
-Score (version 9): 30311
- duration  33.081225002  seconds
-Default-Node-Server
-[node] [INFO] Test clear docker image:
-[node] 
-Set upstream mirror to https://cdn-alt.download.clearlinux.org/update
-Installed version: 29820
-Version URL:       https://cdn-alt.download.clearlinux.org/update
-Content URL:       https://cdn-alt.download.clearlinux.org/update
-Loading required manifests...
-Downloading packs (1.14 Mb) for:
- - wget
- - openssl
- - unzip
-	...1%
-	...2%
-	...4%
-	...5%
-	...7%
-	...8%
-	...9%
-	...11%
-	...12%
-	...14%
-	...15%
-	...17%
-	...18%
-	...20%
-	...21%
-	...22%
-	...24%
-	...25%
-	...27%
-	...28%
-	...30%
-	...31%
-	...32%
-	...34%
-	...35%
-	...37%
-	...38%
-	...40%
-	...41%
-	...43%
-	...44%
-	...45%
-	...47%
-	...48%
-	...50%
-	...51%
-	...53%
-	...54%
-	...55%
-	...57%
-	...58%
-	...60%
-	...61%
-	...63%
-	...64%
-	...66%
-	...67%
-	...68%
-	...70%
-	...71%
-	...73%
-	...74%
-	...76%
-	...77%
-	...78%
-	...80%
-	...81%
-	...83%
-	...84%
-	...86%
-	...87%
-	...89%
-	...90%
-	...91%
-	...93%
-	...94%
-	...97%
-	...98%
-	...100%
-
-Finishing packs extraction...
-No extra files need to be downloaded
-Installing bundle(s) files...
-	...0%
-	...1%
-	...2%
-	...3%
-	...4%
-	...5%
-	...6%
-	...7%
-	...8%
-	...9%
-	...10%
-	...11%
-	...12%
-	...13%
-	...14%
-	...15%
-	...16%
-	...17%
-	...18%
-	...19%
-	...20%
-	...21%
-	...22%
-	...23%
-	...24%
-	...25%
-	...26%
-	...27%
-	...28%
-	...29%
-	...30%
-	...31%
-	...32%
-	...33%
-	...34%
-	...35%
-	...36%
-	...37%
-	...38%
-	...39%
-	...40%
-	...41%
-	...42%
-	...43%
-	...44%
-	...45%
-	...46%
-	...47%
-	...48%
-	...49%
-	...50%
-	...51%
-	...52%
-	...53%
-	...54%
-	...55%
-	...56%
-	...57%
-	...58%
-	...59%
-	...60%
-	...61%
-	...62%
-	...63%
-	...64%
-	...65%
-	...66%
-	...67%
-	...68%
-	...69%
-	...70%
-	...71%
-	...72%
-	...73%
-	...74%
-	...75%
-	...76%
-	...77%
-	...78%
-	...79%
-	...80%
-	...81%
-	...82%
-	...83%
-	...84%
-	...85%
-	...86%
-	...87%
-	...88%
-	...89%
-	...90%
-	...91%
-	...92%
-	...93%
-	...94%
-	...95%
-	...96%
-	...97%
-	...98%
-	...99%
-	...100%
-
-Calling post-update helper scripts.
-Successfully installed 2 bundles
-Archive:  benchmark-octane-20181001.zip
-ecbfa1b33ddc294401f97f2cf87c94434fefb097
-   creating: benchmark-octane-master/
- extracting: benchmark-octane-master/.gitignore  
-  inflating: benchmark-octane-master/README.md  
-   creating: benchmark-octane-master/bin/
- extracting: benchmark-octane-master/bin/benchmark-octane  
- extracting: benchmark-octane-master/index.js  
-   creating: benchmark-octane-master/lib/
-  inflating: benchmark-octane-master/lib/octane.js  
-   creating: benchmark-octane-master/lib/octane/
-  inflating: benchmark-octane-master/lib/octane/base.js  
-  inflating: benchmark-octane-master/lib/octane/box2d.js  
-  inflating: benchmark-octane-master/lib/octane/code-load.js  
-  inflating: benchmark-octane-master/lib/octane/crypto.js  
-   creating: benchmark-octane-master/lib/octane/css/
-  inflating: benchmark-octane-master/lib/octane/css/bootstrap-responsive.css  
-  inflating: benchmark-octane-master/lib/octane/css/bootstrap.css  
-  inflating: benchmark-octane-master/lib/octane/css/docs.css  
-  inflating: benchmark-octane-master/lib/octane/deltablue.js  
-  inflating: benchmark-octane-master/lib/octane/earley-boyer.js  
-  inflating: benchmark-octane-master/lib/octane/gbemu-part1.js  
-  inflating: benchmark-octane-master/lib/octane/gbemu-part2.js  
-   creating: benchmark-octane-master/lib/octane/ico/
- extracting: benchmark-octane-master/lib/octane/ico/apple-touch-icon-114-precomposed.png  
- extracting: benchmark-octane-master/lib/octane/ico/apple-touch-icon-144-precomposed.png  
- extracting: benchmark-octane-master/lib/octane/ico/apple-touch-icon-57-precomposed.png  
- extracting: benchmark-octane-master/lib/octane/ico/apple-touch-icon-72-precomposed.png  
-  inflating: benchmark-octane-master/lib/octane/ico/favicon.ico  
-  inflating: benchmark-octane-master/lib/octane/index.html  
-   creating: benchmark-octane-master/lib/octane/js/
-  inflating: benchmark-octane-master/lib/octane/js/bootstrap-collapse.js  
-  inflating: benchmark-octane-master/lib/octane/js/bootstrap-transition.js  
-  inflating: benchmark-octane-master/lib/octane/js/jquery.js  
-  inflating: benchmark-octane-master/lib/octane/mandreel.js  
-  inflating: benchmark-octane-master/lib/octane/navier-stokes.js  
-  inflating: benchmark-octane-master/lib/octane/pdfjs.js  
-  inflating: benchmark-octane-master/lib/octane/raytrace.js  
-  inflating: benchmark-octane-master/lib/octane/regexp.js  
-  inflating: benchmark-octane-master/lib/octane/richards.js  
-  inflating: benchmark-octane-master/lib/octane/run.js  
-  inflating: benchmark-octane-master/lib/octane/splay.js  
-  inflating: benchmark-octane-master/lib/octane/typescript-compiler.js  
-  inflating: benchmark-octane-master/lib/octane/typescript-input.js  
-  inflating: benchmark-octane-master/lib/octane/typescript.js  
-  inflating: benchmark-octane-master/lib/octane/zlib-data.js  
-  inflating: benchmark-octane-master/lib/octane/zlib.js  
-  inflating: benchmark-octane-master/package.json  
-  inflating: benchmark-octane-master/run.js  
-    hostname     : 49bd48604d30
-    node version : v10.16.0
-      V8 version : 6.8.275.32-node.52
- platform & arch : linux x64
-
- config : { target_defaults:
-   { cflags: [],
-     default_configuration: [32m'Release'[39m,
-     defines: [],
-     include_dirs: [],
-     libraries: [ [32m'-lz'[39m, [32m'-luv'[39m, [32m'-lnghttp2'[39m, [32m'-lcrypto'[39m, [32m'-lssl'[39m ] },
-  variables:
-   { asan: [33m-0[39m,
-     build_v8_with_gn: [33mfalse[39m,
-     coverage: [33mfalse[39m,
-     debug_nghttp2: [33mfalse[39m,
-     enable_lto: [33mtrue[39m,
-     enable_pgo_generate: [33mfalse[39m,
-     enable_pgo_use: [33mfalse[39m,
-     force_dynamic_crt: [33m-0[39m,
-     host_arch: [32m'x64'[39m,
-     icu_data_in: [32m'../../deps/icu-small/source/data/in/icudt64l.dat'[39m,
-     icu_endianness: [32m'l'[39m,
-     icu_gyp_path: [32m'tools/icu/icu-generic.gyp'[39m,
-     icu_locales: [32m'en,root'[39m,
-     icu_path: [32m'deps/icu-small'[39m,
-     icu_small: [33mtrue[39m,
-     icu_ver_major: [32m'64'[39m,
-     llvm_version: [33m-0[39m,
-     node_byteorder: [32m'little'[39m,
-     node_debug_lib: [33mfalse[39m,
-     node_enable_d8: [33mfalse[39m,
-     node_enable_v8_vtunejit: [33mfalse[39m,
-     node_install_npm: [33mtrue[39m,
-     node_module_version: [33m64[39m,
-     node_no_browser_globals: [33mfalse[39m,
-     node_prefix: [32m'/usr'[39m,
-     node_release_urlbase: [32m''[39m,
-     node_shared: [33mfalse[39m,
-     node_shared_cares: [33mfalse[39m,
-     node_shared_http_parser: [33mfalse[39m,
-     node_shared_libuv: [33mtrue[39m,
-     node_shared_nghttp2: [33mtrue[39m,
-     node_shared_openssl: [33mtrue[39m,
-     node_shared_zlib: [33mtrue[39m,
-     node_tag: [32m''[39m,
-     node_target_type: [32m'executable'[39m,
-     node_use_bundled_v8: [33mtrue[39m,
-     node_use_dtrace: [33mfalse[39m,
-     node_use_etw: [33mfalse[39m,
-     node_use_large_pages: [33mtrue[39m,
-     node_use_openssl: [33mtrue[39m,
-     node_use_pch: [33mfalse[39m,
-     node_use_perfctr: [33mfalse[39m,
-     node_use_v8_platform: [33mtrue[39m,
-     node_with_ltcg: [33mfalse[39m,
-     node_without_node_options: [33mfalse[39m,
-     openssl_fips: [32m''[39m,
-     openssl_no_asm: [33m-0[39m,
-     shlib_suffix: [32m'so.64'[39m,
-     target_arch: [32m'x64'[39m,
-     v8_enable_gdbjit: [33m-0[39m,
-     v8_enable_i18n_support: [33m1[39m,
-     v8_enable_inspector: [33m1[39m,
-     v8_no_strict_aliasing: [33m1[39m,
-     v8_optimized_debug: [33m-0[39m,
-     v8_promise_internal_field_count: [33m1[39m,
-     v8_random_seed: [33m-0[39m,
-     v8_trace_maps: [33m-0[39m,
-     v8_typed_array_max_size_in_heap: [33m-0[39m,
-     v8_use_snapshot: [33mtrue[39m,
-     want_separate_host_toolset: [33m-0[39m } }
-
-Richards            : 24027
-DeltaBlue           : 49972
-Crypto              : 26130
-RayTrace            : 57661
-EarleyBoyer         : 38581
-RegExp              : 5385
-Splay               : 17178
-SplayLatency        : 37257
-NavierStokes        : 24758
-PdfJS               : 21563
-Mandreel            : 26824
-MandreelLatency     : 67368
-Gameboy             : 35836
-CodeLoad            : 18040
-Box2D               : 58923
-zlib                : 56306
-Typescript          : 38862
-----
-Score (version 9): 30722
- duration  33.086  seconds
-Clr-Node-Server

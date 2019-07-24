@@ -25,6 +25,10 @@ class Redis(BaseWorker):
                         else:
                             clear.append(_r.split()[0])
                             count += 1
+                if len(official) != 18 or len(clear) != 18:
+                    self.failed(t, 'error logfile')
+                    self.merge(None)
+                    continue
                 self.merge(official)
                 self.merge(clear)
                 self.status(t)

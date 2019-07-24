@@ -32,7 +32,7 @@ class Startor:
                 runner = getattr(getattr(workers, work), work)()
                 setattr(runner, '{}_container'.format(work.lower()), [])
             except Exception as Ex:
-                print("\033[5;31;48mtask {} done Status: Failed {}\033[0m".format(work, Ex))
+                print("task {} done Status: Failed {}".format(work, Ex))
                 continue
             else:
                 self.pool.run(runner.run,())

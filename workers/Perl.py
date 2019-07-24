@@ -17,6 +17,10 @@ class Perl(BaseWorker):
                     result = self.re.findall(pattern, line)
                     if (result):
                         test_list.append(line)
+                if len(test_list) != 4:
+                    self.failed(t,'error logfile')
+                    self.merge(None)
+                    continue
                 list(map(lambda x: s1_list.append(test_list[x].split()[1]), [0, 1]))
                 list(map(lambda x: s2_list.append(test_list[x].split()[1]), [2, 3]))
                 self.merge(s1_list)

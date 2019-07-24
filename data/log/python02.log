@@ -1,644 +1,0 @@
-python/python.sh
-[python] 
-[python] == python unit test ==
-[python] [INFO] Test docker hub official image first:
-[python] 
-Get:1 http://security-cdn.debian.org/debian-security stretch/updates InRelease [94.3 kB]
-Get:2 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 Packages [499 kB]
-Ign:3 http://cdn-fastly.deb.debian.org/debian stretch InRelease
-Get:4 http://cdn-fastly.deb.debian.org/debian stretch-updates InRelease [91.0 kB]
-Get:5 http://cdn-fastly.deb.debian.org/debian stretch-updates/main amd64 Packages [27.2 kB]
-Get:6 http://cdn-fastly.deb.debian.org/debian stretch Release [118 kB]
-Get:7 http://cdn-fastly.deb.debian.org/debian stretch Release.gpg [2434 B]
-Get:8 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 Packages [7082 kB]
-Fetched 7914 kB in 3s (1999 kB/s)
-Reading package lists...
-Reading package lists...
-Building dependency tree...
-Reading state information...
-0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
-Reading package lists...
-Building dependency tree...
-Reading state information...
-wget is already the newest version (1.18-5+deb9u3).
-0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
---2019-06-20 16:00:55--  http://www.phoronix-test-suite.com/benchmark-files/pybench-2018-02-16.tar.gz
-Resolving child-prc.intel.com (child-prc.intel.com)... 10.239.4.80
-Connecting to child-prc.intel.com (child-prc.intel.com)|10.239.4.80|:913... connected.
-Proxy request sent, awaiting response... 200 OK
-Length: 102590 (100K) [application/x-gzip]
-Saving to: ‘pybench-2018-02-16.tar.gz’
-
-     0K .......... .......... .......... .......... .......... 49% 34.2K 1s
-    50K .......... .......... .......... .......... .......... 99% 37.8K 0s
-   100K                                                       100%  354G=2.8s
-
-2019-06-20 16:00:59 (36.0 KB/s) - ‘pybench-2018-02-16.tar.gz’ saved [102590/102590]
-
-pybench-2018-02-16/
-pybench-2018-02-16/Numbers.py
-pybench-2018-02-16/pybench.py
-pybench-2018-02-16/Constructs.pyc
-pybench-2018-02-16/Unicode.py
-pybench-2018-02-16/Lookups.pyc
-pybench-2018-02-16/Lists.py
-pybench-2018-02-16/Calls.pyc
-pybench-2018-02-16/Exceptions.pyc
-pybench-2018-02-16/Dict.pyc
-pybench-2018-02-16/Arithmetic.py
-pybench-2018-02-16/Constructs.py
-pybench-2018-02-16/pybench.pyc
-pybench-2018-02-16/Exceptions.py
-pybench-2018-02-16/Tuples.py
-pybench-2018-02-16/With.py
-pybench-2018-02-16/__pycache__/
-pybench-2018-02-16/__pycache__/Tuples.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Exceptions.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Numbers.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Dict.cpython-36.pyc
-pybench-2018-02-16/__pycache__/CommandLine.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Unicode.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Lookups.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Constructs.cpython-36.pyc
-pybench-2018-02-16/__pycache__/pybench.cpython-36.pyc
-pybench-2018-02-16/__pycache__/With.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Lists.cpython-36.pyc
-pybench-2018-02-16/__pycache__/NewInstances.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Imports.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Calls.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Instances.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Arithmetic.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Setup.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Strings.cpython-36.pyc
-pybench-2018-02-16/Imports.pyc
-pybench-2018-02-16/CommandLine.py
-pybench-2018-02-16/Setup.pyc
-pybench-2018-02-16/Strings.pyc
-pybench-2018-02-16/LICENSE
-pybench-2018-02-16/Lists.pyc
-pybench-2018-02-16/Strings.py
-pybench-2018-02-16/NewInstances.pyc
-pybench-2018-02-16/Instances.py
-pybench-2018-02-16/Setup.py
-pybench-2018-02-16/Unicode.pyc
-pybench-2018-02-16/Imports.py
-pybench-2018-02-16/README
-pybench-2018-02-16/package/
-pybench-2018-02-16/package/__init__.py
-pybench-2018-02-16/package/__init__.pyc
-pybench-2018-02-16/package/__pycache__/
-pybench-2018-02-16/package/__pycache__/__init__.cpython-36.pyc
-pybench-2018-02-16/package/__pycache__/submodule.cpython-36.pyc
-pybench-2018-02-16/package/.svn/
-pybench-2018-02-16/package/.svn/tmp/
-pybench-2018-02-16/package/.svn/tmp/props/
-pybench-2018-02-16/package/.svn/tmp/prop-base/
-pybench-2018-02-16/package/.svn/tmp/text-base/
-pybench-2018-02-16/package/.svn/all-wcprops
-pybench-2018-02-16/package/.svn/format
-pybench-2018-02-16/package/.svn/props/
-pybench-2018-02-16/package/.svn/entries
-pybench-2018-02-16/package/.svn/prop-base/
-pybench-2018-02-16/package/.svn/prop-base/submodule.py.svn-base
-pybench-2018-02-16/package/.svn/prop-base/__init__.py.svn-base
-pybench-2018-02-16/package/.svn/text-base/
-pybench-2018-02-16/package/.svn/text-base/submodule.py.svn-base
-pybench-2018-02-16/package/.svn/text-base/__init__.py.svn-base
-pybench-2018-02-16/package/.svn/dir-prop-base
-pybench-2018-02-16/package/submodule.pyc
-pybench-2018-02-16/package/submodule.py
-pybench-2018-02-16/With.pyc
-pybench-2018-02-16/Tuples.pyc
-pybench-2018-02-16/NewInstances.py
-pybench-2018-02-16/Numbers.pyc
-pybench-2018-02-16/CommandLine.pyc
-pybench-2018-02-16/Instances.pyc
-pybench-2018-02-16/clockres.py
-pybench-2018-02-16/.CommandLine.py.swp
-pybench-2018-02-16/systimes.py
-pybench-2018-02-16/Calls.py
-pybench-2018-02-16/Dict.py
-pybench-2018-02-16/Lookups.py
-pybench-2018-02-16/Arithmetic.pyc
--------------------------------------------------------------------------------
-PYBENCH 2.0
--------------------------------------------------------------------------------
-* using CPython 3.7.3(default,Jun112019,01:05:09)[GCC6.3.020170516]
-* disabled garbage collection
-* system check interval set to maximum: 2147483647
-* using timer: time.time
-
-Calibrating tests. Please wait... pybench.py:864: DeprecationWarning: sys.getcheckinterval() and sys.setcheckinterval() are deprecated.  Use sys.setswitchinterval() instead.
-  sys.setcheckinterval(value)
-done.
-
-Running 10 round(s) of the suite at warp factor 10:
-
-* Round 1 done in 2.146 seconds.
-* Round 2 done in 2.143 seconds.
-* Round 3 done in 2.140 seconds.
-* Round 4 done in 2.144 seconds.
-* Round 5 done in 2.140 seconds.
-* Round 6 done in 2.141 seconds.
-* Round 7 done in 2.138 seconds.
-* Round 8 done in 2.140 seconds.
-* Round 9 done in 2.141 seconds.
-* Round 10 done in 2.139 seconds.
-
--------------------------------------------------------------------------------
-Benchmark: 2019-06-20 16:00:59
--------------------------------------------------------------------------------
-
-    Rounds: 10
-    Warp:   10
-    Timer:  time.time
-
-    Machine Details:
-       Platform ID:    Linux-5.1.10-783.native-x86_64-with-debian-9.9
-       Processor:      
-    
-    Python:
-       Implementation: CPython
-       Executable:     /usr/local/bin/python3
-       Version:        3.7.3
-       Compiler:       GCC 6.3.0 20170516
-       Bits:           64bit
-       Build:          Jun 11 2019 01:05:09 (#default)
-       Unicode:        UCS4
-
-
-Test                             minimum  average  operation  overhead
--------------------------------------------------------------------------------
-          BuiltinFunctionCalls:     69ms     69ms    0.14us    0.098ms
-           BuiltinMethodLookup:     35ms     35ms    0.03us    0.114ms
-                 CompareFloats:     42ms     42ms    0.04us    0.133ms
-         CompareFloatsIntegers:     40ms     40ms    0.04us    0.098ms
-               CompareIntegers:     56ms     57ms    0.03us    0.197ms
-        CompareInternedStrings:     46ms     47ms    0.03us    0.529ms
-                  CompareLongs:     33ms     33ms    0.03us    0.114ms
-                CompareStrings:     36ms     36ms    0.04us    0.332ms
-    ComplexPythonFunctionCalls:     47ms     47ms    0.24us    0.164ms
-                 ConcatStrings:     22ms     23ms    0.05us    0.189ms
-               CreateInstances:     42ms     43ms    0.38us    0.146ms
-            CreateNewInstances:     32ms     32ms    0.38us    0.116ms
-       CreateStringsWithConcat:     50ms     50ms    0.05us    0.328ms
-                  DictCreation:     33ms     34ms    0.09us    0.131ms
-             DictWithFloatKeys:     39ms     39ms    0.04us    0.246ms
-           DictWithIntegerKeys:     39ms     40ms    0.03us    0.322ms
-            DictWithStringKeys:     37ms     38ms    0.03us    0.322ms
-                      ForLoops:     28ms     28ms    1.14us    0.028ms
-                    IfThenElse:     48ms     49ms    0.04us    0.246ms
-                   ListSlicing:     61ms     61ms    4.37us    0.030ms
-                NestedForLoops:     36ms     36ms    0.02us    0.013ms
-      NestedListComprehensions:     51ms     51ms    4.28us    0.033ms
-          NormalClassAttribute:     63ms     64ms    0.05us    0.171ms
-       NormalInstanceAttribute:     41ms     42ms    0.03us    0.176ms
-           PythonFunctionCalls:     46ms     46ms    0.14us    0.098ms
-             PythonMethodCalls:     50ms     50ms    0.22us    0.056ms
-                     Recursion:     67ms     68ms    1.35us    0.180ms
-                  SecondImport:     13ms     13ms    0.13us    0.065ms
-           SecondPackageImport:     13ms     13ms    0.13us    0.065ms
-         SecondSubmoduleImport:     27ms     27ms    0.27us    0.065ms
-       SimpleComplexArithmetic:     30ms     31ms    0.03us    0.131ms
-        SimpleDictManipulation:     86ms     87ms    0.07us    0.161ms
-         SimpleFloatArithmetic:     36ms     36ms    0.03us    0.197ms
-      SimpleIntFloatArithmetic:     39ms     39ms    0.03us    0.197ms
-       SimpleIntegerArithmetic:     39ms     39ms    0.03us    0.197ms
-      SimpleListComprehensions:     43ms     43ms    3.61us    0.033ms
-        SimpleListManipulation:     38ms     39ms    0.03us    0.213ms
-          SimpleLongArithmetic:     24ms     24ms    0.04us    0.098ms
-                    SmallLists:     47ms     47ms    0.07us    0.131ms
-                   SmallTuples:     59ms     60ms    0.11us    0.147ms
-         SpecialClassAttribute:     61ms     61ms    0.05us    0.171ms
-      SpecialInstanceAttribute:     42ms     43ms    0.04us    0.171ms
-                StringMappings:     55ms     55ms    0.22us    0.141ms
-              StringPredicates:     40ms     40ms    0.06us    0.898ms
-                 StringSlicing:     45ms     45ms    0.08us    0.276ms
-                     TryExcept:     13ms     13ms    0.01us    0.241ms
-                    TryFinally:     31ms     31ms    0.19us    0.131ms
-                TryRaiseExcept:     13ms     13ms    0.20us    0.131ms
-                  TupleSlicing:     67ms     68ms    0.26us    0.020ms
-                   WithFinally:     40ms     40ms    0.25us    0.131ms
-               WithRaiseExcept:     35ms     35ms    0.44us    0.164ms
--------------------------------------------------------------------------------
-Totals:                           2126ms   2141ms
-
-Default-Python-Server
-[python] [INFO] Test clear docker image:
-[python] 
-Loading required manifests...
-Downloading packs (1.02 Mb) for:
- - wget
- - openssl
- - lib-openssl
-	...0%
-	...1%
-	...2%
-	...3%
-	...4%
-	...5%
-	...6%
-	...7%
-	...8%
-	...9%
-	...10%
-	...11%
-	...12%
-	...13%
-	...14%
-	...15%
-	...16%
-	...17%
-	...18%
-	...19%
-	...20%
-	...21%
-	...22%
-	...23%
-	...24%
-	...25%
-	...26%
-	...27%
-	...28%
-	...29%
-	...30%
-	...31%
-	...32%
-	...33%
-	...34%
-	...35%
-	...36%
-	...37%
-	...38%
-	...39%
-	...40%
-	...41%
-	...42%
-	...43%
-	...44%
-	...45%
-	...46%
-	...47%
-	...48%
-	...49%
-	...50%
-	...51%
-	...52%
-	...53%
-	...54%
-	...55%
-	...56%
-	...57%
-	...58%
-	...59%
-	...60%
-	...61%
-	...62%
-	...63%
-	...64%
-	...65%
-	...66%
-	...67%
-	...68%
-	...69%
-	...70%
-	...71%
-	...72%
-	...73%
-	...74%
-	...75%
-	...76%
-	...77%
-	...78%
-	...79%
-	...80%
-	...81%
-	...82%
-	...83%
-	...84%
-	...85%
-	...86%
-	...87%
-	...88%
-	...89%
-	...90%
-	...91%
-	...92%
-	...93%
-	...94%
-	...95%
-	...96%
-	...97%
-	...98%
-	...99%
-	...100%
-
-Finishing packs extraction...
-No extra files need to be downloaded
-Installing bundle(s) files...
-	...0%
-	...1%
-	...2%
-	...3%
-	...4%
-	...5%
-	...6%
-	...7%
-	...8%
-	...9%
-	...10%
-	...11%
-	...12%
-	...13%
-	...14%
-	...15%
-	...16%
-	...17%
-	...18%
-	...19%
-	...20%
-	...21%
-	...22%
-	...23%
-	...24%
-	...25%
-	...26%
-	...27%
-	...28%
-	...29%
-	...30%
-	...31%
-	...32%
-	...33%
-	...34%
-	...35%
-	...36%
-	...37%
-	...38%
-	...39%
-	...40%
-	...41%
-	...42%
-	...43%
-	...44%
-	...45%
-	...46%
-	...47%
-	...48%
-	...49%
-	...50%
-	...51%
-	...52%
-	...53%
-	...54%
-	...55%
-	...56%
-	...57%
-	...58%
-	...59%
-	...60%
-	...61%
-	...62%
-	...63%
-	...64%
-	...65%
-	...66%
-	...67%
-	...68%
-	...69%
-	...70%
-	...71%
-	...72%
-	...73%
-	...74%
-	...75%
-	...76%
-	...77%
-	...78%
-	...79%
-	...80%
-	...81%
-	...82%
-	...83%
-	...84%
-	...85%
-	...86%
-	...87%
-	...88%
-	...89%
-	...90%
-	...91%
-	...92%
-	...93%
-	...94%
-	...95%
-	...96%
-	...97%
-	...98%
-	...99%
-	...100%
-
-Calling post-update helper scripts.
-Successfully installed 1 bundle
---2019-06-20 16:01:31--  http://www.phoronix-test-suite.com/benchmark-files/pybench-2018-02-16.tar.gz
-Resolving child-prc.intel.com... 10.239.4.80
-Connecting to child-prc.intel.com|10.239.4.80|:913... connected.
-Proxy request sent, awaiting response... 200 OK
-Length: 102590 (100K) [application/x-gzip]
-Saving to: 'pybench-2018-02-16.tar.gz'
-
-     0K .......... .......... .......... .......... .......... 49% 34.6K 1s
-    50K .......... .......... .......... .......... .......... 99% 6.25K 0s
-   100K                                                       100%  354G=9.4s
-
-2019-06-20 16:01:43 (10.6 KB/s) - 'pybench-2018-02-16.tar.gz' saved [102590/102590]
-
-pybench-2018-02-16/
-pybench-2018-02-16/Numbers.py
-pybench-2018-02-16/pybench.py
-pybench-2018-02-16/Constructs.pyc
-pybench-2018-02-16/Unicode.py
-pybench-2018-02-16/Lookups.pyc
-pybench-2018-02-16/Lists.py
-pybench-2018-02-16/Calls.pyc
-pybench-2018-02-16/Exceptions.pyc
-pybench-2018-02-16/Dict.pyc
-pybench-2018-02-16/Arithmetic.py
-pybench-2018-02-16/Constructs.py
-pybench-2018-02-16/pybench.pyc
-pybench-2018-02-16/Exceptions.py
-pybench-2018-02-16/Tuples.py
-pybench-2018-02-16/With.py
-pybench-2018-02-16/__pycache__/
-pybench-2018-02-16/__pycache__/Tuples.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Exceptions.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Numbers.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Dict.cpython-36.pyc
-pybench-2018-02-16/__pycache__/CommandLine.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Unicode.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Lookups.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Constructs.cpython-36.pyc
-pybench-2018-02-16/__pycache__/pybench.cpython-36.pyc
-pybench-2018-02-16/__pycache__/With.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Lists.cpython-36.pyc
-pybench-2018-02-16/__pycache__/NewInstances.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Imports.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Calls.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Instances.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Arithmetic.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Setup.cpython-36.pyc
-pybench-2018-02-16/__pycache__/Strings.cpython-36.pyc
-pybench-2018-02-16/Imports.pyc
-pybench-2018-02-16/CommandLine.py
-pybench-2018-02-16/Setup.pyc
-pybench-2018-02-16/Strings.pyc
-pybench-2018-02-16/LICENSE
-pybench-2018-02-16/Lists.pyc
-pybench-2018-02-16/Strings.py
-pybench-2018-02-16/NewInstances.pyc
-pybench-2018-02-16/Instances.py
-pybench-2018-02-16/Setup.py
-pybench-2018-02-16/Unicode.pyc
-pybench-2018-02-16/Imports.py
-pybench-2018-02-16/README
-pybench-2018-02-16/package/
-pybench-2018-02-16/package/__init__.py
-pybench-2018-02-16/package/__init__.pyc
-pybench-2018-02-16/package/__pycache__/
-pybench-2018-02-16/package/__pycache__/__init__.cpython-36.pyc
-pybench-2018-02-16/package/__pycache__/submodule.cpython-36.pyc
-pybench-2018-02-16/package/.svn/
-pybench-2018-02-16/package/.svn/tmp/
-pybench-2018-02-16/package/.svn/tmp/props/
-pybench-2018-02-16/package/.svn/tmp/prop-base/
-pybench-2018-02-16/package/.svn/tmp/text-base/
-pybench-2018-02-16/package/.svn/all-wcprops
-pybench-2018-02-16/package/.svn/format
-pybench-2018-02-16/package/.svn/props/
-pybench-2018-02-16/package/.svn/entries
-pybench-2018-02-16/package/.svn/prop-base/
-pybench-2018-02-16/package/.svn/prop-base/submodule.py.svn-base
-pybench-2018-02-16/package/.svn/prop-base/__init__.py.svn-base
-pybench-2018-02-16/package/.svn/text-base/
-pybench-2018-02-16/package/.svn/text-base/submodule.py.svn-base
-pybench-2018-02-16/package/.svn/text-base/__init__.py.svn-base
-pybench-2018-02-16/package/.svn/dir-prop-base
-pybench-2018-02-16/package/submodule.pyc
-pybench-2018-02-16/package/submodule.py
-pybench-2018-02-16/With.pyc
-pybench-2018-02-16/Tuples.pyc
-pybench-2018-02-16/NewInstances.py
-pybench-2018-02-16/Numbers.pyc
-pybench-2018-02-16/CommandLine.pyc
-pybench-2018-02-16/Instances.pyc
-pybench-2018-02-16/clockres.py
-pybench-2018-02-16/.CommandLine.py.swp
-pybench-2018-02-16/systimes.py
-pybench-2018-02-16/Calls.py
-pybench-2018-02-16/Dict.py
-pybench-2018-02-16/Lookups.py
-pybench-2018-02-16/Arithmetic.pyc
--------------------------------------------------------------------------------
-PYBENCH 2.0
--------------------------------------------------------------------------------
-* using CPython 3.7.3(default,Jun172019,00:47:04)[GCC9.1.120190616gcc-9-branch@272336]
-* disabled garbage collection
-* system check interval set to maximum: 2147483647
-* using timer: time.time
-
-Calibrating tests. Please wait... pybench.py:864: DeprecationWarning: sys.getcheckinterval() and sys.setcheckinterval() are deprecated.  Use sys.setswitchinterval() instead.
-  sys.setcheckinterval(value)
-done.
-
-Running 10 round(s) of the suite at warp factor 10:
-
-* Round 1 done in 1.856 seconds.
-* Round 2 done in 1.859 seconds.
-* Round 3 done in 1.856 seconds.
-* Round 4 done in 1.855 seconds.
-* Round 5 done in 1.856 seconds.
-* Round 6 done in 1.855 seconds.
-* Round 7 done in 1.855 seconds.
-* Round 8 done in 1.857 seconds.
-* Round 9 done in 1.865 seconds.
-* Round 10 done in 1.862 seconds.
-
--------------------------------------------------------------------------------
-Benchmark: 2019-06-20 16:01:43
--------------------------------------------------------------------------------
-
-    Rounds: 10
-    Warp:   10
-    Timer:  time.time
-
-    Machine Details:
-       Platform ID:    Linux-5.1.10-783.native-x86_64-with-glibc2.29
-       Processor:      
-    
-    Python:
-       Implementation: CPython
-       Executable:     /usr/sbin/python3
-       Version:        3.7.3
-       Compiler:       GCC 9.1.1 20190616 gcc-9-branch@272336
-       Bits:           64bit
-       Build:          Jun 17 2019 00:47:04 (#default)
-       Unicode:        UCS4
-
-
-Test                             minimum  average  operation  overhead
--------------------------------------------------------------------------------
-          BuiltinFunctionCalls:     63ms     63ms    0.12us    0.077ms
-           BuiltinMethodLookup:     29ms     29ms    0.03us    0.089ms
-                 CompareFloats:     37ms     37ms    0.03us    0.102ms
-         CompareFloatsIntegers:     34ms     34ms    0.04us    0.076ms
-               CompareIntegers:     50ms     50ms    0.03us    0.153ms
-        CompareInternedStrings:     36ms     37ms    0.02us    0.385ms
-                  CompareLongs:     29ms     29ms    0.03us    0.089ms
-                CompareStrings:     37ms     37ms    0.04us    0.258ms
-    ComplexPythonFunctionCalls:     38ms     39ms    0.19us    0.127ms
-                 ConcatStrings:     26ms     27ms    0.05us    0.154ms
-               CreateInstances:     35ms     36ms    0.32us    0.115ms
-            CreateNewInstances:     26ms     27ms    0.32us    0.091ms
-       CreateStringsWithConcat:     38ms     39ms    0.04us    0.255ms
-                  DictCreation:     30ms     31ms    0.08us    0.105ms
-             DictWithFloatKeys:     40ms     40ms    0.04us    0.191ms
-           DictWithIntegerKeys:     35ms     36ms    0.03us    0.255ms
-            DictWithStringKeys:     35ms     35ms    0.03us    0.262ms
-                      ForLoops:     26ms     27ms    1.07us    0.028ms
-                    IfThenElse:     41ms     41ms    0.03us    0.191ms
-                   ListSlicing:     60ms     60ms    4.28us    0.027ms
-                NestedForLoops:     32ms     32ms    0.02us    0.016ms
-      NestedListComprehensions:     46ms     46ms    3.86us    0.026ms
-          NormalClassAttribute:     51ms     52ms    0.04us    0.132ms
-       NormalInstanceAttribute:     35ms     35ms    0.03us    0.132ms
-           PythonFunctionCalls:     41ms     41ms    0.13us    0.076ms
-             PythonMethodCalls:     41ms     42ms    0.18us    0.043ms
-                     Recursion:     58ms     59ms    1.17us    0.127ms
-                  SecondImport:      7ms      7ms    0.07us    0.051ms
-           SecondPackageImport:      8ms      8ms    0.08us    0.051ms
-         SecondSubmoduleImport:     17ms     17ms    0.17us    0.051ms
-       SimpleComplexArithmetic:     28ms     28ms    0.03us    0.102ms
-        SimpleDictManipulation:     75ms     75ms    0.06us    0.127ms
-         SimpleFloatArithmetic:     35ms     35ms    0.03us    0.170ms
-      SimpleIntFloatArithmetic:     37ms     37ms    0.03us    0.153ms
-       SimpleIntegerArithmetic:     37ms     37ms    0.03us    0.153ms
-      SimpleListComprehensions:     39ms     39ms    3.29us    0.026ms
-        SimpleListManipulation:     35ms     35ms    0.03us    0.165ms
-          SimpleLongArithmetic:     21ms     21ms    0.03us    0.076ms
-                    SmallLists:     42ms     42ms    0.06us    0.102ms
-                   SmallTuples:     51ms     52ms    0.10us    0.114ms
-         SpecialClassAttribute:     52ms     53ms    0.04us    0.132ms
-      SpecialInstanceAttribute:     34ms     34ms    0.03us    0.132ms
-                StringMappings:     34ms     35ms    0.14us    0.127ms
-              StringPredicates:     32ms     32ms    0.05us    0.717ms
-                 StringSlicing:     34ms     34ms    0.06us    0.224ms
-                     TryExcept:     11ms     11ms    0.01us    0.191ms
-                    TryFinally:     26ms     26ms    0.17us    0.102ms
-                TryRaiseExcept:     10ms     10ms    0.16us    0.102ms
-                  TupleSlicing:     62ms     63ms    0.24us    0.018ms
-                   WithFinally:     34ms     34ms    0.21us    0.102ms
-               WithRaiseExcept:     30ms     30ms    0.38us    0.127ms
--------------------------------------------------------------------------------
-Totals:                           1841ms   1858ms
-
-Clr-Python-Server

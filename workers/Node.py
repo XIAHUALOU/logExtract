@@ -17,6 +17,10 @@ class Node(BaseWorker):
                 for _ in log:
                     if _.startswith("Score (version"):
                         scores.append(_.split()[-1])
+                if len(scores) != 2:
+                    self.failed(t, 'error logfile')
+                    self.merge(None)
+                    continue
                 self.merge([scores[0]])
                 self.merge([scores[1]])
                 self.status(t)

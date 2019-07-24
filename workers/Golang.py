@@ -19,6 +19,10 @@ class Golang(BaseWorker):
                 s2_list = []
                 list(map(lambda x: s1_list.append(test_list[x].split()[2]), range(0, 4)))
                 list(map(lambda x: s2_list.append(test_list[x].split()[2]), range(4, 8)))
+                if len(s1_list) != 4 or len(s2_list) != 4:
+                    self.failed(t, 'error logfile')
+                    self.merge(None)
+                    continue
                 self.merge(s1_list)
                 self.merge(s2_list)
                 self.status(t)

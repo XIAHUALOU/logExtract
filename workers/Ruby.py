@@ -31,7 +31,6 @@ class Ruby(BaseWorker):
                 df1_copy = df1.drop_duplicates(subset='name', keep='last', inplace=False)
                 df2_copy = df2.drop_duplicates(subset='name', keep='last', inplace=False)
                 list1 = list(df1_copy["result"])
-                list2 = list(df2_copy["result"])
                 self.merge(list1)
                 self.merge(list2)
                 self.status(t)

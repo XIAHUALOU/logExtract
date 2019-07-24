@@ -17,6 +17,11 @@ class Tensorflow(BaseWorker):
                 for _ in log:
                     if _.strip().startswith("Total duration:"):
                         container.append(_.strip().split()[-2])
+                print(container)
+                if len(container) != 2:
+                    self.failed(t, 'error logfile')
+                    self.merge(None)
+                    continue
                 self.merge([container[0]])
                 self.merge([container[1]])
                 self.status(t)

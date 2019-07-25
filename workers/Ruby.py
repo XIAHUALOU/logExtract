@@ -29,8 +29,11 @@ class Ruby(BaseWorker):
                     df['name'][tup[0]] = miss_list[tup[1]]
                 df1, df2 = df[:282], df[282:]
                 df1_copy = df1.drop_duplicates(subset='name', keep='last', inplace=False)
-                df2_copy = df2.drop_duplicates(subset='name', keep='last', inplace=False)
                 list1 = list(df1_copy["result"])
+                if len(list1) != 249 or len(list2) != 249:
+                    self.failed(t, 'error logfile')
+                    self.merge(None)
+                    continue
                 self.merge(list1)
                 self.merge(list2)
                 self.status(t)

@@ -27,13 +27,16 @@ class Ruby(BaseWorker):
                              'so_reverse_complementpreparing /tmp/fasta.output.2500000']
                 for tup in [(111, 0), (124, 1), (393, 0), (406, 1)]:
                     df['name'][tup[0]] = miss_list[tup[1]]
-                df1, df2 = df[:282], df[282:]
+                df1, df2 = df[:282], df[282:564]
                 df1_copy = df1.drop_duplicates(subset='name', keep='last', inplace=False)
+                df2_copy = df2.drop_duplicates(subset='name', keep='last', inplace=False)
                 list1 = list(df1_copy["result"])
+                list2 = list(df2_copy["result"])
                 if len(list1) != 249 or len(list2) != 249:
                     self.failed(t, 'error logfile')
                     self.merge(None)
                     continue
+                print(df)
                 self.merge(list1)
                 self.merge(list2)
                 self.status(t)

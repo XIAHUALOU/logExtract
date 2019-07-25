@@ -18,9 +18,11 @@ class Cassandra(BaseWorker):
                     result = self.re.findall(pattern, line)
                     if (result):
                         test_list.append(line.split()[3])
-                    s1_list=test_list[:14]
-                    s2_list=test_list[16:]
-                if len(s1_list) != 14 or len(s2_list) != 14:
+                s1_list.extend(test_list[:2])
+                s1_list.extend(test_list[len(test_list)//2-11:len(test_list)//2-1])
+                s2_list.extend(test_list[len(test_list)//2:len(test_list)//2+2])
+                s2_list.extend(test_list[-10:])
+                if len(s1_list) != 12 or len(s2_list) != 12:
                     self.failed(t, 'error logfile')
                     self.merge(None)
                     continue

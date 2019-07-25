@@ -1,0 +1,247 @@
+node/node.sh
+[node] 
+[node] == node unit test ==
+[node] [INFO] Test docker hub official image first:
+[node] 
+Ign:1 http://deb.debian.org/debian stretch InRelease
+Get:2 http://deb.debian.org/debian stretch-updates InRelease [91.0 kB]
+Get:3 http://deb.debian.org/debian stretch Release [118 kB]
+Get:4 http://security.debian.org/debian-security stretch/updates InRelease [94.3 kB]
+Get:5 http://deb.debian.org/debian stretch Release.gpg [2434 B]
+Ign:2 http://deb.debian.org/debian stretch-updates InRelease
+Get:6 http://deb.debian.org/debian stretch-updates/main amd64 Packages [27.4 kB]
+Ign:4 http://security.debian.org/debian-security stretch/updates InRelease
+Get:7 http://security.debian.org/debian-security stretch/updates/main amd64 Packages [499 kB]
+Ign:5 http://deb.debian.org/debian stretch Release.gpg
+Get:8 http://deb.debian.org/debian stretch/main amd64 Packages [7082 kB]
+Fetched 7915 kB in 1s (7130 kB/s)
+Reading package lists...
+W: GPG error: http://deb.debian.org/debian stretch-updates InRelease: At least one invalid signature was encountered.
+W: The repository 'http://deb.debian.org/debian stretch-updates InRelease' is not signed.
+W: GPG error: http://security.debian.org/debian-security stretch/updates InRelease: At least one invalid signature was encountered.
+W: The repository 'http://security.debian.org/debian-security stretch/updates InRelease' is not signed.
+W: GPG error: http://deb.debian.org/debian stretch Release: At least one invalid signature was encountered.
+W: The repository 'http://deb.debian.org/debian stretch Release' is not signed.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+unzip is already the newest version (6.0-21+deb9u1).
+wget is already the newest version (1.18-5+deb9u3).
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+--2019-07-24 05:59:57--  http://phoronix-test-suite.com/benchmark-files/benchmark-octane-20181001.zip
+Resolving phoronix-test-suite.com (phoronix-test-suite.com)... 162.252.83.89
+Connecting to phoronix-test-suite.com (phoronix-test-suite.com)|162.252.83.89|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1986184 (1.9M) [application/zip]
+Saving to: 'benchmark-octane-20181001.zip'
+
+     0K .......... .......... .......... .......... ..........  2%  310K 6s
+    50K .......... .......... .......... .......... ..........  5%  621K 4s
+   100K .......... .......... .......... .......... ..........  7% 23.2M 3s
+   150K .......... .......... .......... .......... .......... 10% 20.2M 2s
+   200K .......... .......... .......... .......... .......... 12%  647K 2s
+   250K .......... .......... .......... .......... .......... 15% 25.3M 2s
+   300K .......... .......... .......... .......... .......... 18% 28.2M 1s
+   350K .......... .......... .......... .......... .......... 20% 29.0M 1s
+   400K .......... .......... .......... .......... .......... 23%  673K 1s
+   450K .......... .......... .......... .......... .......... 25% 44.4M 1s
+   500K .......... .......... .......... .......... .......... 28% 36.7M 1s
+   550K .......... .......... .......... .......... .......... 30% 49.5M 1s
+   600K .......... .......... .......... .......... .......... 33% 50.8M 1s
+   650K .......... .......... .......... .......... .......... 36% 68.6M 1s
+   700K .......... .......... .......... .......... .......... 38% 56.2M 1s
+   750K .......... .......... .......... .......... .......... 41% 84.0M 1s
+   800K .......... .......... .......... .......... .......... 43% 74.1M 1s
+   850K .......... .......... .......... .......... .......... 46%  679K 1s
+   900K .......... .......... .......... .......... .......... 48%  161M 1s
+   950K .......... .......... .......... .......... .......... 51% 74.9M 0s
+  1000K .......... .......... .......... .......... .......... 54% 74.8M 0s
+  1050K .......... .......... .......... .......... .......... 56%  100M 0s
+  1100K .......... .......... .......... .......... .......... 59% 96.6M 0s
+  1150K .......... .......... .......... .......... .......... 61% 85.2M 0s
+  1200K .......... .......... .......... .......... .......... 64% 85.8M 0s
+  1250K .......... .......... .......... .......... .......... 67% 79.4M 0s
+  1300K .......... .......... .......... .......... .......... 69% 97.0M 0s
+  1350K .......... .......... .......... .......... .......... 72% 55.2M 0s
+  1400K .......... .......... .......... .......... .......... 74%  157M 0s
+  1450K .......... .......... .......... .......... .......... 77%  129M 0s
+  1500K .......... .......... .......... .......... .......... 79%  113M 0s
+  1550K .......... .......... .......... .......... .......... 82%  105M 0s
+  1600K .......... .......... .......... .......... .......... 85%  117M 0s
+  1650K .......... .......... .......... .......... .......... 87%  103M 0s
+  1700K .......... .......... .......... .......... .......... 90%  122M 0s
+  1750K .......... .......... .......... .......... .......... 92%  691K 0s
+  1800K .......... .......... .......... .......... .......... 95%  166M 0s
+  1850K .......... .......... .......... .......... .......... 97%  114M 0s
+  1900K .......... .......... .......... .........            100% 53.5M=0.6s
+
+2019-07-24 05:59:58 (3.34 MB/s) - 'benchmark-octane-20181001.zip' saved [1986184/1986184]
+
+Archive:  benchmark-octane-20181001.zip
+ecbfa1b33ddc294401f97f2cf87c94434fefb097
+   creating: benchmark-octane-master/
+ extracting: benchmark-octane-master/.gitignore  
+  inflating: benchmark-octane-master/README.md  
+   creating: benchmark-octane-master/bin/
+ extracting: benchmark-octane-master/bin/benchmark-octane  
+ extracting: benchmark-octane-master/index.js  
+   creating: benchmark-octane-master/lib/
+  inflating: benchmark-octane-master/lib/octane.js  
+   creating: benchmark-octane-master/lib/octane/
+  inflating: benchmark-octane-master/lib/octane/base.js  
+  inflating: benchmark-octane-master/lib/octane/box2d.js  
+  inflating: benchmark-octane-master/lib/octane/code-load.js  
+  inflating: benchmark-octane-master/lib/octane/crypto.js  
+   creating: benchmark-octane-master/lib/octane/css/
+  inflating: benchmark-octane-master/lib/octane/css/bootstrap-responsive.css  
+  inflating: benchmark-octane-master/lib/octane/css/bootstrap.css  
+  inflating: benchmark-octane-master/lib/octane/css/docs.css  
+  inflating: benchmark-octane-master/lib/octane/deltablue.js  
+  inflating: benchmark-octane-master/lib/octane/earley-boyer.js  
+  inflating: benchmark-octane-master/lib/octane/gbemu-part1.js  
+  inflating: benchmark-octane-master/lib/octane/gbemu-part2.js  
+   creating: benchmark-octane-master/lib/octane/ico/
+ extracting: benchmark-octane-master/lib/octane/ico/apple-touch-icon-114-precomposed.png  
+ extracting: benchmark-octane-master/lib/octane/ico/apple-touch-icon-144-precomposed.png  
+ extracting: benchmark-octane-master/lib/octane/ico/apple-touch-icon-57-precomposed.png  
+ extracting: benchmark-octane-master/lib/octane/ico/apple-touch-icon-72-precomposed.png  
+  inflating: benchmark-octane-master/lib/octane/ico/favicon.ico  
+  inflating: benchmark-octane-master/lib/octane/index.html  
+   creating: benchmark-octane-master/lib/octane/js/
+  inflating: benchmark-octane-master/lib/octane/js/bootstrap-collapse.js  
+  inflating: benchmark-octane-master/lib/octane/js/bootstrap-transition.js  
+  inflating: benchmark-octane-master/lib/octane/js/jquery.js  
+  inflating: benchmark-octane-master/lib/octane/mandreel.js  
+  inflating: benchmark-octane-master/lib/octane/navier-stokes.js  
+  inflating: benchmark-octane-master/lib/octane/pdfjs.js  
+  inflating: benchmark-octane-master/lib/octane/raytrace.js  
+  inflating: benchmark-octane-master/lib/octane/regexp.js  
+  inflating: benchmark-octane-master/lib/octane/richards.js  
+  inflating: benchmark-octane-master/lib/octane/run.js  
+  inflating: benchmark-octane-master/lib/octane/splay.js  
+  inflating: benchmark-octane-master/lib/octane/typescript-compiler.js  
+  inflating: benchmark-octane-master/lib/octane/typescript-input.js  
+  inflating: benchmark-octane-master/lib/octane/typescript.js  
+  inflating: benchmark-octane-master/lib/octane/zlib-data.js  
+  inflating: benchmark-octane-master/lib/octane/zlib.js  
+  inflating: benchmark-octane-master/package.json  
+  inflating: benchmark-octane-master/run.js  
+    hostname     : c8a999fa0b9c
+    node version : v12.6.0
+      V8 version : 7.5.288.22-node.14
+ platform & arch : linux x64
+
+ config : {
+  target_defaults: {
+    cflags: [],
+    default_configuration: [32m'Release'[39m,
+    defines: [],
+    include_dirs: [],
+    libraries: []
+  },
+  variables: {
+    asan: [33m0[39m,
+    build_v8_with_gn: [33mfalse[39m,
+    coverage: [33mfalse[39m,
+    debug_nghttp2: [33mfalse[39m,
+    enable_lto: [33mfalse[39m,
+    enable_pgo_generate: [33mfalse[39m,
+    enable_pgo_use: [33mfalse[39m,
+    force_dynamic_crt: [33m0[39m,
+    gas_version: [32m'2.27'[39m,
+    host_arch: [32m'x64'[39m,
+    icu_data_in: [32m'../../deps/icu-small/source/data/in/icudt64l.dat'[39m,
+    icu_endianness: [32m'l'[39m,
+    icu_gyp_path: [32m'tools/icu/icu-generic.gyp'[39m,
+    icu_locales: [32m'en,root'[39m,
+    icu_path: [32m'deps/icu-small'[39m,
+    icu_small: [33mtrue[39m,
+    icu_ver_major: [32m'64'[39m,
+    is_debug: [33m0[39m,
+    llvm_version: [33m0[39m,
+    napi_build_version: [32m'4'[39m,
+    node_byteorder: [32m'little'[39m,
+    node_code_cache_path: [32m'yes'[39m,
+    node_debug_lib: [33mfalse[39m,
+    node_enable_d8: [33mfalse[39m,
+    node_enable_v8_vtunejit: [33mfalse[39m,
+    node_install_npm: [33mtrue[39m,
+    node_module_version: [33m72[39m,
+    node_no_browser_globals: [33mfalse[39m,
+    node_prefix: [32m'/'[39m,
+    node_release_urlbase: [32m'https://nodejs.org/download/release/'[39m,
+    node_report: [33mtrue[39m,
+    node_shared: [33mfalse[39m,
+    node_shared_cares: [33mfalse[39m,
+    node_shared_http_parser: [33mfalse[39m,
+    node_shared_libuv: [33mfalse[39m,
+    node_shared_nghttp2: [33mfalse[39m,
+    node_shared_openssl: [33mfalse[39m,
+    node_shared_zlib: [33mfalse[39m,
+    node_tag: [32m''[39m,
+    node_target_type: [32m'executable'[39m,
+    node_use_bundled_v8: [33mtrue[39m,
+    node_use_dtrace: [33mfalse[39m,
+    node_use_etw: [33mfalse[39m,
+    node_use_large_pages: [33mfalse[39m,
+    node_use_node_snapshot: [33mtrue[39m,
+    node_use_openssl: [33mtrue[39m,
+    node_use_v8_platform: [33mtrue[39m,
+    node_with_ltcg: [33mfalse[39m,
+    node_without_node_options: [33mfalse[39m,
+    openssl_fips: [32m''[39m,
+    openssl_is_fips: [33mfalse[39m,
+    shlib_suffix: [32m'so.72'[39m,
+    target_arch: [32m'x64'[39m,
+    v8_enable_gdbjit: [33m0[39m,
+    v8_enable_i18n_support: [33m1[39m,
+    v8_enable_inspector: [33m1[39m,
+    v8_no_strict_aliasing: [33m1[39m,
+    v8_optimized_debug: [33m1[39m,
+    v8_promise_internal_field_count: [33m1[39m,
+    v8_random_seed: [33m0[39m,
+    v8_trace_maps: [33m0[39m,
+    v8_use_siphash: [33m1[39m,
+    v8_use_snapshot: [33m1[39m,
+    want_separate_host_toolset: [33m0[39m
+  }
+}
+
+Richards            : 26448
+DeltaBlue           : 64868
+Crypto              : 31325
+RayTrace            : 72371
+EarleyBoyer         : 43702
+RegExp              : 6565
+Splay               : 19362
+SplayLatency        : 38007
+NavierStokes        : 38063
+PdfJS               : 30712
+Mandreel            : 34485
+MandreelLatency     : 43730
+Gameboy             : 44073
+CodeLoad            : 23809
+Box2D               : 60605
+zlib                : 68588
+Typescript          : 37690
+----
+Score (version 9): 35609
+ duration  32.475185124  seconds
+(node:88) [DEP0016] DeprecationWarning: 'GLOBAL' is deprecated, use 'global'
+Default-Node-Server
+[node] [INFO] Test clear docker image:
+[node] 
+Set upstream mirror to https://cdn-alt.download.clearlinux.org/update
+Installed version: 30450
+Version URL:       https://cdn-alt.download.clearlinux.org/update
+Content URL:       https://cdn-alt.download.clearlinux.org/update
+Loading required manifests...
+NOTE: currently, swupd only checks /usr/ (or the passed-in path with /usr/ appended) for available space.
+To skip this error and install anyways, add the --skip-diskspace-check flag to your command.
+Error: Unable to determine free space on filesystem.
+Failed to install 2 of 2 bundles
+Clr-Node-Server

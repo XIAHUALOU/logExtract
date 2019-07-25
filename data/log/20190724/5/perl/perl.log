@@ -1,0 +1,81 @@
+perl/perl.sh
+[perl] 
+[perl] == perl unit test ==
+[perl] [INFO] Test docker hub official image first:
+[perl] 
+--2019-07-24 08:06:27--  http://phoronix-test-suite.com/benchmark-files/perlbench-20160525.zip
+Resolving phoronix-test-suite.com (phoronix-test-suite.com)... 162.252.83.89
+Connecting to phoronix-test-suite.com (phoronix-test-suite.com)|162.252.83.89|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 795381 (777K) [application/zip]
+Saving to: 'perlbench-20160525.zip'
+
+     0K .......... .......... .......... .......... ..........  6%  308K 2s
+    50K .......... .......... .......... .......... .......... 12%  619K 2s
+   100K .......... .......... .......... .......... .......... 19% 24.8M 1s
+   150K .......... .......... .......... .......... .......... 25% 19.3M 1s
+   200K .......... .......... .......... .......... .......... 32%  635K 1s
+   250K .......... .......... .......... .......... .......... 38% 25.5M 1s
+   300K .......... .......... .......... .......... .......... 45% 44.4M 0s
+   350K .......... .......... .......... .......... .......... 51% 29.4M 0s
+   400K .......... .......... .......... .......... .......... 57%  665K 0s
+   450K .......... .......... .......... .......... .......... 64% 33.3M 0s
+   500K .......... .......... .......... .......... .......... 70% 86.5M 0s
+   550K .......... .......... .......... .......... .......... 77% 44.2M 0s
+   600K .......... .......... .......... .......... .......... 83% 48.8M 0s
+   650K .......... .......... .......... .......... .......... 90% 65.4M 0s
+   700K .......... .......... .......... .......... .......... 96% 64.4M 0s
+   750K .......... .......... ......                          100% 86.6M=0.4s
+
+2019-07-24 08:06:28 (1.84 MB/s) - 'perlbench-20160525.zip' saved [795381/795381]
+
+Host: c84529f2c23a
+Perl: /usr/local/bin/perl
+Test-File: benchmarks/app/podhtml.b
+Test-Name: Run pod2html on perlfunc
+Test-Result: perlbench-results/c84529f2c23a/perls/cc4b7ced2cbe64dd1e7a2dd66c4fdbcc/tests/20190724T080628.pb
+Host: c84529f2c23a
+Perl: /usr/local/bin/perl
+Test-File: benchmarks/startup/noprog.b
+Test-Name: How long does it take to start the interpreter
+Test-Result: perlbench-results/c84529f2c23a/perls/cc4b7ced2cbe64dd1e7a2dd66c4fdbcc/tests/20190724T080753.pb
+Date: 2019-07-24 08:06:28 (08:07:53)
+PerlBench-Version: 0.93
+Test: benchmarks/app/podhtml.b md5:ee2f3b4f2eecc05245ef158f263d3f24
+Perl: /usr/local/bin/perl 5.030000
+Hostname: c84529f2c23a
+System-Uptime: 08:07:53 up 1 day, 2:40, 0 users, load average: 1.00, 1.01, 1.25
+Cycles: 7
+Loop-Overhead: 0.1%
+Samples: 56
+Min: 0.167188232142857
+Med: 0.172973446428571
+Max: 0.178633633928571
+Avg: 0.173075054528061
+Std-Dev: 0.0022644721344905
+Date: 2019-07-24 08:07:53 (08:08:52)
+PerlBench-Version: 0.93
+Test: benchmarks/startup/noprog.b md5:e983ca4f46f3a89d56c58b494ea0a96f
+Perl: /usr/local/bin/perl 5.030000
+Hostname: c84529f2c23a
+System-Uptime: 08:08:52 up 1 day, 2:41, 0 users, load average: 0.81, 0.95, 1.21
+Cycles: 671
+Loop-Overhead: 0.8%
+Samples: 56
+Min: 0.00147639585107515
+Med: 0.00153729898073238
+Max: 0.00163611148073238
+Avg: 0.00154057836190083
+Std-Dev: 2.89646228903261e-05
+[perl] [INFO] Test clear docker image:
+[perl] 
+Set upstream mirror to https://cdn-alt.download.clearlinux.org/update
+Installed version: 30450
+Version URL:       https://cdn-alt.download.clearlinux.org/update
+Content URL:       https://cdn-alt.download.clearlinux.org/update
+Loading required manifests...
+Error: Unable to determine free space on filesystem.
+NOTE: currently, swupd only checks /usr/ (or the passed-in path with /usr/ appended) for available space.
+To skip this error and install anyways, add the --skip-diskspace-check flag to your command.
+Failed to install 2 of 2 bundles
+make: *** [Makefile:14: perl] Error 25

@@ -1,0 +1,290 @@
+openjdk/openjdk.sh
+[openjdk] 
+[openjdk] == openjdk unit test ==
+[openjdk] [INFO] generating benchmarks.jar by maven tool first:
+[openjdk] 
+[openjdk] [INFO] Test docker hub official image first:
+[openjdk] 
+# JMH version: 1.21
+# VM version: JDK 1.8.0_222, OpenJDK 64-Bit Server VM, 25.222-b10
+# VM invoker: /usr/local/openjdk-8/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.sample.MyBenchmark.testMethod
+
+# Run progress: 0.00% complete, ETA 00:08:20
+# Fork: 1 of 5
+# Warmup Iteration   1: 3401347207.121 ops/s
+# Warmup Iteration   2: 3407700715.550 ops/s
+# Warmup Iteration   3: 3371054160.887 ops/s
+# Warmup Iteration   4: 3389667008.185 ops/s
+# Warmup Iteration   5: 3362883069.026 ops/s
+Iteration   1: 3374414888.623 ops/s
+Iteration   2: 3370088896.140 ops/s
+Iteration   3: 3409614198.191 ops/s
+Iteration   4: 3400949656.185 ops/s
+Iteration   5: 3386573851.776 ops/s
+
+# Run progress: 20.00% complete, ETA 00:06:41
+# Fork: 2 of 5
+# Warmup Iteration   1: 3404165862.014 ops/s
+# Warmup Iteration   2: 3399284025.954 ops/s
+# Warmup Iteration   3: 3406864921.426 ops/s
+# Warmup Iteration   4: 3367632804.323 ops/s
+# Warmup Iteration   5: 3404661849.584 ops/s
+Iteration   1: 3398058043.184 ops/s
+Iteration   2: 3416568590.905 ops/s
+Iteration   3: 3414927222.442 ops/s
+Iteration   4: 3403963878.493 ops/s
+Iteration   5: 3419140487.969 ops/s
+
+# Run progress: 40.00% complete, ETA 00:05:00
+# Fork: 3 of 5
+# Warmup Iteration   1: 3412439656.132 ops/s
+# Warmup Iteration   2: 3386228741.676 ops/s
+# Warmup Iteration   3: 3409569266.802 ops/s
+# Warmup Iteration   4: 3365767448.114 ops/s
+# Warmup Iteration   5: 3388692853.230 ops/s
+Iteration   1: 3404359400.392 ops/s
+Iteration   2: 3407543165.306 ops/s
+Iteration   3: 3402467884.071 ops/s
+Iteration   4: 3410463832.957 ops/s
+Iteration   5: 3401192952.814 ops/s
+
+# Run progress: 60.00% complete, ETA 00:03:20
+# Fork: 4 of 5
+# Warmup Iteration   1: 3389015456.084 ops/s
+# Warmup Iteration   2: 3409271633.463 ops/s
+# Warmup Iteration   3: 3393340600.812 ops/s
+# Warmup Iteration   4: 3361167455.732 ops/s
+# Warmup Iteration   5: 3376035726.531 ops/s
+Iteration   1: 3342507644.694 ops/s
+Iteration   2: 3380724992.650 ops/s
+Iteration   3: 3383509659.628 ops/s
+Iteration   4: 3392977916.671 ops/s
+Iteration   5: 3391053508.894 ops/s
+
+# Run progress: 80.00% complete, ETA 00:01:40
+# Fork: 5 of 5
+# Warmup Iteration   1: 3389272885.688 ops/s
+# Warmup Iteration   2: 3384746477.364 ops/s
+# Warmup Iteration   3: 3395965232.828 ops/s
+# Warmup Iteration   4: 3401893877.419 ops/s
+# Warmup Iteration   5: 3354358779.438 ops/s
+Iteration   1: 3388307074.136 ops/s
+Iteration   2: 3412205649.393 ops/s
+Iteration   3: 3395637474.662 ops/s
+Iteration   4: 3396877175.533 ops/s
+Iteration   5: 3399718820.071 ops/s
+
+
+Result "org.sample.MyBenchmark.testMethod":
+  3396153874.631 ±(99.9%) 12721391.160 ops/s [Average]
+  (min, avg, max) = (3342507644.694, 3396153874.631, 3419140487.969), stdev = 16982693.237
+  CI (99.9%): [3383432483.471, 3408875265.791] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:08:21
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                Mode  Cnt           Score          Error  Units
+MyBenchmark.testMethod  thrpt   25  3396153874.631 ± 12721391.160  ops/s
+[openjdk] [INFO] Test clear docker image:
+[openjdk] 
+# JMH version: 1.21
+# VM version: JDK 1.8.0-internal, OpenJDK 64-Bit Server VM, 25.71-b00
+# VM invoker: /usr/lib/jvm/java-1.8.0-openjdk/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.sample.MyBenchmark.testMethod
+
+# Run progress: 0.00% complete, ETA 00:08:20
+# Fork: 1 of 5
+# Warmup Iteration   1: 3407530358.771 ops/s
+# Warmup Iteration   2: 3399627001.989 ops/s
+# Warmup Iteration   3: 3416293739.559 ops/s
+# Warmup Iteration   4: 3393724043.803 ops/s
+# Warmup Iteration   5: 3381752029.174 ops/s
+Iteration   1: 3376884717.789 ops/s
+Iteration   2: 3402084401.331 ops/s
+Iteration   3: 3406386024.016 ops/s
+Iteration   4: 3415167743.130 ops/s
+Iteration   5: 3398826897.890 ops/s
+
+# Run progress: 20.00% complete, ETA 00:06:41
+# Fork: 2 of 5
+# Warmup Iteration   1: 3396202771.695 ops/s
+# Warmup Iteration   2: 3407489540.671 ops/s
+# Warmup Iteration   3: 3372461891.696 ops/s
+# Warmup Iteration   4: 3395912345.421 ops/s
+# Warmup Iteration   5: 3408499726.568 ops/s
+Iteration   1: 3399546666.347 ops/s
+Iteration   2: 3391166990.009 ops/s
+Iteration   3: 3378688033.912 ops/s
+Iteration   4: 3380593375.633 ops/s
+Iteration   5: 3405789414.219 ops/s
+
+# Run progress: 40.00% complete, ETA 00:05:00
+# Fork: 3 of 5
+# Warmup Iteration   1: 3407055878.657 ops/s
+# Warmup Iteration   2: 3401502309.064 ops/s
+# Warmup Iteration   3: 3393147744.408 ops/s
+# Warmup Iteration   4: 3398339843.643 ops/s
+# Warmup Iteration   5: 3403827920.508 ops/s
+Iteration   1: 3384583117.483 ops/s
+Iteration   2: 3402253010.870 ops/s
+Iteration   3: 3400174712.569 ops/s
+Iteration   4: 3395924952.904 ops/s
+Iteration   5: 3403804370.815 ops/s
+
+# Run progress: 60.00% complete, ETA 00:03:20
+# Fork: 4 of 5
+# Warmup Iteration   1: 3408352696.136 ops/s
+# Warmup Iteration   2: 3397373037.534 ops/s
+# Warmup Iteration   3: 3408380002.122 ops/s
+# Warmup Iteration   4: 3398485842.150 ops/s
+# Warmup Iteration   5: 3400204774.648 ops/s
+Iteration   1: 3395010777.698 ops/s
+Iteration   2: 3402440105.779 ops/s
+Iteration   3: 3372735308.376 ops/s
+Iteration   4: 3409774637.066 ops/s
+Iteration   5: 3397752693.413 ops/s
+
+# Run progress: 80.00% complete, ETA 00:01:40
+# Fork: 5 of 5
+# Warmup Iteration   1: 3389407677.703 ops/s
+# Warmup Iteration   2: 3410234188.744 ops/s
+# Warmup Iteration   3: 3386001214.747 ops/s
+# Warmup Iteration   4: 3396257500.672 ops/s
+# Warmup Iteration   5: 3406152377.466 ops/s
+Iteration   1: 3376049432.577 ops/s
+Iteration   2: 3399521172.039 ops/s
+Iteration   3: 3411707496.080 ops/s
+Iteration   4: 3379734372.161 ops/s
+Iteration   5: 3376366190.621 ops/s
+
+
+Result "org.sample.MyBenchmark.testMethod":
+  3394518664.589 ?(99.9%) 9464281.821 ops/s [Average]
+  (min, avg, max) = (3372735308.376, 3394518664.589, 3415167743.130), stdev = 12634545.455
+  CI (99.9%): [3385054382.768, 3403982946.410] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:08:21
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                Mode  Cnt           Score         Error  Units
+MyBenchmark.testMethod  thrpt   25  3394518664.589 ? 9464281.821  ops/s
+[openjdk] [INFO] Test extra official docker image, official latest image:
+[openjdk] 
+# JMH version: 1.21
+# VM version: JDK 1.8.0_222, OpenJDK 64-Bit Server VM, 25.222-b10
+# VM invoker: /usr/local/openjdk-8/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.sample.MyBenchmark.testMethod
+
+# Run progress: 0.00% complete, ETA 00:08:20
+# Fork: 1 of 5
+# Warmup Iteration   1: 3371119959.162 ops/s
+# Warmup Iteration   2: 3399802495.012 ops/s
+# Warmup Iteration   3: 3410372668.919 ops/s
+# Warmup Iteration   4: 3418220735.557 ops/s
+# Warmup Iteration   5: 3387713994.408 ops/s
+Iteration   1: 3401011308.277 ops/s
+Iteration   2: 3414679082.338 ops/s
+Iteration   3: 3398695983.742 ops/s
+Iteration   4: 3403378241.886 ops/s
+Iteration   5: 3407252055.434 ops/s
+
+# Run progress: 20.00% complete, ETA 00:06:41
+# Fork: 2 of 5
+# Warmup Iteration   1: 3368511296.615 ops/s
+# Warmup Iteration   2: 3419619894.956 ops/s
+# Warmup Iteration   3: 3415239472.345 ops/s
+# Warmup Iteration   4: 3401247007.526 ops/s
+# Warmup Iteration   5: 3412893093.781 ops/s
+Iteration   1: 3397320541.045 ops/s
+Iteration   2: 3388456431.210 ops/s
+Iteration   3: 3410497602.593 ops/s
+Iteration   4: 3408464637.570 ops/s
+Iteration   5: 3393527543.261 ops/s
+
+# Run progress: 40.00% complete, ETA 00:05:00
+# Fork: 3 of 5
+# Warmup Iteration   1: 3384524733.382 ops/s
+# Warmup Iteration   2: 3400361869.905 ops/s
+# Warmup Iteration   3: 3383173044.849 ops/s
+# Warmup Iteration   4: 3411739268.191 ops/s
+# Warmup Iteration   5: 3414453866.389 ops/s
+Iteration   1: 3410405679.760 ops/s
+Iteration   2: 3410779319.940 ops/s
+Iteration   3: 3400536158.207 ops/s
+Iteration   4: 3403061952.699 ops/s
+Iteration   5: 3396157125.242 ops/s
+
+# Run progress: 60.00% complete, ETA 00:03:20
+# Fork: 4 of 5
+# Warmup Iteration   1: 3396018491.620 ops/s
+# Warmup Iteration   2: 3377903161.082 ops/s
+# Warmup Iteration   3: 3360817706.352 ops/s
+# Warmup Iteration   4: 3402381791.950 ops/s
+# Warmup Iteration   5: 3381600398.362 ops/s
+Iteration   1: 3398259092.602 ops/s
+Iteration   2: 3402061351.117 ops/s
+Iteration   3: 3383518062.116 ops/s
+Iteration   4: 3397447689.432 ops/s
+Iteration   5: 3407487076.981 ops/s
+
+# Run progress: 80.00% complete, ETA 00:01:40
+# Fork: 5 of 5
+# Warmup Iteration   1: 3391476431.834 ops/s
+# Warmup Iteration   2: 3363435495.154 ops/s
+# Warmup Iteration   3: 3397401882.134 ops/s
+# Warmup Iteration   4: 3398138069.645 ops/s
+# Warmup Iteration   5: 3397806399.179 ops/s
+Iteration   1: 3385667405.116 ops/s
+Iteration   2: 3372025990.554 ops/s
+Iteration   3: 3399906442.020 ops/s
+Iteration   4: 3385613031.736 ops/s
+Iteration   5: 3389867698.259 ops/s
+
+
+Result "org.sample.MyBenchmark.testMethod":
+  3398643100.125 ±(99.9%) 7627479.292 ops/s [Average]
+  (min, avg, max) = (3372025990.554, 3398643100.125, 3414679082.338), stdev = 10182466.631
+  CI (99.9%): [3391015620.834, 3406270579.417] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:08:21
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                Mode  Cnt           Score         Error  Units
+MyBenchmark.testMethod  thrpt   25  3398643100.125 ± 7627479.292  ops/s

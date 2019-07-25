@@ -27,7 +27,8 @@ class Golang(BaseWorker):
                 self.merge(s2_list)
                 self.status(t)
             except Exception as Ex:
-                self.failed(t, Ex)
+                self.failed(t, 'error logfile')
+                self.merge(None)
                 continue
 
     def to_excel(self):

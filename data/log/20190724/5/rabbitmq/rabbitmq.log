@@ -1,0 +1,8 @@
+rabbitmq/rabbitmq.sh
+[rabbitmq] 
+[rabbitmq] == rabbitmq unit test ==
+[rabbitmq] [INFO] Test docker hub official image first:
+[rabbitmq] 
+1ff5028c9acc96fdf1454799dd3b1b8705105fe93adbc5a98166c477d4fa3786
+Error: No such object: offi-rabbitmq
+make: *** [Makefile:14: rabbitmq] Error 1

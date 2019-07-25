@@ -1,0 +1,732 @@
+postgres/postgres.sh
+[postgres] 
+[postgres] == postgres unit test ==
+[postgres] [INFO] Test docker hub official image first:
+[postgres] 
+pgbench with BUFFER_TEST SINGLE_THREAD READ_WRITE
+pgbench_entry
+PGDATA=/var/lib/postgresql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST SINGLE_THREAD READ_WRITE
+posgresql user mode
+HOME=/var/lib/postgresql
+PGDATA=/var/lib/postgresql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+initdb: could not create directory "/var/lib/postgresql/data/pg_wal": No space left on device
+initdb: removing contents of data directory "/var/lib/postgresql/data"
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+createdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+SYS_MEMORY=32933956 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+PGBENCH_ARGS=-c 1 PGBENCH_MORE_ARGS=
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+dropdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+pgbench with BUFFER_TEST SINGLE_THREAD READ_ONLY
+pgbench_entry
+PGDATA=/var/lib/postgresql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST SINGLE_THREAD READ_ONLY
+posgresql user mode
+HOME=/var/lib/postgresql
+PGDATA=/var/lib/postgresql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+initdb: could not create directory "/var/lib/postgresql/data/pg_wal": No space left on device
+initdb: removing contents of data directory "/var/lib/postgresql/data"
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+createdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+SYS_MEMORY=32933956 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+PGBENCH_ARGS=-c 1 PGBENCH_MORE_ARGS=-S
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+dropdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+pgbench with BUFFER_TEST NORMAL_LOAD READ_WRITE
+pgbench_entry
+PGDATA=/var/lib/postgresql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST NORMAL_LOAD READ_WRITE
+posgresql user mode
+HOME=/var/lib/postgresql
+PGDATA=/var/lib/postgresql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+initdb: could not create directory "/var/lib/postgresql/data/pg_wal": No space left on device
+initdb: removing contents of data directory "/var/lib/postgresql/data"
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+createdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+SYS_MEMORY=32933956 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+PGBENCH_ARGS=-j 16 -c 64 PGBENCH_MORE_ARGS=
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+dropdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+pgbench with BUFFER_TEST NORMAL_LOAD READ_ONLY
+pgbench_entry
+PGDATA=/var/lib/postgresql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST NORMAL_LOAD READ_ONLY
+posgresql user mode
+HOME=/var/lib/postgresql
+PGDATA=/var/lib/postgresql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+initdb: could not create directory "/var/lib/postgresql/data/pg_wal": No space left on device
+initdb: removing contents of data directory "/var/lib/postgresql/data"
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+createdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+SYS_MEMORY=32933956 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+PGBENCH_ARGS=-j 16 -c 64 PGBENCH_MORE_ARGS=-S
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+dropdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+pgbench with BUFFER_TEST HEAVY_CONTENTION READ_WRITE
+pgbench_entry
+PGDATA=/var/lib/postgresql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST HEAVY_CONTENTION READ_WRITE
+posgresql user mode
+HOME=/var/lib/postgresql
+PGDATA=/var/lib/postgresql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+initdb: could not create directory "/var/lib/postgresql/data/pg_wal": No space left on device
+initdb: removing contents of data directory "/var/lib/postgresql/data"
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+createdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+SYS_MEMORY=32933956 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+PGBENCH_ARGS=-j 32 -c 256 PGBENCH_MORE_ARGS=
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+dropdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+pgbench with BUFFER_TEST HEAVY_CONTENTION READ_ONLY
+pgbench_entry
+PGDATA=/var/lib/postgresql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST HEAVY_CONTENTION READ_ONLY
+posgresql user mode
+HOME=/var/lib/postgresql
+PGDATA=/var/lib/postgresql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+initdb: could not create directory "/var/lib/postgresql/data/pg_wal": No space left on device
+initdb: removing contents of data directory "/var/lib/postgresql/data"
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+createdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+SYS_MEMORY=32933956 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+PGBENCH_ARGS=-j 32 -c 256 PGBENCH_MORE_ARGS=-S
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+dropdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+Default-Node-Server
+[postgres] [INFO] Test clear docker image:
+[postgres] 
+pgbench with BUFFER_TEST SINGLE_THREAD READ_WRITE
+pgbench_entry
+PGDATA=/var/lib/pgsql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST SINGLE_THREAD READ_WRITE
+posgresql user mode
+HOME=/
+PGDATA=/var/lib/pgsql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/pgsql/data ... ok
+initdb: could not create directory "/var/lib/pgsql/data/pg_xlog": No space left on device
+initdb: removing contents of data directory "/var/lib/pgsql/data"
+pg_ctl: directory "/var/lib/pgsql/data" is not a database cluster directory
+createdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+SYS_MEMORY=32933956 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+PGBENCH_ARGS=-c 1 PGBENCH_MORE_ARGS=
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+dropdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+pg_ctl: directory "/var/lib/pgsql/data" is not a database cluster directory
+pgbench with BUFFER_TEST SINGLE_THREAD READ_ONLY
+pgbench_entry
+PGDATA=/var/lib/pgsql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST SINGLE_THREAD READ_ONLY
+posgresql user mode
+HOME=/
+PGDATA=/var/lib/pgsql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/pgsql/data ... ok
+initdb: could not create directory "/var/lib/pgsql/data/pg_xlog": No space left on device
+initdb: removing contents of data directory "/var/lib/pgsql/data"
+pg_ctl: directory "/var/lib/pgsql/data" is not a database cluster directory
+createdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+SYS_MEMORY=32933956 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+PGBENCH_ARGS=-c 1 PGBENCH_MORE_ARGS=-S
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+dropdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+pg_ctl: directory "/var/lib/pgsql/data" is not a database cluster directory
+pgbench with BUFFER_TEST NORMAL_LOAD READ_WRITE
+pgbench_entry
+PGDATA=/var/lib/pgsql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST NORMAL_LOAD READ_WRITE
+posgresql user mode
+HOME=/
+PGDATA=/var/lib/pgsql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/pgsql/data ... ok
+initdb: could not create directory "/var/lib/pgsql/data/pg_xlog": No space left on device
+initdb: removing contents of data directory "/var/lib/pgsql/data"
+pg_ctl: directory "/var/lib/pgsql/data" is not a database cluster directory
+createdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+SYS_MEMORY=32933956 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+PGBENCH_ARGS=-j 16 -c 64 PGBENCH_MORE_ARGS=
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+dropdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+pg_ctl: directory "/var/lib/pgsql/data" is not a database cluster directory
+pgbench with BUFFER_TEST NORMAL_LOAD READ_ONLY
+pgbench_entry
+PGDATA=/var/lib/pgsql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST NORMAL_LOAD READ_ONLY
+posgresql user mode
+HOME=/
+PGDATA=/var/lib/pgsql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/pgsql/data ... ok
+initdb: could not create directory "/var/lib/pgsql/data/pg_xlog": No space left on device
+initdb: removing contents of data directory "/var/lib/pgsql/data"
+pg_ctl: directory "/var/lib/pgsql/data" is not a database cluster directory
+createdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+SYS_MEMORY=32933956 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+PGBENCH_ARGS=-j 16 -c 64 PGBENCH_MORE_ARGS=-S
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+dropdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+pg_ctl: directory "/var/lib/pgsql/data" is not a database cluster directory
+pgbench with BUFFER_TEST HEAVY_CONTENTION READ_WRITE
+pgbench_entry
+PGDATA=/var/lib/pgsql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST HEAVY_CONTENTION READ_WRITE
+posgresql user mode
+HOME=/
+PGDATA=/var/lib/pgsql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/pgsql/data ... ok
+initdb: could not create directory "/var/lib/pgsql/data/pg_xlog": No space left on device
+initdb: removing contents of data directory "/var/lib/pgsql/data"
+pg_ctl: directory "/var/lib/pgsql/data" is not a database cluster directory
+createdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+SYS_MEMORY=32933956 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+PGBENCH_ARGS=-j 32 -c 256 PGBENCH_MORE_ARGS=
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+dropdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+pg_ctl: directory "/var/lib/pgsql/data" is not a database cluster directory
+pgbench with BUFFER_TEST HEAVY_CONTENTION READ_ONLY
+pgbench_entry
+PGDATA=/var/lib/pgsql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST HEAVY_CONTENTION READ_ONLY
+posgresql user mode
+HOME=/
+PGDATA=/var/lib/pgsql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/pgsql/data ... ok
+initdb: could not create directory "/var/lib/pgsql/data/pg_xlog": No space left on device
+initdb: removing contents of data directory "/var/lib/pgsql/data"
+pg_ctl: directory "/var/lib/pgsql/data" is not a database cluster directory
+createdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+SYS_MEMORY=32933956 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+PGBENCH_ARGS=-j 32 -c 256 PGBENCH_MORE_ARGS=-S
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+dropdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/run/postgresql/.s.PGSQL.5432"?
+pg_ctl: directory "/var/lib/pgsql/data" is not a database cluster directory
+Clr-Node-Server
+[postgres] [INFO] Test extra official docker image, postgres9.6:
+[postgres] 
+pgbench with BUFFER_TEST SINGLE_THREAD READ_WRITE
+pgbench_entry
+PGDATA=/var/lib/postgresql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST SINGLE_THREAD READ_WRITE
+posgresql user mode
+HOME=/var/lib/postgresql
+PGDATA=/var/lib/postgresql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+initdb: could not create directory "/var/lib/postgresql/data/pg_xlog": No space left on device
+initdb: removing contents of data directory "/var/lib/postgresql/data"
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+createdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+SYS_MEMORY=32933956 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+PGBENCH_ARGS=-c 1 PGBENCH_MORE_ARGS=
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+dropdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+pgbench with BUFFER_TEST SINGLE_THREAD READ_ONLY
+pgbench_entry
+PGDATA=/var/lib/postgresql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST SINGLE_THREAD READ_ONLY
+posgresql user mode
+HOME=/var/lib/postgresql
+PGDATA=/var/lib/postgresql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+initdb: could not create directory "/var/lib/postgresql/data/pg_xlog": No space left on device
+initdb: removing contents of data directory "/var/lib/postgresql/data"
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+createdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+SYS_MEMORY=32933956 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+PGBENCH_ARGS=-c 1 PGBENCH_MORE_ARGS=-S
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+dropdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+pgbench with BUFFER_TEST NORMAL_LOAD READ_WRITE
+pgbench_entry
+PGDATA=/var/lib/postgresql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST NORMAL_LOAD READ_WRITE
+posgresql user mode
+HOME=/var/lib/postgresql
+PGDATA=/var/lib/postgresql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+initdb: could not create directory "/var/lib/postgresql/data/pg_xlog": No space left on device
+initdb: removing contents of data directory "/var/lib/postgresql/data"
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+createdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+SYS_MEMORY=32933956 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+PGBENCH_ARGS=-j 16 -c 64 PGBENCH_MORE_ARGS=
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+dropdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+pgbench with BUFFER_TEST NORMAL_LOAD READ_ONLY
+pgbench_entry
+PGDATA=/var/lib/postgresql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST NORMAL_LOAD READ_ONLY
+posgresql user mode
+HOME=/var/lib/postgresql
+PGDATA=/var/lib/postgresql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+initdb: could not create directory "/var/lib/postgresql/data/pg_xlog": No space left on device
+initdb: removing contents of data directory "/var/lib/postgresql/data"
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+createdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+SYS_MEMORY=32933956 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+PGBENCH_ARGS=-j 16 -c 64 PGBENCH_MORE_ARGS=-S
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+dropdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+pgbench with BUFFER_TEST HEAVY_CONTENTION READ_WRITE
+pgbench_entry
+PGDATA=/var/lib/postgresql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST HEAVY_CONTENTION READ_WRITE
+posgresql user mode
+HOME=/var/lib/postgresql
+PGDATA=/var/lib/postgresql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+initdb: could not create directory "/var/lib/postgresql/data/pg_xlog": No space left on device
+initdb: removing contents of data directory "/var/lib/postgresql/data"
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+createdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+SYS_MEMORY=32933956 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+PGBENCH_ARGS=-j 32 -c 256 PGBENCH_MORE_ARGS=
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+dropdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+pgbench with BUFFER_TEST HEAVY_CONTENTION READ_ONLY
+pgbench_entry
+PGDATA=/var/lib/postgresql/data
+POSTGRES_INITDB_WALDIR=
+input parameters: BUFFER_TEST HEAVY_CONTENTION READ_ONLY
+posgresql user mode
+HOME=/var/lib/postgresql
+PGDATA=/var/lib/postgresql/data
+/
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+initdb: could not create directory "/var/lib/postgresql/data/pg_xlog": No space left on device
+initdb: removing contents of data directory "/var/lib/postgresql/data"
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+createdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+SYS_MEMORY=32933956 NUM_CPU_CORES=16
+BUFFER_TEST Selected
+SCALING_FACTOR=98
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+PGBENCH_ARGS=-j 32 -c 256 PGBENCH_MORE_ARGS=-S
+connection to database "pgbench" failed:
+could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+dropdb: could not connect to database template1: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+pg_ctl: directory "/var/lib/postgresql/data" is not a database cluster directory
+Extra Test on postgres9.6

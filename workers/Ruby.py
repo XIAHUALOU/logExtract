@@ -39,6 +39,7 @@ class Ruby(BaseWorker):
                 self.status(t)
             except Exception as Ex:
                 self.failed(t, Ex)
+                self.merge(None)
                 continue
 
     def to_excel(self):

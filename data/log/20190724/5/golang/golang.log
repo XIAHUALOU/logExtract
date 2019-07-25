@@ -1,0 +1,57 @@
+golang/golang.sh
+[golang] 
+[golang] == golang unit test ==
+[golang] [INFO] Test docker hub official image first:
+[golang] 
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+2019/07/24 07:29:52 Failed to execute 'perf record [go build -o goperf -a -p 1 cmd/go]': exec: "perf": executable file not found in $PATH
+# sections=/tmp/1.size.txt
+BenchmarkBuild-16        1	26861918210 ns/op	  14617825 binary-size	26861918210 build-ns/op	 218800128 build-peak-RSS-bytes	27339416000 build-user+sys-ns/op
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+2019/07/24 07:29:52 Benchmarking 1 iterations
+consumption=1733KB npkg=15
+2019/07/24 07:29:52 Benchmarking 100 iterations
+2019/07/24 07:29:53 Benchmarking 10000 iterations
+# memprof=/tmp/11.prof.txt
+# cpuprof=/tmp/10.prof.txt
+BenchmarkGarbage/benchmem-MB=64-16    10000	   1365463 ns/op	  14059520 GC-bytes-from-system	    214777 STW-ns/GC	      5562 STW-ns/op	   2781823 allocated-bytes/op	     66270 allocs/op	 359235832 bytes-from-system	 332955648 heap-bytes-from-system	   9631992 other-bytes-from-system	 282836992 peak-RSS-bytes	 395825152 peak-VM-bytes	   2588672 stack-bytes-from-system	  21112498 user+sys-ns/op
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+2019/07/24 07:30:07 Benchmarking 1 iterations
+2019/07/24 07:30:07 Benchmarking 100 iterations
+2019/07/24 07:30:07 Benchmarking 10000 iterations
+2019/07/24 07:30:08 Benchmarking 1000000 iterations
+# memprof=/tmp/14.prof.txt
+# cpuprof=/tmp/13.prof.txt
+BenchmarkHTTP-16  1000000	      5284 ns/op	   2402304 GC-bytes-from-system	     86899 P50-ns/op	   1396690 P95-ns/op	   2335882 P99-ns/op	    134182 STW-ns/GC	        66 STW-ns/op	      4806 allocated-bytes/op	        61 allocs/op	  75432184 bytes-from-system	  63635456 heap-bytes-from-system	   5921016 other-bytes-from-system	  35688448 peak-RSS-bytes	2835677184 peak-VM-bytes	   3473408 stack-bytes-from-system	     77413 user+sys-ns/op
+2019/07/24 07:30:13 Benchmarking 1 iterations
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+2019/07/24 07:30:14 Benchmarking 100 iterations
+2019/07/24 07:30:14 Benchmarking 2000 iterations
+# memprof=/tmp/11.prof.txt
+# cpuprof=/tmp/10.prof.txt
+BenchmarkJSON-16     2000	   4976168 ns/op	  12572672 GC-bytes-from-system	    318837 STW-ns/GC	     32840 STW-ns/op	   8351692 allocated-bytes/op	     92680 allocs/op	 353919224 bytes-from-system	 334430208 heap-bytes-from-system	   5802232 other-bytes-from-system	 289775616 peak-RSS-bytes	 390561792 peak-VM-bytes	   1114112 stack-bytes-from-system	  78125423 user+sys-ns/op
+Default-Golang-Server
+[golang] [INFO] Test clear docker image:
+[golang] 
+Set upstream mirror to https://cdn-alt.download.clearlinux.org/update
+Installed version: 30450
+Version URL:       https://cdn-alt.download.clearlinux.org/update
+Content URL:       https://cdn-alt.download.clearlinux.org/update
+Loading required manifests...
+Error: Unable to determine free space on filesystem.
+NOTE: currently, swupd only checks /usr/ (or the passed-in path with /usr/ appended) for available space.
+To skip this error and install anyways, add the --skip-diskspace-check flag to your command.
+Failed to install 1 of 1 bundles
+Clr-Golang-Server

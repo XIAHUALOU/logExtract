@@ -1,0 +1,46 @@
+mariadb/mariadb.sh
+[mariadb] 
+[mariadb] == mariadb unit test ==
+employees_db/._load_departments.dump
+employees_db/load_departments.dump
+employees_db/load_dept_emp.dump
+employees_db/._load_dept_manager.dump
+employees_db/load_dept_manager.dump
+employees_db/._load_employees.dump
+employees_db/load_employees.dump
+employees_db/._load_salaries.dump
+employees_db/load_salaries.dump
+employees_db/._load_titles.dump
+employees_db/load_titles.dump
+employees_db/._employees.sql
+employees_db/employees.sql
+employees_db/employees_partitioned.sql
+employees_db/._employees_partitioned2.sql
+employees_db/employees_partitioned2.sql
+employees_db/employees_partitioned3.sql
+employees_db/objects.sql
+employees_db/test_employees_md5.sql
+employees_db/test_employees_sha.sql
+employees_db/Changelog
+employees_db/._README
+employees_db/README
+[mariadb] [INFO] Test docker hub official image first:
+[mariadb] 
+c4f705b5b77462f615f4b58a428dac2a3a1f9dff544334bd867b89d017b88151
+Error: No such object: mariadbtest
+ERROR 2005 (HY000): Unknown MySQL server host '-t' (-2)
+[mariadb] [INFO] Starting the mysqlslap test, it may take a while, please be patient ...:
+[mariadb] 
+mysqlslap: Error when connecting to server: Unknown MySQL server host '--verbose' (-2)
+Error response from daemon: No such container: mariadbtest
+Default-Mariadb
+[mariadb] [INFO] Test clear docker image:
+[mariadb] 
+4efe3e18ecde5a2e1113269e6d32126f2ac0922f8931cf0e93e4ebcc65246134
+Error: No such object: mariadbtest
+ERROR 2005 (HY000): Unknown MySQL server host '-t' (-2)
+[mariadb] [INFO] Starting the mysqlslap test, it may take a while, please be patient ...:
+[mariadb] 
+mysqlslap: Error when connecting to server: Unknown MySQL server host '--verbose' (-2)
+Error response from daemon: No such container: mariadbtest
+Clr-Mariadb

@@ -36,7 +36,6 @@ class Ruby(BaseWorker):
                     self.failed(t, 'error logfile')
                     self.merge(None)
                     continue
-                print(df)
                 self.merge(list1)
                 self.merge(list2)
                 self.status(t)

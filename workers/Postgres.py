@@ -11,8 +11,8 @@ class Postgres(BaseWorker):
     s3_list=[]
     def run(self):
         logs = self.read_from_file(mode=list)
-        container = []
         for log in logs:
+            container = []
             t, log = log
             try:
                 for _ in log:

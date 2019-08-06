@@ -3,7 +3,8 @@ from .Basewoker import BaseWorker
 
 
 class Openjdk(BaseWorker):
-    s3_list=[]
+    s3_list = []
+
     def run(self):
         logs = self.read_from_file(mode=list)
         for log in logs:
@@ -20,9 +21,9 @@ class Openjdk(BaseWorker):
                         test_list.append(log[log.index(line) + 1])
                 list(map(lambda x: s1_list.append(test_list[0].split()[x]), [3, 5]))
                 list(map(lambda x: s2_list.append(test_list[1].split()[x]), [3, 5]))
-                if(len(test_list)==3):
+                if len(test_list) == 3:
                     list(map(lambda x: self.s3_list.append(test_list[2].split()[x]), [3, 5]))
-                if len(s1_list) != 2 or len(s2_list) !=2:
+                if len(s1_list) != 2 or len(s2_list) != 2:
                     self.failed(t, 'error logfile')
                     self.merge(None)
                     continue

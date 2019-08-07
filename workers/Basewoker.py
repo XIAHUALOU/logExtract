@@ -84,11 +84,11 @@ class BaseWorker(metaclass=abc.ABCMeta):
         '''
         path = self.get_logfiles(os.path.join(os.getcwd(), 'data/log'), [])
         if sys.platform in ['win32', 'win64', 'cygwin']:
-            path = [_ for _ in path if _.split('\\')[-1].startswith(type(self).__name__.lower())]
+            path = [_ for _ in path if _.split('\\')[-1].startswith(type(self).__name__.lower()) and _.endswith(".log")]
             path = sorted(path, key=lambda s: s.split('\\')[-1], reverse=True)
             path = self.__ajust_index(path)
         else:
-            path = [_ for _ in path if _.split('/')[-1].startswith(type(self).__name__.lower())]
+            path = [_ for _ in path if _.split('/')[-1].startswith(type(self).__name__.lower()) and _.endswith(".log")]
             path = sorted(path, key=lambda s: s.split('/')[-1], reverse=True)
             path = self.__ajust_index(path)
         return path

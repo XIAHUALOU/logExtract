@@ -9,17 +9,12 @@ class Openjdk(BaseWorker):
         for log in logs:
             t, log = log
             try:
-                patt = r'Score'
-                pattern = self.re.compile(patt)
                 test_list = []
                 s1_list = []
                 s2_list = []
-                for line in log:
-                    result = self.re.findall(pattern, line)
-                    if (result):
-                        test_list.append(log[log.index(line) + 1])
-                list(map(lambda x: s1_list.append(test_list[0].split()[x]), [3, 5]))
-                list(map(lambda x: s2_list.append(test_list[1].split()[x]), [3, 5]))
+                index_list = [i for i, x in enumerate(log) if x.find("Score") != -1]
+                list(map(lambda x: s1_list.append(log[index_list[0]+1].split()[x]), [3, 5]))
+                list(map(lambda x: s2_list.append(log[index_list[1]+1].split()[x]), [3, 5]))
                 if(len(test_list)==3):
                     list(map(lambda x: self.s3_list.append(test_list[2].split()[x]), [3, 5]))
                 if len(s1_list) != 2 or len(s2_list) !=2:

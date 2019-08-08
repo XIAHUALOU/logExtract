@@ -19,3 +19,4 @@ from . import Memcached
 from . import Ruby
 from . import Flink
 from . import Cassandra
+from . import Rabbitmq

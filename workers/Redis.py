@@ -4,38 +4,41 @@
 @Author  : xiahaulou
 @Email   : 390306467@qq.com
 """
-from .Basewoker import BaseWorker
+from libs import config
+from threadsPool.t_pool import ThreadPool
+import os
+import workers
 
 
-class Redis(BaseWorker):
-    def run(self):
-        logs = self.read_from_file(mode=list)
-        for log in logs:
-            t, log = log
+
+class Startor:
+    def __init__(self):
+        if len(config.workers) == 0:
+            workers = os.listdir(os.path.join(os.path.dirname(__file__), 'workers'))
             try:
-                official = []
-                clear = []
-                count = 0
-                for _ in log:
-                    _r = _.strip()
-                    if _r.endswith("requests per second"):
-                        if count < 18:
-                            official.append(_r.split()[0])
-                            count += 1
-                        else:
-                            clear.append(_r.split()[0])
-                            count += 1
-                if len(official) != 18 or len(clear) != 18:
-                    self.failed(t, 'error logfile')
-                    self.merge(None)
-                    continue
-                self.merge(official)
-                self.merge(clear)
-                self.status(t)
+                on_remove = ["__init__.py", 'Basewoker.py', '__pycache__']
+                [workers.remove(_) for _ in on_remove]
             except Exception as Ex:
-                self.failed(t, Ex)
-                self.merge(None)
+                pass
+            self.workers = [worker.split('.')[0] for worker in workers]
+        else:
+            self.workers = config.workers
+        self.pool = ThreadPool(config.config.getint('threads', 'maximum'))
+    def run(self):
+        for work in self.workers:
+            if not hasattr(workers, work):
                 continue
+            try:
+                runner = getattr(getattr(workers, work), work)()
+                setattr(runner, '{}_container'.format(work.lower()), [])
+            except Exception as Ex:
+                print("task {} done Status: Failed {}".format(work, Ex))
+                continue
+            else:
+                self.pool.run(runner.run,())
+        self.pool.close()
+        self.pool.join()
 
-    def to_excel(self):
-        pass
+if __name__ == '__main__':
+    Startor().run()
+

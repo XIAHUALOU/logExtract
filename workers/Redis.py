@@ -4,41 +4,55 @@
 @Author  : xiahaulou
 @Email   : 390306467@qq.com
 """
-from libs import config
-from threadsPool.t_pool import ThreadPool
-import os
-import workers
+from .Basewoker import BaseWorker
 
 
-
-class Startor:
-    def __init__(self):
-        if len(config.workers) == 0:
-            workers = os.listdir(os.path.join(os.path.dirname(__file__), 'workers'))
-            try:
-                on_remove = ["__init__.py", 'Basewoker.py', '__pycache__']
-                [workers.remove(_) for _ in on_remove]
-            except Exception as Ex:
-                pass
-            self.workers = [worker.split('.')[0] for worker in workers]
-        else:
-            self.workers = config.workers
-        self.pool = ThreadPool(config.config.getint('threads', 'maximum'))
+class Redis(BaseWorker):
     def run(self):
-        for work in self.workers:
-            if not hasattr(workers, work):
-                continue
+        logs = self.read_from_file(mode=list)
+        for log in logs:
+            t, log = log
             try:
-                runner = getattr(getattr(workers, work), work)()
-                setattr(runner, '{}_container'.format(work.lower()), [])
+                official = []
+                clear = []
+                index_list=[]
+                count = 0
+                for _ in log:
+                    _r = _.strip()
+                    if _r.endswith("requests per second"):
+                        if count < 18:
+                            official.append(_r.split()[0])
+                            count+=1 
+                        else:
+                            clear.append(_r.split()[0]) 
+                            count+=1         
+                index_list = [i for i, x in enumerate(log) if x.find("Sets") != -1]
+                official.append(log[index_list[0]].split()[4])
+                official.append(log[index_list[0]].split()[5])
+                official.append(log[index_list[0]+1].split()[4])
+                official.append(log[index_list[0]+1].split()[5])
+                official.append(log[index_list[0]+3].split()[4])
+                official.append(log[index_list[0]+3].split()[5])
+                clear.append(log[index_list[1]].split()[4])
+                clear.append(log[index_list[1]].split()[5])
+                clear.append(log[index_list[1]+1].split()[4])
+                clear.append(log[index_list[1]+1].split()[5])
+                clear.append(log[index_list[1]+3].split()[4])
+                clear.append(log[index_list[1]+3].split()[5])
+                      
+                if len(official) != 24 or len(clear) != 24:
+                    self.failed(t, 'error logfile')
+                    self.merge(None)
+                    continue
+                self.merge(official)
+                self.merge(clear)
+                self.status(t)
             except Exception as Ex:
-                print("task {} done Status: Failed {}".format(work, Ex))
+                self.failed(t, Ex)
+                self.merge(None)
                 continue
-            else:
-                self.pool.run(runner.run,())
-        self.pool.close()
-        self.pool.join()
 
-if __name__ == '__main__':
-    Startor().run()
+    def to_excel(self):
+        pass
+
 

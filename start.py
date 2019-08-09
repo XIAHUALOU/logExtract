@@ -10,7 +10,6 @@ import os
 import workers
 
 
-
 class Startor:
     def __init__(self):
         if len(config.workers) == 0:
@@ -24,6 +23,7 @@ class Startor:
         else:
             self.workers = config.workers
         self.pool = ThreadPool(config.config.getint('threads', 'maximum'))
+
     def run(self):
         for work in self.workers:
             if not hasattr(workers, work):
@@ -35,9 +35,10 @@ class Startor:
                 print("task {} done Status: Failed {}".format(work, Ex))
                 continue
             else:
-                self.pool.run(runner.run,())
+                self.pool.run(runner.run, ())
         self.pool.close()
         self.pool.join()
+
 
 if __name__ == '__main__':
     Startor().run()

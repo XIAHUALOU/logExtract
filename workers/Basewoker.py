@@ -102,17 +102,17 @@ class BaseWorker(metaclass=abc.ABCMeta):
         files = self.datest_logs
         try:
             for _ in files:
-                with open(_, 'r',encoding='utf8') as f:
+                with open(_, 'r', encoding='utf8') as f:
                     if sys.platform in ['win32', 'win64', 'cygwin']:
                         if mode is list:
-                            logs.append((_.split('\\')[-1].split('.log')[0], f.readlines()))
+                            logs.append((_, f.readlines()))
                         elif mode is str:
-                            logs.append((_.split('\\')[-1].split('.log')[0], f.read()))
+                            logs.append((_, f.read()))
                     else:
                         if mode is list:
-                            logs.append((_.split('/')[-1].split('.log')[0], f.readlines()))
+                            logs.append((_, f.readlines()))
                         elif mode is str or isinstance(mode, str):
-                            logs.append((_.split('/')[-1].split('.log')[0], f.read()))
+                            logs.append((_, f.read()))
         except Exception as Ex:
             print(Ex)
         return logs

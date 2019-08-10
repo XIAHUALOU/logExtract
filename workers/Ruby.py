@@ -14,7 +14,7 @@ class Ruby(BaseWorker):
                 list2 = []
                 for line in log:
                     target = self.re.findall(pattern_r, line)
-                    if (target):
+                    if target:
                         test_list.append(line)
                 for each in test_list:
                     s1 = each.split(' s -')[0]

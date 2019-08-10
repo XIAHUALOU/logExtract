@@ -162,5 +162,5 @@ class BaseWorker(metaclass=abc.ABCMeta):
             _container.clear()
             if ret_index_even:
                 df = self.pd.DataFrame(ret_index_even).T
-                self.ubuntu_df = df
+                self.D = df
                 self.to_csv('{}{}'.format(type(self).__name__.lower(), self.now()), df)

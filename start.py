@@ -17,7 +17,7 @@ class Startor:
             try:
                 on_remove = ["__init__.py", 'Basewoker.py', '__pycache__']
                 [workers.remove(_) for _ in on_remove]
-            except Exception as Ex:
+            except Exception:
                 pass
             self.workers = [worker.split('.')[0] for worker in workers]
         else:

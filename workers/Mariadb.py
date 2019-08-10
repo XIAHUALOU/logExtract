@@ -22,7 +22,7 @@ class Mariadb(BaseWorker):
                     if _.strip("\t").startswith("Maximum number of seconds to run all queries:"):
                         package.append(_.split()[-2])
                 if len(package) != 6:
-                    self.failed(t,'error log')
+                    self.failed(t, 'error log')
                     continue
                 self.merge(package[0:3])
                 self.merge(package[3:6])

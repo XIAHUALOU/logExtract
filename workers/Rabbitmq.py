@@ -10,14 +10,14 @@ class Rabbitmq(BaseWorker):
             try:
                 official = []
                 clear = []
-                index_list=[]
-                count = 0        
+                index_list = []
+                count = 0
                 index_list = [i for i, x in enumerate(log) if x.find("sending") != -1]
                 official.append(log[index_list[0]].split()[5])
-                official.append(log[index_list[0]+1].split()[5])
+                official.append(log[index_list[0] + 1].split()[5])
                 clear.append(log[index_list[1]].split()[5])
-                clear.append(log[index_list[1]+1].split()[5])
-                      
+                clear.append(log[index_list[1] + 1].split()[5])
+
                 if len(official) != 2 or len(clear) != 2:
                     self.failed(t, 'error logfile')
                     self.merge(None)
@@ -32,4 +32,3 @@ class Rabbitmq(BaseWorker):
 
     def to_excel(self):
         pass
-

@@ -40,6 +40,3 @@ class Cassandra(BaseWorker):
                 self.failed(t, Ex)
                 self.merge(None)
                 continue
-
-    def to_excel(self):
-        pass

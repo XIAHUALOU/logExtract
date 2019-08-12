@@ -30,6 +30,3 @@ class Mariadb(BaseWorker):
             except Exception as Ex:
                 self.failed(t, Ex)
                 continue
-
-    def to_excel(self):
-        pass

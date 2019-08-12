@@ -30,7 +30,6 @@ class BaseWorker(metaclass=abc.ABCMeta):
         '''
         pass
 
-    @abc.abstractclassmethod
     def to_excel(self):
         '''
         need each work rewrite this function

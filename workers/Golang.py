@@ -30,6 +30,3 @@ class Golang(BaseWorker):
                 self.failed(t, 'error logfile')
                 self.merge(None)
                 continue
-
-    def to_excel(self):
-        pass

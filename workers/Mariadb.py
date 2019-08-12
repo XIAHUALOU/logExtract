@@ -23,6 +23,7 @@ class Mariadb(BaseWorker):
                         package.append(_.split()[-2])
                 if len(package) != 6:
                     self.failed(t, 'error log')
+                    self.merge(None)
                     continue
                 self.merge(package[0:3])
                 self.merge(package[3:6])

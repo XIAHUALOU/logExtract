@@ -1,9 +1,3 @@
-# -*- encoding: utf-8 -*-
-"""
-@Time    : 7/2/19 2:05 AM
-@Author  : xiahaulou
-@Email   : 390306467@qq.com
-"""
 from .Basewoker import BaseWorker
 
 
@@ -20,13 +14,8 @@ class Postgres(BaseWorker):
                     if _.strip().endswith("(excluding connections establishing)"):
                         container.append(_.strip().split()[2])
                 if len(container) == 12:
-                    self.merge(container[0:6])
-                    self.merge(container[6:12])
-                    self.status(t)
-                elif len(container) == 18:
-                    self.merge(container[0:6])
-                    self.merge(container[6:12])
-                    self.s3_list = container[12:]
+                    self.merge(container[0:4])
+                    self.merge(container[4:8])
                     self.status(t)
                 else:
                     self.failed(t, 'error logfile')
@@ -36,3 +25,7 @@ class Postgres(BaseWorker):
                 self.failed(t, Ex)
                 self.merge(None)
                 continue
+
+    def to_excel(self):
+        pass
+

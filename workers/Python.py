@@ -1,6 +1,3 @@
-Test
-extra
-official
 # -*- encoding: utf-8 -*-
 """
 @Time    : 7/1/19 1:26 AM

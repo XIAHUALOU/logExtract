@@ -8,7 +8,7 @@ class Golang(BaseWorker):
         for log in logs:
             t, log = log
             try:
-                patt = r'BenchmarkBuild|BenchmarkGarbage|BenchmarkHTTP|BenchmarkJSON'
+                patt = r'BenchmarkGarbage|BenchmarkHTTP|BenchmarkJSON'
                 pattern = self.re.compile(patt)
                 test_list = []
                 for line in log:
@@ -17,9 +17,9 @@ class Golang(BaseWorker):
                         test_list.append(line)
                 s1_list = []
                 s2_list = []
-                list(map(lambda x: s1_list.append(test_list[x].split()[2]), range(0, 4)))
-                list(map(lambda x: s2_list.append(test_list[x].split()[2]), range(4, 8)))
-                if len(s1_list) != 4 or len(s2_list) != 4:
+                list(map(lambda x: s1_list.append(test_list[x].split()[2]), range(0, 3)))
+                list(map(lambda x: s2_list.append(test_list[x].split()[2]), range(3, 6)))
+                if len(s1_list) != 3 or len(s2_list) != 3:
                     self.failed(t, 'error logfile')
                     self.merge(None)
                     continue
@@ -30,3 +30,7 @@ class Golang(BaseWorker):
                 self.failed(t, 'error logfile')
                 self.merge(None)
                 continue
+
+    def to_excel(self):
+        pass
+

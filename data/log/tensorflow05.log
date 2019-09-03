@@ -1,0 +1,392 @@
+tensorflow/tensorflow.sh
+[tensorflow] 
+[tensorflow] == tensorflow unit test ==
+Reading package lists...
+Building dependency tree...
+Reading state information...
+wget is already the newest version (1.19.4-1ubuntu2.2).
+0 upgraded, 0 newly installed, 0 to remove and 33 not upgraded.
+[tensorflow] [INFO] Test docker hub official image first:
+[tensorflow] 
+[tensorflow] [INFO] default package version:
+[tensorflow] 
+1.14.0
+Get:1 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu bionic InRelease
+Get:3 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:4 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [6222 B]
+Get:5 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:6 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [760 kB]
+Get:7 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [926 kB]
+Get:8 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [4173 B]
+Get:9 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [1279 kB]
+Get:10 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [628 kB]
+Get:11 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [7216 B]
+Get:12 http://archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [16.8 kB]
+Get:13 http://archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [4212 B]
+Fetched 3885 kB in 4s (984 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libpsl5
+Recommended packages:
+  publicsuffix
+The following NEW packages will be installed:
+  libpsl5 wget
+0 upgraded, 2 newly installed, 0 to remove and 22 not upgraded.
+Need to get 358 kB of archives.
+After this operation, 1030 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu bionic/main amd64 libpsl5 amd64 0.19.1-5build1 [41.8 kB]
+Get:2 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 wget amd64 1.19.4-1ubuntu2.2 [316 kB]
+Fetched 358 kB in 0s (8249 kB/s)
+Selecting previously unselected package libpsl5:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 14721 files and directories currently installed.)
+Preparing to unpack .../libpsl5_0.19.1-5build1_amd64.deb ...
+Unpacking libpsl5:amd64 (0.19.1-5build1) ...
+Selecting previously unselected package wget.
+Preparing to unpack .../wget_1.19.4-1ubuntu2.2_amd64.deb ...
+Unpacking wget (1.19.4-1ubuntu2.2) ...
+Setting up libpsl5:amd64 (0.19.1-5build1) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+Setting up wget (1.19.4-1ubuntu2.2) ...
+cifar10/
+cifar10/cifar10_train.py
+cifar10/cifar10_multi_gpu_train.py
+cifar10/cifar10_input_test.py
+cifar10/cifar10_input.py
+cifar10/cifar10_eval.py
+cifar10/cifar10.py
+cifar10/__init__.py
+cifar10/README.md
+cifar10/BUILD
+cifar-10-batches-bin/
+cifar-10-batches-bin/data_batch_1.bin
+cifar-10-batches-bin/batches.meta.txt
+cifar-10-batches-bin/data_batch_3.bin
+cifar-10-batches-bin/data_batch_4.bin
+cifar-10-batches-bin/test_batch.bin
+cifar-10-batches-bin/readme.html
+cifar-10-batches-bin/data_batch_5.bin
+cifar-10-batches-bin/data_batch_2.bin
+Filling queue with 20000 CIFAR images before starting to train. This will take a few minutes.
+2019-09-02 09:20:27.304040: step 0, loss = 4.68 (182.3 examples/sec; 0.702 sec/batch)
+2019-09-02 09:20:29.918188: step 10, loss = 4.62 (574.1 examples/sec; 0.223 sec/batch)
+2019-09-02 09:20:32.307168: step 20, loss = 4.47 (538.2 examples/sec; 0.238 sec/batch)
+2019-09-02 09:20:34.715755: step 30, loss = 4.47 (499.8 examples/sec; 0.256 sec/batch)
+2019-09-02 09:20:37.141018: step 40, loss = 4.50 (557.0 examples/sec; 0.230 sec/batch)
+2019-09-02 09:20:39.512917: step 50, loss = 4.29 (549.1 examples/sec; 0.233 sec/batch)
+2019-09-02 09:20:41.951763: step 60, loss = 4.25 (531.0 examples/sec; 0.241 sec/batch)
+2019-09-02 09:20:44.383737: step 70, loss = 4.19 (527.1 examples/sec; 0.243 sec/batch)
+2019-09-02 09:20:46.787585: step 80, loss = 4.15 (529.3 examples/sec; 0.242 sec/batch)
+2019-09-02 09:20:49.210968: step 90, loss = 4.14 (457.2 examples/sec; 0.280 sec/batch)
+2019-09-02 09:20:51.676791: step 100, loss = 5.36 (363.6 examples/sec; 0.352 sec/batch)
+2019-09-02 09:20:54.048400: step 110, loss = 4.15 (537.0 examples/sec; 0.238 sec/batch)
+2019-09-02 09:20:56.397189: step 120, loss = 4.08 (538.4 examples/sec; 0.238 sec/batch)
+2019-09-02 09:20:58.721118: step 130, loss = 4.10 (627.4 examples/sec; 0.204 sec/batch)
+2019-09-02 09:21:01.192937: step 140, loss = 3.90 (514.0 examples/sec; 0.249 sec/batch)
+2019-09-02 09:21:03.596625: step 150, loss = 4.00 (559.2 examples/sec; 0.229 sec/batch)
+2019-09-02 09:21:05.965145: step 160, loss = 3.75 (529.2 examples/sec; 0.242 sec/batch)
+2019-09-02 09:21:08.323817: step 170, loss = 3.91 (534.0 examples/sec; 0.240 sec/batch)
+2019-09-02 09:21:10.692621: step 180, loss = 3.95 (562.7 examples/sec; 0.227 sec/batch)
+2019-09-02 09:21:13.084604: step 190, loss = 3.87 (567.2 examples/sec; 0.226 sec/batch)
+2019-09-02 09:21:15.570555: step 200, loss = 3.96 (332.5 examples/sec; 0.385 sec/batch)
+2019-09-02 09:21:17.954173: step 210, loss = 3.95 (500.8 examples/sec; 0.256 sec/batch)
+2019-09-02 09:21:20.313715: step 220, loss = 3.74 (559.1 examples/sec; 0.229 sec/batch)
+2019-09-02 09:21:22.643622: step 230, loss = 3.55 (540.3 examples/sec; 0.237 sec/batch)
+2019-09-02 09:21:25.033627: step 240, loss = 3.83 (529.2 examples/sec; 0.242 sec/batch)
+2019-09-02 09:21:27.417606: step 250, loss = 3.71 (535.8 examples/sec; 0.239 sec/batch)
+2019-09-02 09:21:29.789077: step 260, loss = 3.48 (536.5 examples/sec; 0.239 sec/batch)
+2019-09-02 09:21:32.148108: step 270, loss = 3.73 (582.9 examples/sec; 0.220 sec/batch)
+2019-09-02 09:21:34.462909: step 280, loss = 3.71 (615.9 examples/sec; 0.208 sec/batch)
+2019-09-02 09:21:36.782068: step 290, loss = 3.48 (585.2 examples/sec; 0.219 sec/batch)
+2019-09-02 09:21:39.230885: step 300, loss = 3.82 (383.8 examples/sec; 0.334 sec/batch)
+2019-09-02 09:21:41.567740: step 310, loss = 3.51 (539.5 examples/sec; 0.237 sec/batch)
+2019-09-02 09:21:43.912782: step 320, loss = 3.42 (583.4 examples/sec; 0.219 sec/batch)
+2019-09-02 09:21:46.154007: step 330, loss = 3.46 (557.8 examples/sec; 0.229 sec/batch)
+2019-09-02 09:21:48.507537: step 340, loss = 3.56 (565.6 examples/sec; 0.226 sec/batch)
+2019-09-02 09:21:50.740104: step 350, loss = 3.49 (593.1 examples/sec; 0.216 sec/batch)
+2019-09-02 09:21:52.988556: step 360, loss = 3.50 (571.9 examples/sec; 0.224 sec/batch)
+2019-09-02 09:21:55.293527: step 370, loss = 3.46 (534.1 examples/sec; 0.240 sec/batch)
+2019-09-02 09:21:57.620437: step 380, loss = 3.40 (582.9 examples/sec; 0.220 sec/batch)
+2019-09-02 09:22:00.035220: step 390, loss = 3.32 (509.5 examples/sec; 0.251 sec/batch)
+Total duration: 94.81 seconds
+Default-Tensorflow-Server
+[tensorflow] [INFO] Test clear docker image:
+[tensorflow] 
+[tensorflow] [INFO] clear package version:
+[tensorflow] 
+1.14.0
+The --allow-insecure-http flag was used, be aware that this poses a threat to the system
+
+Loading required manifests...
+Downloading packs (1.02 MB) for:
+ - lib-openssl
+ - openssl
+ - wget
+	...0%
+	...1%
+	...2%
+	...3%
+	...4%
+	...5%
+	...6%
+	...7%
+	...8%
+	...9%
+	...10%
+	...11%
+	...12%
+	...13%
+	...14%
+	...15%
+	...16%
+	...17%
+	...18%
+	...19%
+	...20%
+	...21%
+	...22%
+	...23%
+	...24%
+	...25%
+	...26%
+	...27%
+	...28%
+	...29%
+	...30%
+	...31%
+	...32%
+	...33%
+	...34%
+	...35%
+	...36%
+	...37%
+	...38%
+	...39%
+	...40%
+	...41%
+	...42%
+	...43%
+	...44%
+	...45%
+	...46%
+	...47%
+	...48%
+	...49%
+	...50%
+	...51%
+	...52%
+	...53%
+	...54%
+	...55%
+	...56%
+	...57%
+	...58%
+	...59%
+	...60%
+	...61%
+	...62%
+	...63%
+	...65%
+	...66%
+	...67%
+	...68%
+	...69%
+	...70%
+	...71%
+	...72%
+	...73%
+	...75%
+	...76%
+	...77%
+	...78%
+	...79%
+	...81%
+	...82%
+	...83%
+	...84%
+	...85%
+	...86%
+	...87%
+	...88%
+	...89%
+	...90%
+	...91%
+	...92%
+	...93%
+	...94%
+	...95%
+	...96%
+	...97%
+	...99%
+	...100%
+Finishing packs extraction...
+No extra files need to be downloaded
+Installing bundle(s) files...
+	...0%
+	...1%
+	...2%
+	...3%
+	...4%
+	...5%
+	...6%
+	...7%
+	...8%
+	...9%
+	...10%
+	...11%
+	...12%
+	...13%
+	...14%
+	...15%
+	...16%
+	...17%
+	...18%
+	...19%
+	...20%
+	...21%
+	...22%
+	...23%
+	...24%
+	...25%
+	...26%
+	...27%
+	...28%
+	...29%
+	...30%
+	...31%
+	...32%
+	...33%
+	...34%
+	...35%
+	...36%
+	...37%
+	...38%
+	...39%
+	...40%
+	...41%
+	...42%
+	...43%
+	...44%
+	...45%
+	...46%
+	...47%
+	...48%
+	...49%
+	...50%
+	...51%
+	...52%
+	...53%
+	...54%
+	...55%
+	...56%
+	...57%
+	...58%
+	...59%
+	...60%
+	...61%
+	...62%
+	...63%
+	...64%
+	...65%
+	...66%
+	...67%
+	...68%
+	...69%
+	...70%
+	...71%
+	...72%
+	...73%
+	...74%
+	...75%
+	...76%
+	...77%
+	...78%
+	...79%
+	...80%
+	...81%
+	...82%
+	...83%
+	...84%
+	...85%
+	...86%
+	...87%
+	...88%
+	...89%
+	...90%
+	...91%
+	...92%
+	...93%
+	...94%
+	...95%
+	...96%
+	...97%
+	...98%
+	...99%
+	...100%
+Calling post-update helper scripts
+Successfully installed 1 bundle
+cifar10/
+cifar10/cifar10_train.py
+cifar10/cifar10_multi_gpu_train.py
+cifar10/cifar10_input_test.py
+cifar10/cifar10_input.py
+cifar10/cifar10_eval.py
+cifar10/cifar10.py
+cifar10/__init__.py
+cifar10/README.md
+cifar10/BUILD
+cifar-10-batches-bin/
+cifar-10-batches-bin/data_batch_1.bin
+cifar-10-batches-bin/batches.meta.txt
+cifar-10-batches-bin/data_batch_3.bin
+cifar-10-batches-bin/data_batch_4.bin
+cifar-10-batches-bin/test_batch.bin
+cifar-10-batches-bin/readme.html
+cifar-10-batches-bin/data_batch_5.bin
+cifar-10-batches-bin/data_batch_2.bin
+Filling queue with 20000 CIFAR images before starting to train. This will take a few minutes.
+2019-09-02 09:22:40.603746: step 0, loss = 4.68 (38.3 examples/sec; 3.345 sec/batch)
+2019-09-02 09:22:42.962442: step 10, loss = 4.63 (604.0 examples/sec; 0.212 sec/batch)
+2019-09-02 09:22:45.053271: step 20, loss = 4.50 (609.4 examples/sec; 0.210 sec/batch)
+2019-09-02 09:22:47.281680: step 30, loss = 4.37 (535.0 examples/sec; 0.239 sec/batch)
+2019-09-02 09:22:49.338502: step 40, loss = 4.31 (607.7 examples/sec; 0.211 sec/batch)
+2019-09-02 09:22:51.530575: step 50, loss = 4.32 (609.7 examples/sec; 0.210 sec/batch)
+2019-09-02 09:22:53.694762: step 60, loss = 4.56 (634.9 examples/sec; 0.202 sec/batch)
+2019-09-02 09:22:55.892414: step 70, loss = 4.30 (556.5 examples/sec; 0.230 sec/batch)
+2019-09-02 09:22:57.947159: step 80, loss = 4.20 (613.4 examples/sec; 0.209 sec/batch)
+2019-09-02 09:23:00.044556: step 90, loss = 4.05 (610.8 examples/sec; 0.210 sec/batch)
+2019-09-02 09:23:02.404162: step 100, loss = 4.12 (344.7 examples/sec; 0.371 sec/batch)
+2019-09-02 09:23:04.506942: step 110, loss = 4.04 (604.2 examples/sec; 0.212 sec/batch)
+2019-09-02 09:23:06.537080: step 120, loss = 3.95 (673.7 examples/sec; 0.190 sec/batch)
+2019-09-02 09:23:08.618387: step 130, loss = 4.06 (598.3 examples/sec; 0.214 sec/batch)
+2019-09-02 09:23:10.695586: step 140, loss = 4.03 (656.9 examples/sec; 0.195 sec/batch)
+2019-09-02 09:23:12.841584: step 150, loss = 4.11 (678.8 examples/sec; 0.189 sec/batch)
+2019-09-02 09:23:14.957115: step 160, loss = 3.88 (602.8 examples/sec; 0.212 sec/batch)
+2019-09-02 09:23:17.062624: step 170, loss = 3.88 (603.8 examples/sec; 0.212 sec/batch)
+2019-09-02 09:23:19.240878: step 180, loss = 3.78 (577.0 examples/sec; 0.222 sec/batch)
+2019-09-02 09:23:21.521360: step 190, loss = 3.92 (591.0 examples/sec; 0.217 sec/batch)
+2019-09-02 09:23:23.702104: step 200, loss = 3.96 (366.5 examples/sec; 0.349 sec/batch)
+2019-09-02 09:23:25.793516: step 210, loss = 3.68 (618.7 examples/sec; 0.207 sec/batch)
+2019-09-02 09:23:27.806190: step 220, loss = 3.67 (690.6 examples/sec; 0.185 sec/batch)
+2019-09-02 09:23:29.823508: step 230, loss = 4.03 (623.7 examples/sec; 0.205 sec/batch)
+2019-09-02 09:23:31.855507: step 240, loss = 3.66 (620.3 examples/sec; 0.206 sec/batch)
+2019-09-02 09:23:33.914146: step 250, loss = 3.78 (653.9 examples/sec; 0.196 sec/batch)
+2019-09-02 09:23:35.909677: step 260, loss = 3.74 (662.4 examples/sec; 0.193 sec/batch)
+2019-09-02 09:23:37.982982: step 270, loss = 3.65 (650.5 examples/sec; 0.197 sec/batch)
+2019-09-02 09:23:40.086287: step 280, loss = 3.98 (596.9 examples/sec; 0.214 sec/batch)
+2019-09-02 09:23:42.172545: step 290, loss = 3.36 (630.8 examples/sec; 0.203 sec/batch)
+2019-09-02 09:23:44.351949: step 300, loss = 4.05 (353.2 examples/sec; 0.362 sec/batch)
+2019-09-02 09:23:46.392907: step 310, loss = 3.51 (606.6 examples/sec; 0.211 sec/batch)
+2019-09-02 09:23:48.408507: step 320, loss = 3.49 (632.3 examples/sec; 0.202 sec/batch)
+2019-09-02 09:23:50.549081: step 330, loss = 3.45 (622.6 examples/sec; 0.206 sec/batch)
+2019-09-02 09:23:52.594047: step 340, loss = 3.69 (614.7 examples/sec; 0.208 sec/batch)
+2019-09-02 09:23:54.672389: step 350, loss = 3.80 (614.7 examples/sec; 0.208 sec/batch)
+2019-09-02 09:23:56.747089: step 360, loss = 3.47 (661.4 examples/sec; 0.194 sec/batch)
+2019-09-02 09:23:58.823107: step 370, loss = 3.24 (558.1 examples/sec; 0.229 sec/batch)
+2019-09-02 09:24:00.905134: step 380, loss = 3.58 (606.9 examples/sec; 0.211 sec/batch)
+2019-09-02 09:24:02.920617: step 390, loss = 3.33 (590.9 examples/sec; 0.217 sec/batch)
+Total duration: 84.13 seconds
+Clr-Tensorflow-Server

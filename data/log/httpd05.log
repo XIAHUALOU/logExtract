@@ -1,0 +1,114 @@
+httpd/httpd.sh
+[httpd] 
+[httpd] == httpd unit test ==
+Reading package lists...
+Building dependency tree...
+Reading state information...
+apache2 is already the newest version (2.4.29-1ubuntu4.10).
+0 upgraded, 0 newly installed, 0 to remove and 33 not upgraded.
+[httpd] [INFO] Test docker hub official image first:
+[httpd] 
+[httpd] [INFO] default package version:
+[httpd] 
+Server version: Apache/2.4.41 (Unix)
+Server built:   Aug 14 2019 00:35:10
+3b9e935d5b882a0703090ddeadc2c3224c144f532cfdfd879afc09d92fd25ae1
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+
+
+Server Software:        Apache/2.4.41
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /
+Document Length:        45 bytes
+
+Concurrency Level:      50
+Time taken for tests:   9.389 seconds
+Complete requests:      100000
+Failed requests:        1
+   (Connect: 0, Receive: 0, Length: 1, Exceptions: 0)
+Keep-Alive requests:    99034
+Total transferred:      32457247 bytes
+HTML transferred:       4499955 bytes
+Requests per second:    10651.18 [#/sec] (mean)
+Time per request:       4.694 [ms] (mean)
+Time per request:       0.094 [ms] (mean, across all concurrent requests)
+Transfer rate:          3376.05 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.2      0      13
+Processing:     0    5   3.8      4      80
+Waiting:        0    5   3.7      4      80
+Total:          0    5   3.8      4      84
+
+Percentage of the requests served within a certain time (ms)
+  50%      4
+  66%      5
+  75%      6
+  80%      7
+  90%      9
+  95%     12
+  98%     15
+  99%     18
+ 100%     84 (longest request)
+httpd-server
+Default-Httpd-Server
+[httpd] [INFO] Test clear docker image:
+[httpd] 
+[httpd] [INFO] clear package version:
+[httpd] 
+Server version: Apache/2.4.41 (Unix)
+Server built:   Aug 15 2019 15:40:05
+bc932339928bd43615978ffd09a0bd9d87789cbc3d487545b029e5158cba7344
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+
+
+Server Software:        Apache/2.4.41
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /
+Document Length:        45 bytes
+
+Concurrency Level:      50
+Time taken for tests:   12.398 seconds
+Complete requests:      100000
+Failed requests:        30
+   (Connect: 0, Receive: 0, Length: 30, Exceptions: 0)
+Keep-Alive requests:    99022
+Total transferred:      32475288 bytes
+HTML transferred:       4498650 bytes
+Requests per second:    8065.58 [#/sec] (mean)
+Time per request:       6.199 [ms] (mean)
+Time per request:       0.124 [ms] (mean, across all concurrent requests)
+Transfer rate:          2557.93 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.1      0       7
+Processing:     0    6   3.7      6      69
+Waiting:        0    6   3.7      6      69
+Total:          0    6   3.7      6      72
+
+Percentage of the requests served within a certain time (ms)
+  50%      6
+  66%      7
+  75%      8
+  80%      9
+  90%     11
+  95%     13
+  98%     15
+  99%     17
+ 100%     72 (longest request)
+httpd-server
+Clr-Httpd-Server

@@ -1,0 +1,291 @@
+golang/golang.sh
+[golang] 
+[golang] == golang unit test ==
+[golang] [INFO] Test docker hub official image first:
+[golang] 
+[golang] [INFO] default package version:
+[golang] 
+go version go1.12.9 linux/amd64
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+# sections=/tmp/1.size.txt
+BenchmarkBuild-16        1	52141734986 ns/op	  14613692 binary-size	52141734986 build-ns/op	 221679616 build-peak-RSS-bytes	52909104000 build-user+sys-ns/op
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+consumption=1733KB npkg=15
+# memprof=/tmp/11.prof.txt
+# cpuprof=/tmp/10.prof.txt
+BenchmarkGarbage/benchmem-MB=64-16     5000	   2503941 ns/op	  14129152 GC-bytes-from-system	    404725 STW-ns/GC	     10280 STW-ns/op	   2782762 allocated-bytes/op	     66273 allocs/op	 359301368 bytes-from-system	 332759040 heap-bytes-from-system	   9627896 other-bytes-from-system	 284188672 peak-RSS-bytes	 395894784 peak-VM-bytes	   2785280 stack-bytes-from-system	  37566649 user+sys-ns/op
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+# memprof=/tmp/14.prof.txt
+# cpuprof=/tmp/13.prof.txt
+BenchmarkHTTP-16   500000	     18392 ns/op	   2402304 GC-bytes-from-system	    618490 P50-ns/op	   4156683 P95-ns/op	   6395166 P99-ns/op	    348559 STW-ns/GC	       173 STW-ns/op	      4814 allocated-bytes/op	        61 allocs/op	  75432184 bytes-from-system	  63832064 heap-bytes-from-system	   5921016 other-bytes-from-system	  43589632 peak-RSS-bytes	2835685376 peak-VM-bytes	   3276800 stack-bytes-from-system	    209122 user+sys-ns/op
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+# memprof=/tmp/11.prof.txt
+# cpuprof=/tmp/10.prof.txt
+BenchmarkJSON-16     1000	   7294570 ns/op	  12355584 GC-bytes-from-system	    380799 STW-ns/GC	     38079 STW-ns/op	   8162079 allocated-bytes/op	     92684 allocs/op	 354246904 bytes-from-system	 334495744 heap-bytes-from-system	   6347000 other-bytes-from-system	 321073152 peak-RSS-bytes	 390795264 peak-VM-bytes	   1048576 stack-bytes-from-system	 113423977 user+sys-ns/op
+Default-Golang-Server
+[golang] [INFO] Test clear docker image:
+[golang] 
+[golang] [INFO] clear package version:
+[golang] 
+go version go1.12.7 linux/amd64
+The --allow-insecure-http flag was used, be aware that this poses a threat to the system
+
+Loading required manifests...
+Downloading packs (161.99 Mb) for:
+ - perl-basic
+ - nasm
+ - binutils
+ - bison
+ - flex
+ - glibc-locale
+ - llvm
+ - make
+ - c-basic
+	...0%
+	...1%
+	...2%
+	...3%
+	...4%
+	...5%
+	...6%
+	...7%
+	...8%
+	...9%
+	...10%
+	...11%
+	...12%
+	...13%
+	...14%
+	...15%
+	...16%
+	...17%
+	...18%
+	...19%
+	...20%
+	...21%
+	...22%
+	...23%
+	...24%
+	...25%
+	...26%
+	...27%
+	...28%
+	...29%
+	...30%
+	...31%
+	...32%
+	...33%
+	...34%
+	...35%
+	...36%
+	...37%
+	...38%
+	...39%
+	...40%
+	...41%
+	...42%
+	...43%
+	...44%
+	...45%
+	...46%
+	...47%
+	...48%
+	...49%
+	...50%
+	...51%
+	...52%
+	...53%
+	...54%
+	...55%
+	...56%
+	...57%
+	...58%
+	...59%
+	...60%
+	...61%
+	...62%
+	...63%
+	...64%
+	...65%
+	...66%
+	...67%
+	...68%
+	...69%
+	...70%
+	...71%
+	...72%
+	...73%
+	...74%
+	...75%
+	...76%
+	...77%
+	...78%
+	...79%
+	...80%
+	...81%
+	...82%
+	...83%
+	...84%
+	...85%
+	...86%
+	...87%
+	...88%
+	...89%
+	...90%
+	...91%
+	...92%
+	...93%
+	...94%
+	...95%
+	...96%
+	...97%
+	...98%
+	...99%
+	...100%
+Finishing packs extraction...
+No extra files need to be downloaded
+Installing bundle(s) files...
+	...0%
+	...1%
+	...2%
+	...3%
+	...4%
+	...5%
+	...6%
+	...7%
+	...8%
+	...9%
+	...10%
+	...11%
+	...12%
+	...13%
+	...14%
+	...15%
+	...16%
+	...17%
+	...18%
+	...19%
+	...20%
+	...21%
+	...22%
+	...23%
+	...24%
+	...25%
+	...26%
+	...27%
+	...28%
+	...29%
+	...30%
+	...31%
+	...32%
+	...33%
+	...34%
+	...35%
+	...36%
+	...37%
+	...38%
+	...39%
+	...40%
+	...41%
+	...42%
+	...43%
+	...44%
+	...45%
+	...46%
+	...47%
+	...48%
+	...49%
+	...50%
+	...51%
+	...52%
+	...53%
+	...54%
+	...55%
+	...56%
+	...57%
+	...58%
+	...59%
+	...60%
+	...61%
+	...62%
+	...63%
+	...64%
+	...65%
+	...66%
+	...67%
+	...68%
+	...69%
+	...70%
+	...71%
+	...72%
+	...73%
+	...74%
+	...75%
+	...76%
+	...77%
+	...78%
+	...79%
+	...80%
+	...81%
+	...82%
+	...83%
+	...84%
+	...85%
+	...86%
+	...87%
+	...88%
+	...89%
+	...90%
+	...91%
+	...92%
+	...93%
+	...94%
+	...95%
+	...96%
+	...97%
+	...98%
+	...99%
+	...100%
+Calling post-update helper scripts
+Successfully installed 1 bundle
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+# sections=/tmp/1.size.txt
+BenchmarkBuild-16        1	49382955299 ns/op	  14617823 binary-size	49382955299 build-ns/op	 213434368 build-peak-RSS-bytes	50177245000 build-user+sys-ns/op
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+consumption=1733KB npkg=15
+# memprof=/tmp/11.prof.txt
+# cpuprof=/tmp/10.prof.txt
+BenchmarkGarbage/benchmem-MB=64-16     2000	   2521057 ns/op	  14129152 GC-bytes-from-system	    409078 STW-ns/GC	     10431 STW-ns/op	   2784834 allocated-bytes/op	     66276 allocs/op	 358252792 bytes-from-system	 332726272 heap-bytes-from-system	   8579320 other-bytes-from-system	 281096192 peak-RSS-bytes	 394846208 peak-VM-bytes	   2818048 stack-bytes-from-system	  37609735 user+sys-ns/op
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+# memprof=/tmp/14.prof.txt
+# cpuprof=/tmp/13.prof.txt
+BenchmarkHTTP-16   500000	     19065 ns/op	   2402304 GC-bytes-from-system	    664696 P50-ns/op	   4194521 P95-ns/op	   6402002 P99-ns/op	    360516 STW-ns/GC	       178 STW-ns/op	      4814 allocated-bytes/op	        61 allocs/op	  75432184 bytes-from-system	  63668224 heap-bytes-from-system	   5921016 other-bytes-from-system	  30048256 peak-RSS-bytes	2901188608 peak-VM-bytes	   3440640 stack-bytes-from-system	    218395 user+sys-ns/op
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+# memprof=/tmp/11.prof.txt
+# cpuprof=/tmp/10.prof.txt
+BenchmarkJSON-16     1000	   7489824 ns/op	  12830720 GC-bytes-from-system	    452191 STW-ns/GC	     41601 STW-ns/op	   8017674 allocated-bytes/op	     92683 allocs/op	 354181368 bytes-from-system	 334430208 heap-bytes-from-system	   5806328 other-bytes-from-system	 302718976 peak-RSS-bytes	 390729728 peak-VM-bytes	   1114112 stack-bytes-from-system	 116202251 user+sys-ns/op
+Clr-Golang-Server

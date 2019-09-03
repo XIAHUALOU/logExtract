@@ -1,0 +1,616 @@
+python/python.sh
+[python] 
+[python] == python unit test ==
+[python] [INFO] Test docker hub official image first:
+[python] 
+[python] [INFO] default package version:
+[python] 
+Python 3.7.4
+Get:1 http://cdn-fastly.deb.debian.org/debian buster InRelease [118 kB]
+Get:2 http://cdn-fastly.deb.debian.org/debian buster-updates InRelease [49.3 kB]
+Get:4 http://cdn-fastly.deb.debian.org/debian buster/main amd64 Packages [7897 kB]
+Get:3 http://security-cdn.debian.org/debian-security buster/updates InRelease [39.1 kB]
+Get:5 http://security-cdn.debian.org/debian-security buster/updates/main amd64 Packages [63.4 kB]
+Get:6 http://cdn-fastly.deb.debian.org/debian buster-updates/main amd64 Packages [884 B]
+Fetched 8168 kB in 4s (2279 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+wget is already the newest version (1.20.1-1.1).
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+pybench-2018-02-16/
+pybench-2018-02-16/Numbers.py
+pybench-2018-02-16/pybench.py
+pybench-2018-02-16/Constructs.pyc
+pybench-2018-02-16/Unicode.py
+pybench-2018-02-16/Lookups.pyc
+pybench-2018-02-16/Lists.py
+pybench-2018-02-16/Calls.pyc
+pybench-2018-02-16/Exceptions.pyc
+pybench-2018-02-16/Dict.pyc
+pybench-2018-02-16/Arithmetic.py
+pybench-2018-02-16/Constructs.py
+pybench-2018-02-16/pybench.pyc
+pybench-2018-02-16/Exceptions.py
+pybench-2018-02-16/Tuples.py
+pybench-2018-02-16/With.py
+pybench-2018-02-16/__pycache__/
+pybench-2018-02-16/__pycache__/Tuples.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Exceptions.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Numbers.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Dict.cpython-36.pyc
+pybench-2018-02-16/__pycache__/CommandLine.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Unicode.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Lookups.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Constructs.cpython-36.pyc
+pybench-2018-02-16/__pycache__/pybench.cpython-36.pyc
+pybench-2018-02-16/__pycache__/With.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Lists.cpython-36.pyc
+pybench-2018-02-16/__pycache__/NewInstances.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Imports.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Calls.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Instances.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Arithmetic.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Setup.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Strings.cpython-36.pyc
+pybench-2018-02-16/Imports.pyc
+pybench-2018-02-16/CommandLine.py
+pybench-2018-02-16/Setup.pyc
+pybench-2018-02-16/Strings.pyc
+pybench-2018-02-16/LICENSE
+pybench-2018-02-16/Lists.pyc
+pybench-2018-02-16/Strings.py
+pybench-2018-02-16/NewInstances.pyc
+pybench-2018-02-16/Instances.py
+pybench-2018-02-16/Setup.py
+pybench-2018-02-16/Unicode.pyc
+pybench-2018-02-16/Imports.py
+pybench-2018-02-16/README
+pybench-2018-02-16/package/
+pybench-2018-02-16/package/__init__.py
+pybench-2018-02-16/package/__init__.pyc
+pybench-2018-02-16/package/__pycache__/
+pybench-2018-02-16/package/__pycache__/__init__.cpython-36.pyc
+pybench-2018-02-16/package/__pycache__/submodule.cpython-36.pyc
+pybench-2018-02-16/package/.svn/
+pybench-2018-02-16/package/.svn/tmp/
+pybench-2018-02-16/package/.svn/tmp/props/
+pybench-2018-02-16/package/.svn/tmp/prop-base/
+pybench-2018-02-16/package/.svn/tmp/text-base/
+pybench-2018-02-16/package/.svn/all-wcprops
+pybench-2018-02-16/package/.svn/format
+pybench-2018-02-16/package/.svn/props/
+pybench-2018-02-16/package/.svn/entries
+pybench-2018-02-16/package/.svn/prop-base/
+pybench-2018-02-16/package/.svn/prop-base/submodule.py.svn-base
+pybench-2018-02-16/package/.svn/prop-base/__init__.py.svn-base
+pybench-2018-02-16/package/.svn/text-base/
+pybench-2018-02-16/package/.svn/text-base/submodule.py.svn-base
+pybench-2018-02-16/package/.svn/text-base/__init__.py.svn-base
+pybench-2018-02-16/package/.svn/dir-prop-base
+pybench-2018-02-16/package/submodule.pyc
+pybench-2018-02-16/package/submodule.py
+pybench-2018-02-16/With.pyc
+pybench-2018-02-16/Tuples.pyc
+pybench-2018-02-16/NewInstances.py
+pybench-2018-02-16/Numbers.pyc
+pybench-2018-02-16/CommandLine.pyc
+pybench-2018-02-16/Instances.pyc
+pybench-2018-02-16/clockres.py
+pybench-2018-02-16/.CommandLine.py.swp
+pybench-2018-02-16/systimes.py
+pybench-2018-02-16/Calls.py
+pybench-2018-02-16/Dict.py
+pybench-2018-02-16/Lookups.py
+pybench-2018-02-16/Arithmetic.pyc
+-------------------------------------------------------------------------------
+PYBENCH 2.0
+-------------------------------------------------------------------------------
+* using CPython 3.7.4(default,Aug142019,12:09:51)[GCC8.3.0]
+* disabled garbage collection
+* system check interval set to maximum: 2147483647
+* using timer: time.time
+
+Calibrating tests. Please wait... done.
+
+Running 10 round(s) of the suite at warp factor 10:
+
+* Round 1 done in 2.240 seconds.
+* Round 2 done in 5.051 seconds.
+* Round 3 done in 4.971 seconds.
+* Round 4 done in 5.221 seconds.
+* Round 5 done in 3.688 seconds.
+* Round 6 done in 2.264 seconds.
+* Round 7 done in 2.391 seconds.
+* Round 8 done in 2.215 seconds.
+* Round 9 done in 2.220 seconds.
+* Round 10 done in 2.250 seconds.
+
+-------------------------------------------------------------------------------
+Benchmark: 2019-08-19 08:04:34
+-------------------------------------------------------------------------------
+
+    Rounds: 10
+    Warp:   10
+    Timer:  time.time
+
+    Machine Details:
+       Platform ID:    Linux-4.15.0-29-generic-x86_64-with-debian-10.0
+       Processor:      
+    
+    Python:
+       Implementation: CPython
+       Executable:     /usr/local/bin/python3
+       Version:        3.7.4
+       Compiler:       GCC 8.3.0
+       Bits:           64bit
+       Build:          Aug 14 2019 12:09:51 (#default)
+       Unicode:        UCS4
+
+
+Test                             minimum  average  operation  overhead
+-------------------------------------------------------------------------------
+          BuiltinFunctionCalls:     67ms    100ms    0.20us    0.156ms
+           BuiltinMethodLookup:     33ms     52ms    0.05us    0.182ms
+                 CompareFloats:     24ms     36ms    0.03us    0.208ms
+         CompareFloatsIntegers:     41ms     64ms    0.07us    0.154ms
+               CompareIntegers:     42ms     65ms    0.04us    0.273ms
+        CompareInternedStrings:     32ms     51ms    0.03us    0.657ms
+                  CompareLongs:     24ms     40ms    0.04us    0.139ms
+                CompareStrings:     28ms     49ms    0.05us    0.464ms
+    ComplexPythonFunctionCalls:     42ms     67ms    0.34us    0.199ms
+                 ConcatStrings:     38ms     61ms    0.12us    0.232ms
+               CreateInstances:     47ms     76ms    0.68us    0.196ms
+            CreateNewInstances:     34ms     57ms    0.67us    0.141ms
+       CreateStringsWithConcat:     50ms     75ms    0.08us    0.448ms
+                  DictCreation:     30ms     47ms    0.12us    0.158ms
+             DictWithFloatKeys:     43ms     66ms    0.07us    0.302ms
+           DictWithIntegerKeys:     36ms     54ms    0.04us    0.417ms
+            DictWithStringKeys:     32ms     49ms    0.04us    0.405ms
+                      ForLoops:     23ms     35ms    1.41us    0.033ms
+                    IfThenElse:     31ms     44ms    0.03us    0.321ms
+                   ListSlicing:     39ms     55ms    3.93us    0.021ms
+                NestedForLoops:     30ms     47ms    0.03us    0.016ms
+      NestedListComprehensions:     50ms     70ms    5.82us    0.038ms
+          NormalClassAttribute:    101ms    146ms    0.12us    0.207ms
+       NormalInstanceAttribute:     49ms     74ms    0.06us    0.208ms
+           PythonFunctionCalls:     37ms     57ms    0.17us    0.119ms
+             PythonMethodCalls:     53ms     81ms    0.36us    0.066ms
+                     Recursion:     68ms    109ms    2.19us    0.215ms
+                  SecondImport:     13ms     20ms    0.20us    0.078ms
+           SecondPackageImport:     15ms     24ms    0.24us    0.078ms
+         SecondSubmoduleImport:     32ms     49ms    0.49us    0.078ms
+       SimpleComplexArithmetic:     33ms     53ms    0.06us    0.159ms
+        SimpleDictManipulation:     75ms    116ms    0.10us    0.199ms
+         SimpleFloatArithmetic:     26ms     45ms    0.03us    0.254ms
+      SimpleIntFloatArithmetic:     29ms     46ms    0.03us    0.239ms
+       SimpleIntegerArithmetic:     27ms     45ms    0.03us    0.239ms
+      SimpleListComprehensions:     37ms     69ms    5.76us    0.038ms
+        SimpleListManipulation:     36ms     55ms    0.05us    0.294ms
+          SimpleLongArithmetic:     20ms     32ms    0.05us    0.118ms
+                    SmallLists:     39ms     61ms    0.09us    0.159ms
+                   SmallTuples:     43ms     67ms    0.12us    0.179ms
+         SpecialClassAttribute:     96ms    152ms    0.13us    0.208ms
+      SpecialInstanceAttribute:     45ms     74ms    0.06us    0.210ms
+                StringMappings:    107ms    166ms    0.66us    0.184ms
+              StringPredicates:     54ms     84ms    0.12us    0.606ms
+                 StringSlicing:     46ms     70ms    0.13us    0.363ms
+                     TryExcept:     22ms     35ms    0.02us    0.300ms
+                    TryFinally:     25ms     40ms    0.25us    0.158ms
+                TryRaiseExcept:     16ms     24ms    0.38us    0.158ms
+                  TupleSlicing:     49ms     72ms    0.27us    0.014ms
+                   WithFinally:     39ms     63ms    0.39us    0.159ms
+               WithRaiseExcept:     41ms     61ms    0.77us    0.200ms
+-------------------------------------------------------------------------------
+Totals:                           2091ms   3251ms
+
+Default-Python-Server
+[python] [INFO] Test clear docker image:
+[python] 
+[python] [INFO] clear package version:
+[python] 
+Python 3.7.4
+The --allow-insecure-http flag was used, be aware that this poses a threat to the system
+
+Loading required manifests...
+Downloading packs (1.02 Mb) for:
+ - lib-openssl
+ - openssl
+ - wget
+	...0%
+	...1%
+	...2%
+	...3%
+	...4%
+	...5%
+	...6%
+	...7%
+	...8%
+	...9%
+	...10%
+	...11%
+	...12%
+	...13%
+	...14%
+	...15%
+	...16%
+	...17%
+	...18%
+	...19%
+	...20%
+	...22%
+	...23%
+	...24%
+	...25%
+	...26%
+	...27%
+	...28%
+	...29%
+	...30%
+	...31%
+	...32%
+	...33%
+	...34%
+	...35%
+	...36%
+	...37%
+	...38%
+	...39%
+	...40%
+	...41%
+	...42%
+	...43%
+	...44%
+	...45%
+	...46%
+	...47%
+	...48%
+	...49%
+	...50%
+	...51%
+	...52%
+	...53%
+	...54%
+	...55%
+	...56%
+	...57%
+	...58%
+	...59%
+	...60%
+	...61%
+	...62%
+	...63%
+	...64%
+	...65%
+	...66%
+	...67%
+	...68%
+	...69%
+	...70%
+	...71%
+	...72%
+	...73%
+	...74%
+	...75%
+	...77%
+	...78%
+	...79%
+	...80%
+	...81%
+	...82%
+	...83%
+	...84%
+	...85%
+	...86%
+	...87%
+	...88%
+	...89%
+	...90%
+	...91%
+	...92%
+	...93%
+	...94%
+	...95%
+	...96%
+	...97%
+	...98%
+	...99%
+	...100%
+Finishing packs extraction...
+No extra files need to be downloaded
+Installing bundle(s) files...
+	...0%
+	...1%
+	...2%
+	...3%
+	...4%
+	...5%
+	...6%
+	...7%
+	...8%
+	...9%
+	...10%
+	...11%
+	...12%
+	...13%
+	...14%
+	...15%
+	...16%
+	...17%
+	...18%
+	...19%
+	...20%
+	...21%
+	...22%
+	...23%
+	...24%
+	...25%
+	...26%
+	...27%
+	...28%
+	...29%
+	...30%
+	...31%
+	...32%
+	...33%
+	...34%
+	...35%
+	...36%
+	...37%
+	...38%
+	...39%
+	...40%
+	...41%
+	...42%
+	...43%
+	...44%
+	...45%
+	...46%
+	...47%
+	...48%
+	...49%
+	...50%
+	...51%
+	...52%
+	...53%
+	...54%
+	...55%
+	...56%
+	...57%
+	...58%
+	...59%
+	...60%
+	...61%
+	...62%
+	...63%
+	...64%
+	...65%
+	...66%
+	...67%
+	...68%
+	...69%
+	...70%
+	...71%
+	...72%
+	...73%
+	...74%
+	...75%
+	...76%
+	...77%
+	...78%
+	...79%
+	...80%
+	...81%
+	...82%
+	...83%
+	...84%
+	...85%
+	...86%
+	...87%
+	...88%
+	...89%
+	...90%
+	...91%
+	...92%
+	...93%
+	...94%
+	...95%
+	...96%
+	...97%
+	...98%
+	...99%
+	...100%
+Calling post-update helper scripts
+Successfully installed 1 bundle
+pybench-2018-02-16/
+pybench-2018-02-16/Numbers.py
+pybench-2018-02-16/pybench.py
+pybench-2018-02-16/Constructs.pyc
+pybench-2018-02-16/Unicode.py
+pybench-2018-02-16/Lookups.pyc
+pybench-2018-02-16/Lists.py
+pybench-2018-02-16/Calls.pyc
+pybench-2018-02-16/Exceptions.pyc
+pybench-2018-02-16/Dict.pyc
+pybench-2018-02-16/Arithmetic.py
+pybench-2018-02-16/Constructs.py
+pybench-2018-02-16/pybench.pyc
+pybench-2018-02-16/Exceptions.py
+pybench-2018-02-16/Tuples.py
+pybench-2018-02-16/With.py
+pybench-2018-02-16/__pycache__/
+pybench-2018-02-16/__pycache__/Tuples.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Exceptions.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Numbers.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Dict.cpython-36.pyc
+pybench-2018-02-16/__pycache__/CommandLine.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Unicode.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Lookups.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Constructs.cpython-36.pyc
+pybench-2018-02-16/__pycache__/pybench.cpython-36.pyc
+pybench-2018-02-16/__pycache__/With.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Lists.cpython-36.pyc
+pybench-2018-02-16/__pycache__/NewInstances.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Imports.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Calls.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Instances.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Arithmetic.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Setup.cpython-36.pyc
+pybench-2018-02-16/__pycache__/Strings.cpython-36.pyc
+pybench-2018-02-16/Imports.pyc
+pybench-2018-02-16/CommandLine.py
+pybench-2018-02-16/Setup.pyc
+pybench-2018-02-16/Strings.pyc
+pybench-2018-02-16/LICENSE
+pybench-2018-02-16/Lists.pyc
+pybench-2018-02-16/Strings.py
+pybench-2018-02-16/NewInstances.pyc
+pybench-2018-02-16/Instances.py
+pybench-2018-02-16/Setup.py
+pybench-2018-02-16/Unicode.pyc
+pybench-2018-02-16/Imports.py
+pybench-2018-02-16/README
+pybench-2018-02-16/package/
+pybench-2018-02-16/package/__init__.py
+pybench-2018-02-16/package/__init__.pyc
+pybench-2018-02-16/package/__pycache__/
+pybench-2018-02-16/package/__pycache__/__init__.cpython-36.pyc
+pybench-2018-02-16/package/__pycache__/submodule.cpython-36.pyc
+pybench-2018-02-16/package/.svn/
+pybench-2018-02-16/package/.svn/tmp/
+pybench-2018-02-16/package/.svn/tmp/props/
+pybench-2018-02-16/package/.svn/tmp/prop-base/
+pybench-2018-02-16/package/.svn/tmp/text-base/
+pybench-2018-02-16/package/.svn/all-wcprops
+pybench-2018-02-16/package/.svn/format
+pybench-2018-02-16/package/.svn/props/
+pybench-2018-02-16/package/.svn/entries
+pybench-2018-02-16/package/.svn/prop-base/
+pybench-2018-02-16/package/.svn/prop-base/submodule.py.svn-base
+pybench-2018-02-16/package/.svn/prop-base/__init__.py.svn-base
+pybench-2018-02-16/package/.svn/text-base/
+pybench-2018-02-16/package/.svn/text-base/submodule.py.svn-base
+pybench-2018-02-16/package/.svn/text-base/__init__.py.svn-base
+pybench-2018-02-16/package/.svn/dir-prop-base
+pybench-2018-02-16/package/submodule.pyc
+pybench-2018-02-16/package/submodule.py
+pybench-2018-02-16/With.pyc
+pybench-2018-02-16/Tuples.pyc
+pybench-2018-02-16/NewInstances.py
+pybench-2018-02-16/Numbers.pyc
+pybench-2018-02-16/CommandLine.pyc
+pybench-2018-02-16/Instances.pyc
+pybench-2018-02-16/clockres.py
+pybench-2018-02-16/.CommandLine.py.swp
+pybench-2018-02-16/systimes.py
+pybench-2018-02-16/Calls.py
+pybench-2018-02-16/Dict.py
+pybench-2018-02-16/Lookups.py
+pybench-2018-02-16/Arithmetic.pyc
+-------------------------------------------------------------------------------
+PYBENCH 2.0
+-------------------------------------------------------------------------------
+* using CPython 3.7.4(default,Jul312019,14:55:20)[GCC9.1.120190730gcc-9-branch@273913]
+* disabled garbage collection
+* system check interval set to maximum: 2147483647
+* using timer: time.time
+
+Calibrating tests. Please wait... done.
+
+Running 10 round(s) of the suite at warp factor 10:
+
+* Round 1 done in 1.835 seconds.
+* Round 2 done in 1.906 seconds.
+* Round 3 done in 1.908 seconds.
+* Round 4 done in 1.891 seconds.
+* Round 5 done in 1.902 seconds.
+* Round 6 done in 1.884 seconds.
+* Round 7 done in 1.886 seconds.
+* Round 8 done in 1.865 seconds.
+* Round 9 done in 1.916 seconds.
+* Round 10 done in 1.920 seconds.
+
+-------------------------------------------------------------------------------
+Benchmark: 2019-08-19 08:06:11
+-------------------------------------------------------------------------------
+
+    Rounds: 10
+    Warp:   10
+    Timer:  time.time
+
+    Machine Details:
+       Platform ID:    Linux-4.15.0-29-generic-x86_64-with-glibc2.29
+       Processor:      
+    
+    Python:
+       Implementation: CPython
+       Executable:     /usr/sbin/python3
+       Version:        3.7.4
+       Compiler:       GCC 9.1.1 20190730 gcc-9-branch@273913
+       Bits:           64bit
+       Build:          Jul 31 2019 14:55:20 (#default)
+       Unicode:        UCS4
+
+
+Test                             minimum  average  operation  overhead
+-------------------------------------------------------------------------------
+          BuiltinFunctionCalls:     61ms     64ms    0.13us    0.119ms
+           BuiltinMethodLookup:     28ms     30ms    0.03us    0.139ms
+                 CompareFloats:     21ms     24ms    0.02us    0.164ms
+         CompareFloatsIntegers:     30ms     33ms    0.04us    0.119ms
+               CompareIntegers:     40ms     45ms    0.02us    0.252ms
+        CompareInternedStrings:     29ms     31ms    0.02us    0.466ms
+                  CompareLongs:     25ms     27ms    0.03us    0.106ms
+                CompareStrings:     29ms     34ms    0.03us    0.312ms
+    ComplexPythonFunctionCalls:     39ms     42ms    0.21us    0.155ms
+                 ConcatStrings:     26ms     29ms    0.06us    0.193ms
+               CreateInstances:     34ms     37ms    0.33us    0.143ms
+            CreateNewInstances:     26ms     28ms    0.34us    0.112ms
+       CreateStringsWithConcat:     38ms     41ms    0.04us    0.307ms
+                  DictCreation:     29ms     31ms    0.08us    0.122ms
+             DictWithFloatKeys:     37ms     42ms    0.05us    0.248ms
+           DictWithIntegerKeys:     33ms     37ms    0.03us    0.308ms
+            DictWithStringKeys:     31ms     33ms    0.03us    0.310ms
+                      ForLoops:     25ms     27ms    1.08us    0.025ms
+                    IfThenElse:     29ms     31ms    0.02us    0.230ms
+                   ListSlicing:     38ms     41ms    2.96us    0.022ms
+                NestedForLoops:     28ms     31ms    0.02us    0.011ms
+      NestedListComprehensions:     49ms     61ms    5.04us    0.030ms
+          NormalClassAttribute:     77ms     83ms    0.07us    0.161ms
+       NormalInstanceAttribute:     37ms     40ms    0.03us    0.161ms
+           PythonFunctionCalls:     30ms     33ms    0.10us    0.091ms
+             PythonMethodCalls:     38ms     43ms    0.19us    0.053ms
+                     Recursion:     59ms     63ms    1.26us    0.153ms
+                  SecondImport:      9ms     10ms    0.10us    0.060ms
+           SecondPackageImport:     10ms     12ms    0.12us    0.060ms
+         SecondSubmoduleImport:     22ms     25ms    0.25us    0.060ms
+       SimpleComplexArithmetic:     24ms     26ms    0.03us    0.124ms
+        SimpleDictManipulation:     67ms     71ms    0.06us    0.153ms
+         SimpleFloatArithmetic:     25ms     28ms    0.02us    0.184ms
+      SimpleIntFloatArithmetic:     25ms     28ms    0.02us    0.184ms
+       SimpleIntegerArithmetic:     26ms     28ms    0.02us    0.184ms
+      SimpleListComprehensions:     48ms     55ms    4.62us    0.030ms
+        SimpleListManipulation:     27ms     31ms    0.03us    0.201ms
+          SimpleLongArithmetic:     18ms     21ms    0.03us    0.091ms
+                    SmallLists:     35ms     37ms    0.05us    0.122ms
+                   SmallTuples:     37ms     40ms    0.07us    0.137ms
+         SpecialClassAttribute:     81ms     85ms    0.07us    0.164ms
+      SpecialInstanceAttribute:     36ms     40ms    0.03us    0.175ms
+                StringMappings:     58ms     65ms    0.26us    0.141ms
+              StringPredicates:     30ms     32ms    0.05us    0.540ms
+                 StringSlicing:     30ms     32ms    0.06us    0.265ms
+                     TryExcept:     16ms     18ms    0.01us    0.230ms
+                    TryFinally:     22ms     24ms    0.15us    0.122ms
+                TryRaiseExcept:     10ms     12ms    0.18us    0.122ms
+                  TupleSlicing:     40ms     43ms    0.16us    0.014ms
+                   WithFinally:     30ms     34ms    0.21us    0.122ms
+               WithRaiseExcept:     31ms     34ms    0.43us    0.153ms
+-------------------------------------------------------------------------------
+Totals:                           1722ms   1891ms
+
+Clr-Python-Server

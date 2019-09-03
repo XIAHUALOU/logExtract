@@ -1,0 +1,140 @@
+mariadb/mariadb.sh
+[mariadb] 
+[mariadb] == mariadb unit test ==
+employees_db/._load_departments.dump
+employees_db/load_departments.dump
+employees_db/load_dept_emp.dump
+employees_db/._load_dept_manager.dump
+employees_db/load_dept_manager.dump
+employees_db/._load_employees.dump
+employees_db/load_employees.dump
+employees_db/._load_salaries.dump
+employees_db/load_salaries.dump
+employees_db/._load_titles.dump
+employees_db/load_titles.dump
+employees_db/._employees.sql
+employees_db/employees.sql
+employees_db/employees_partitioned.sql
+employees_db/._employees_partitioned2.sql
+employees_db/employees_partitioned2.sql
+employees_db/employees_partitioned3.sql
+employees_db/objects.sql
+employees_db/test_employees_md5.sql
+employees_db/test_employees_sha.sql
+employees_db/Changelog
+employees_db/._README
+employees_db/README
+[mariadb] [INFO] Test docker hub official image first:
+[mariadb] 
+[mariadb] [INFO] default package version:
+[mariadb] 
+mysqld  Ver 10.4.7-MariaDB-1:10.4.7+maria~bionic for debian-linux-gnu on x86_64 (mariadb.org binary distribution)
+4631fd038562147d1be6e7b38629c1ac0ce086e397191fc9529d1f38d58dbe4c
++-----------------------------+
+| INFO                        |
++-----------------------------+
+| CREATING DATABASE STRUCTURE |
++-----------------------------+
++------------------------+
+| INFO                   |
++------------------------+
+| storage engine: InnoDB |
++------------------------+
++---------------------+
+| INFO                |
++---------------------+
+| LOADING departments |
++---------------------+
++-------------------+
+| INFO              |
++-------------------+
+| LOADING employees |
++-------------------+
++------------------+
+| INFO             |
++------------------+
+| LOADING dept_emp |
++------------------+
++----------------------+
+| INFO                 |
++----------------------+
+| LOADING dept_manager |
++----------------------+
++----------------+
+| INFO           |
++----------------+
+| LOADING titles |
++----------------+
++------------------+
+| INFO             |
++------------------+
+| LOADING salaries |
++------------------+
+[mariadb] [INFO] Starting the mysqlslap test, it may take a while, please be patient ...:
+[mariadb] 
+Benchmark
+	Average number of seconds to run all queries: 1.471 seconds
+	Minimum number of seconds to run all queries: 1.228 seconds
+	Maximum number of seconds to run all queries: 1.808 seconds
+	Number of clients running queries: 1
+	Average number of queries per client: 1000
+
+mariadbtest
+Default-Mariadb
+[mariadb] [INFO] Test clear docker image:
+[mariadb] 
+[mariadb] [INFO] clear package version:
+[mariadb] 
+mysqld  Ver 10.4.6-MariaDB for Linux on x86_64 (MariaDB Server)
+e6a3e55819789924791513480a00ad1b8a19643f44cd99981e04734eff631de4
++-----------------------------+
+| INFO                        |
++-----------------------------+
+| CREATING DATABASE STRUCTURE |
++-----------------------------+
++------------------------+
+| INFO                   |
++------------------------+
+| storage engine: InnoDB |
++------------------------+
++---------------------+
+| INFO                |
++---------------------+
+| LOADING departments |
++---------------------+
++-------------------+
+| INFO              |
++-------------------+
+| LOADING employees |
++-------------------+
++------------------+
+| INFO             |
++------------------+
+| LOADING dept_emp |
++------------------+
++----------------------+
+| INFO                 |
++----------------------+
+| LOADING dept_manager |
++----------------------+
++----------------+
+| INFO           |
++----------------+
+| LOADING titles |
++----------------+
++------------------+
+| INFO             |
++------------------+
+| LOADING salaries |
++------------------+
+[mariadb] [INFO] Starting the mysqlslap test, it may take a while, please be patient ...:
+[mariadb] 
+Benchmark
+	Average number of seconds to run all queries: 1.449 seconds
+	Minimum number of seconds to run all queries: 1.133 seconds
+	Maximum number of seconds to run all queries: 1.703 seconds
+	Number of clients running queries: 1
+	Average number of queries per client: 1000
+
+mariadbtest
+Clr-Mariadb

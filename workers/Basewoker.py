@@ -4,7 +4,10 @@
 @Author  : xiahaulou
 @Email   : 390306467@qq.com
 """
+import workers
 from libs import config
+from openpyxl import load_workbook
+import threading
 import abc
 import pandas as pd
 import numpy as np
@@ -19,18 +22,12 @@ class BaseWorker(metaclass=abc.ABCMeta):
         self.pd = pd
         self.np = np
         self.re = re
+        self.lock = threading.Lock()
         self.times = config.config.getint('test_times', 'times')
         self.containers = []
 
     @abc.abstractclassmethod
     def run(self):
-        '''
-        need each work rewrite this function
-        :return:
-        '''
-        pass
-
-    def to_excel(self):
         '''
         need each work rewrite this function
         :return:
@@ -47,6 +44,7 @@ class BaseWorker(metaclass=abc.ABCMeta):
         temp = data[pos_one]
         data[pos_one] = data[pos_two]
         data[pos_two] = temp
+
 
     @staticmethod
     def now():
@@ -127,14 +125,15 @@ class BaseWorker(metaclass=abc.ABCMeta):
             fileList.append(dir)
         elif os.path.isdir(dir):
             for s in os.listdir(dir):
-                newDir = os.path.join(dir, s)
-                cls.get_logfiles(newDir, fileList)
+                new_dir = os.path.join(dir, s)
+                cls.get_logfiles(new_dir, fileList)
         return fileList
 
     def status(self, t):
-        print('task {}.log done, Status:Success'.format(t))
+        print('task {} done, Status:Success'.format(t))
 
     def failed(self, t, error):
+        workers.task_status[t.lower()] = False
         _c = getattr(self, '{}_times'.format(type(self).__name__)) - 1
         setattr(self, '{}_times'.format(type(self).__name__), _c)
         print("task {}.log done Status: Failed,Error Message: {}\n".format(t, error))
@@ -162,4 +161,4 @@ class BaseWorker(metaclass=abc.ABCMeta):
             if ret_index_even:
                 df = self.pd.DataFrame(ret_index_even).T
                 self.D = df
-                self.to_csv('{}{}'.format(type(self).__name__.lower(), self.now()), df)
+                self.to_csv(type(self).__name__.lower(), df)

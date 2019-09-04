@@ -4,6 +4,9 @@
 @Author  : xiahaulou
 @Email   : 390306467@qq.com
 """
+import time
+import pandas
+from openpyxl import load_workbook
 from libs import config
 from threadsPool.t_pool import ThreadPool
 import os
@@ -12,6 +15,15 @@ import workers
 
 class Startor:
     def __init__(self):
+        self.pd = pandas
+        self.success = []
+        self.base_path = os.path.dirname(__file__)
+        self.template = os.path.join(self.base_path, 'template.xlsx')
+        self.consts = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+        if os.path.exists(self.template):
+            self.wb = load_workbook(filename=self.template)
+        else:
+            raise "no template.xlsx"
         if len(config.workers) == 0:
             workers = os.listdir(os.path.join(os.path.dirname(__file__), 'workers'))
             try:
@@ -24,20 +36,88 @@ class Startor:
             self.workers = config.workers
         self.pool = ThreadPool(config.config.getint('threads', 'maximum'))
 
+    def add_to_excel(self, mic):
+        path = os.path.join(self.base_path, "data/csv/{}/{}.csv".format(mic, mic))
+        df = self.pd.read_csv(path)
+        if len(df.columns) != 10:
+            print("{} size less than five,can't write to template.xlxs".format(mic))
+            return
+        df.loc[len(df)] = df.columns
+        platform = config.config.get("platform", "platform")
+        df.columns = range(10)
+        ws = self.wb[mic]
+        if platform == "ubuntu":
+            self.excel_mapping(ws, df, "T")
+            self.excel_mapping(ws, df, "L")
+        else:
+            self.excel_mapping(ws, df, "D")
+
+    @staticmethod
+    def find_end_in_sheet(sheet):
+        for column in sheet.iter_cols():
+            for cell2 in column:
+                if cell2.value is not None:
+                    info2 = cell2.value.find('Latency Score (Small is better)')
+                    if info2 == 0:
+                        if sheet.title == "golang":
+                            return cell2.row, 1
+                        if sheet.title == "postgres":
+                            return cell2.row - 2, 0
+                        return cell2.row, 0
+
+    def excel_mapping(self, ws, df, mark, start=0, end=5):
+        rows_length, offset, = self.find_end_in_sheet(ws)
+        for column in range(start, end):
+            index = self.consts[self.consts.index(mark) + column]
+            i = 0
+            for row in range(4 + offset, rows_length - 1):
+                if mark == "T":
+                    try:
+                        print("{}{}".format(index, row))
+                        ws["{}{}".format(index, row)].value = float(df[column][i])
+                    except Exception:
+                        ws["{}{}".format(index, row)].value = df[column][i]
+                else:
+                    try:
+                        ws["{}{}".format(index, row)].value = float(df[column + 5][i])
+                    except Exception:
+                        ws["{}{}".format(index, row)].value = df[column + 5][i]
+                i += 1
+
+    def write(self):
+        self.wb.save("template.xlsx")
+
+    def save(self, status_map):
+        for key in status_map.keys():
+            if not status_map[key]:
+                continue
+            try:
+                self.add_to_excel(key.lower())
+            except Exception as Ex:
+                print("{} add to xlsx failed,skip it".format(key))
+
+    @staticmethod
+    def wait(t=1):
+        time.sleep(t)
+
     def run(self):
         for work in self.workers:
             if not hasattr(workers, work):
                 continue
+            workers.task_status[work] = True
             try:
                 runner = getattr(getattr(workers, work), work)()
                 setattr(runner, '{}_container'.format(work.lower()), [])
             except Exception as Ex:
+                workers.task_status[work] = False
                 print("task {} done Status: Failed {}".format(work, Ex))
                 continue
             else:
-                self.pool.run(runner.run, ())
+                self.pool.run(func=runner.run, args=())
         self.pool.close()
         self.pool.join()
+        self.save(workers.task_status)
+        self.write()
 
 
 if __name__ == '__main__':

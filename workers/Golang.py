@@ -6,6 +6,7 @@ class Golang(BaseWorker):
     def run(self):
         logs = self.read_from_file(mode=list)
         for log in logs:
+
             t, log = log
             try:
                 patt = r'BenchmarkGarbage|BenchmarkHTTP|BenchmarkJSON'

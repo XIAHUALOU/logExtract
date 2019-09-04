@@ -17,7 +17,6 @@ class Rabbitmq(BaseWorker):
                 official.append(log[index_list[0] + 1].split()[5])
                 clear.append(log[index_list[1]].split()[5])
                 clear.append(log[index_list[1] + 1].split()[5])
-
                 if len(official) != 2 or len(clear) != 2:
                     self.failed(t, 'error logfile')
                     self.merge(None)

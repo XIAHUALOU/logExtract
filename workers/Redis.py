@@ -39,7 +39,6 @@ class Redis(BaseWorker):
                 clear.append(log[index_list[1] + 1].split()[5])
                 clear.append(log[index_list[1] + 3].split()[4])
                 clear.append(log[index_list[1] + 3].split()[5])
-
                 if len(official) != 24 or len(clear) != 24:
                     self.failed(t, 'error logfile')
                     self.merge(None)

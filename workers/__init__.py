@@ -20,3 +20,5 @@ from . import Ruby
 from . import Flink
 from . import Cassandra
 from . import Rabbitmq
+
+task_status = {}

@@ -1,7 +1,7 @@
 import threading
 import contextlib
-from queue import Queue
 import time
+from queue import Queue
 
 
 class ThreadPool(object):
@@ -105,3 +105,6 @@ class ThreadPool(object):
             yield
         finally:
             state_list.remove(worker_thread)
+
+    def alive_thread_num(self):
+        return threading.activeCount()

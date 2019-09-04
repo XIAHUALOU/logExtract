@@ -42,15 +42,16 @@ class Startor:
         if len(df.columns) != 10:
             print("{} size less than five,can't write to template.xlxs".format(mic))
             return
-        df.loc[len(df)] = df.columns
-        platform = config.config.get("platform", "platform")
+        df2 = self.pd.DataFrame([df.columns])
         df.columns = range(10)
+        df2 = df2.append(df, ignore_index=True)
+        platform = config.config.get("platform", "platform")
         ws = self.wb[mic]
         if platform == "ubuntu":
-            self.excel_mapping(ws, df, "T")
-            self.excel_mapping(ws, df, "L")
+            self.excel_mapping(ws, df2, "T")
+            self.excel_mapping(ws, df2, "L")
         else:
-            self.excel_mapping(ws, df, "D")
+            self.excel_mapping(ws, df2, "D")
 
     @staticmethod
     def find_end_in_sheet(sheet):

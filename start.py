@@ -69,7 +69,6 @@ class Startor:
             for row in range(4, rows_length - 1):
                 if mark == "T":
                     try:
-                        print("{}{}".format(index, row))
                         ws["{}{}".format(index, row)].value = float(df[column][i])
                     except Exception:
                         ws["{}{}".format(index, row)].value = df[column][i]

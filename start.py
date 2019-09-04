@@ -59,18 +59,14 @@ class Startor:
                 if cell2.value is not None:
                     info2 = cell2.value.find('Latency Score (Small is better)')
                     if info2 == 0:
-                        if sheet.title == "golang":
-                            return cell2.row, 1
-                        if sheet.title == "postgres":
-                            return cell2.row - 2, 0
-                        return cell2.row, 0
+                        return cell2.row
 
     def excel_mapping(self, ws, df, mark, start=0, end=5):
-        rows_length, offset, = self.find_end_in_sheet(ws)
+        rows_length = self.find_end_in_sheet(ws)
         for column in range(start, end):
             index = self.consts[self.consts.index(mark) + column]
             i = 0
-            for row in range(4 + offset, rows_length - 1):
+            for row in range(4, rows_length - 1):
                 if mark == "T":
                     try:
                         print("{}{}".format(index, row))

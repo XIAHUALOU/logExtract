@@ -18,12 +18,12 @@ class Startor:
         self.pd = pandas
         self.success = []
         self.base_path = os.path.dirname(__file__)
-        self.template = os.path.join(self.base_path, 'template.xlsx')
+        self.template = os.path.join(self.base_path, 'report.xlsx')
         self.consts = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
         if os.path.exists(self.template):
             self.wb = load_workbook(filename=self.template)
         else:
-            raise "no template.xlsx"
+            raise "no report.xlsx"
         if len(config.workers) == 0:
             workers = os.listdir(os.path.join(os.path.dirname(__file__), 'workers'))
             try:
@@ -40,7 +40,7 @@ class Startor:
         path = os.path.join(self.base_path, "data/csv/{}/{}.csv".format(mic, mic))
         df = self.pd.read_csv(path)
         if len(df.columns) != 10:
-            print("{} size less than five,can't write to template.xlxs".format(mic))
+            print("{} size less than five,can't write to report.xlxs".format(mic))
             return
         df2 = self.pd.DataFrame([df.columns])
         df.columns = range(10)
@@ -81,7 +81,7 @@ class Startor:
                 i += 1
 
     def write(self):
-        self.wb.save("template.xlsx")
+        self.wb.save("report.xlsx")
 
     def save(self, status_map):
         for key in status_map.keys():

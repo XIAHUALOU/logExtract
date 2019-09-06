@@ -25,7 +25,6 @@ class Perl(BaseWorker):
                 list(map(lambda x: s2_list.append(test_list[x].split()[1]), [2, 3]))
                 self.merge(s1_list)
                 self.merge(s2_list)
-                self.status(t)
             except Exception as Ex:
                 self.failed(t, Ex)
                 self.merge(None)

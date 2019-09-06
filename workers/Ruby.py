@@ -38,7 +38,6 @@ class Ruby(BaseWorker):
                     continue
                 self.merge(list1)
                 self.merge(list2)
-                self.status(t)
             except Exception as Ex:
                 self.failed(t, Ex)
                 self.merge(None)

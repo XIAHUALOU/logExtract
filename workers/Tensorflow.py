@@ -23,7 +23,6 @@ class Tensorflow(BaseWorker):
                     continue
                 self.merge([container[0]])
                 self.merge([container[1]])
-                self.status(t)
             except Exception as Ex:
                 self.failed(t, Ex)
                 self.merge(None)

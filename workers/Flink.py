@@ -20,7 +20,6 @@ class Flink(BaseWorker):
                     continue
                 self.merge(s1_list)
                 self.merge(s2_list)
-                self.status(t)
             except Exception:
                 self.failed(t, 'error logfile')
                 self.merge(None)

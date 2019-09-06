@@ -16,7 +16,6 @@ class Postgres(BaseWorker):
                 if len(container) == 12:
                     self.merge(container[0:4])
                     self.merge(container[4:8])
-                    self.status(t)
                 else:
                     self.failed(t, 'error logfile')
                     self.merge(None)

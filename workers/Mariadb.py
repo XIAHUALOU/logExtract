@@ -27,7 +27,6 @@ class Mariadb(BaseWorker):
                     continue
                 self.merge(package[0:3])
                 self.merge(package[3:6])
-                self.status(t)
             except Exception as Ex:
                 self.failed(t, Ex)
                 continue

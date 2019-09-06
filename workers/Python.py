@@ -27,7 +27,6 @@ class Python(BaseWorker):
                 else:
                     self.merge(box[0:2])
                     self.merge(box[2:4])
-                    self.status(t)
             except Exception as Ex:
                 self.failed(t, Ex)
                 self.merge(None)

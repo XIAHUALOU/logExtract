@@ -26,7 +26,6 @@ class Golang(BaseWorker):
                     continue
                 self.merge(s1_list)
                 self.merge(s2_list)
-                self.status(t)
             except Exception as Ex:
                 self.failed(t, 'error logfile')
                 self.merge(None)

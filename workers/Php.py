@@ -20,7 +20,6 @@ class Php(BaseWorker):
                     continue
                 self.merge([test_list[0]])
                 self.merge([test_list[1]])
-                self.status(t)
             except Exception as Ex:
                 self.failed(t, Ex)
                 self.merge(None)

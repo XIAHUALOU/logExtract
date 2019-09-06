@@ -23,7 +23,6 @@ class Node(BaseWorker):
                     continue
                 self.merge([scores[0]])
                 self.merge([scores[1]])
-                self.status(t)
             except Exception as Ex:
                 self.failed(t, Ex)
                 self.merge(None)

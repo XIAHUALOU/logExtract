@@ -136,10 +136,11 @@ class BaseWorker(metaclass=abc.ABCMeta):
         workers.task_status[t.lower()] = False
         _c = getattr(self, '{}_times'.format(type(self).__name__)) - 1
         setattr(self, '{}_times'.format(type(self).__name__), _c)
-        print("task {}.log done Status: Failed,Error Message: {}\n".format(t, error))
+        print("task {}.log done Status: extract failed,Error: {}\n".format(t, error))
 
     def merge(self, data):
         '''
+        generate csv files named by microservice name
         :param data: type list,docker official data or clear data
         :return:
         '''

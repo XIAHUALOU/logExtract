@@ -13,7 +13,7 @@ import os
 import workers
 
 
-class Startor:
+class Ignition:
     def __init__(self):
         self.pd = pandas
         self.success = []
@@ -23,7 +23,7 @@ class Startor:
         if os.path.exists(self.template):
             self.wb = load_workbook(filename=self.template)
         else:
-            raise "no report.xlsx"
+            raise Exception("no report.xlsx")
         if len(config.workers) == 0:
             workers = os.listdir(os.path.join(os.path.dirname(__file__), 'workers'))
             try:
@@ -89,8 +89,10 @@ class Startor:
                 continue
             try:
                 self.add_to_excel(key.lower())
+                print("write {} to report successfully".format(key))
             except Exception as Ex:
-                print("{} add to xlsx failed,skip it".format(key))
+                print("failed to write {} to report,please check data/csv/{}.csv and make sure it's right".format(key,
+                                                                                                                  key))
 
     @staticmethod
     def wait(t=1):
@@ -106,8 +108,7 @@ class Startor:
                 setattr(runner, '{}_container'.format(work.lower()), [])
             except Exception as Ex:
                 workers.task_status[work] = False
-                print("task {} done Status: Failed {}".format(work, Ex))
-                continue
+                print("task {}.log done Status: extract failed,Error: {}\n".format(work, Ex))
             else:
                 self.pool.run(func=runner.run, args=())
         self.pool.close()
@@ -117,4 +118,4 @@ class Startor:
 
 
 if __name__ == '__main__':
-    Startor().run()
+    Ignition().run()

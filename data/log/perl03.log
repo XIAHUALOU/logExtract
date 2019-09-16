@@ -1,322 +1,0 @@
-perl/perl.sh
-[perl] 
-[perl] == perl unit test ==
-[perl] [INFO] Test docker hub official image first:
-[perl] 
-[perl] [INFO] default package version:
-[perl] 
-
-This is perl 5, version 30, subversion 0 (v5.30.0) built for x86_64-linux-gnu
-
-Copyright 1987-2019, Larry Wall
-
-Perl may be copied only under the terms of either the Artistic License or the
-GNU General Public License, which may be found in the Perl 5 source kit.
-
-Complete documentation for Perl, including FAQ lists, should be found on
-this system using "man perl" or "perldoc perl".  If you have access to the
-Internet, point your browser at http://www.perl.org/, the Perl Home Page.
-
-Host: 4d921ec120fa
-Perl: /usr/local/bin/perl
-Test-File: benchmarks/app/podhtml.b
-Test-Name: Run pod2html on perlfunc
-Test-Result: perlbench-results/4d921ec120fa/perls/37cfa4e9b84cde72895bff2f4f0caedd/tests/20190828T091341.pb
-Host: 4d921ec120fa
-Perl: /usr/local/bin/perl
-Test-File: benchmarks/startup/noprog.b
-Test-Name: How long does it take to start the interpreter
-Test-Result: perlbench-results/4d921ec120fa/perls/37cfa4e9b84cde72895bff2f4f0caedd/tests/20190828T091514.pb
-Date: 2019-08-28 09:13:41 (09:15:14)
-PerlBench-Version: 0.93
-Test: benchmarks/app/podhtml.b md5:ee2f3b4f2eecc05245ef158f263d3f24
-Perl: /usr/local/bin/perl 5.030000
-Hostname: 4d921ec120fa
-System-Uptime: 09:15:14 up 9 days, 5:12, 0 users, load average: 0.84, 0.56, 0.48
-Cycles: 5
-Loop-Overhead: 1.5%
-Samples: 56
-Min: 0.221162433333333
-Med: 0.232471633333333
-Max: 0.571597633333333
-Avg: 0.241729369642857
-Std-Dev: 0.0496496909422027
-Date: 2019-08-28 09:15:14 (09:16:13)
-PerlBench-Version: 0.93
-Test: benchmarks/startup/noprog.b md5:e983ca4f46f3a89d56c58b494ea0a96f
-Perl: /usr/local/bin/perl 5.030000
-Hostname: 4d921ec120fa
-System-Uptime: 09:16:13 up 9 days, 5:13, 0 users, load average: 0.74, 0.57, 0.49
-Cycles: 177
-Loop-Overhead: -1.9%
-Samples: 56
-Min: 0.00543263862438901
-Med: 0.00571202345584968
-Max: 0.00594255997270361
-Avg: 0.00570110179580307
-Std-Dev: 0.000109845777497138
-[perl] [INFO] Test clear docker image:
-[perl] 
-[perl] [INFO] clear package version:
-[perl] 
-
-This is perl 5, version 28, subversion 2 (v5.28.2) built for x86_64-linux-thread-multi
-
-Copyright 1987-2019, Larry Wall
-
-Perl may be copied only under the terms of either the Artistic License or the
-GNU General Public License, which may be found in the Perl 5 source kit.
-
-Complete documentation for Perl, including FAQ lists, should be found on
-this system using "man perl" or "perldoc perl".  If you have access to the
-Internet, point your browser at http://www.perl.org/, the Perl Home Page.
-
-The --allow-insecure-http flag was used, be aware that this poses a threat to the system
-
-Loading required manifests...
-Downloading packs (1.14 Mb) for:
- - openssl
- - wget
- - unzip
-	...0%
-	...1%
-	...2%
-	...3%
-	...4%
-	...5%
-	...6%
-	...7%
-	...8%
-	...9%
-	...10%
-	...12%
-	...13%
-	...14%
-	...15%
-	...16%
-	...17%
-	...18%
-	...19%
-	...20%
-	...21%
-	...22%
-	...23%
-	...24%
-	...25%
-	...26%
-	...27%
-	...28%
-	...29%
-	...30%
-	...31%
-	...32%
-	...33%
-	...34%
-	...35%
-	...36%
-	...37%
-	...38%
-	...39%
-	...40%
-	...41%
-	...42%
-	...43%
-	...44%
-	...45%
-	...46%
-	...47%
-	...48%
-	...49%
-	...50%
-	...51%
-	...52%
-	...53%
-	...54%
-	...55%
-	...56%
-	...57%
-	...58%
-	...59%
-	...60%
-	...61%
-	...62%
-	...63%
-	...64%
-	...65%
-	...66%
-	...67%
-	...68%
-	...69%
-	...70%
-	...72%
-	...73%
-	...74%
-	...75%
-	...76%
-	...77%
-	...78%
-	...79%
-	...80%
-	...81%
-	...82%
-	...83%
-	...84%
-	...85%
-	...86%
-	...87%
-	...88%
-	...89%
-	...91%
-	...92%
-	...93%
-	...94%
-	...95%
-	...96%
-	...97%
-	...98%
-	...99%
-	...100%
-Finishing packs extraction...
-No extra files need to be downloaded
-Installing bundle(s) files...
-	...0%
-	...1%
-	...2%
-	...3%
-	...4%
-	...5%
-	...6%
-	...7%
-	...8%
-	...9%
-	...10%
-	...11%
-	...12%
-	...13%
-	...14%
-	...15%
-	...16%
-	...17%
-	...18%
-	...19%
-	...20%
-	...21%
-	...22%
-	...23%
-	...24%
-	...25%
-	...26%
-	...27%
-	...28%
-	...29%
-	...30%
-	...31%
-	...32%
-	...33%
-	...34%
-	...35%
-	...36%
-	...37%
-	...38%
-	...39%
-	...40%
-	...41%
-	...42%
-	...43%
-	...44%
-	...45%
-	...46%
-	...47%
-	...48%
-	...49%
-	...50%
-	...51%
-	...52%
-	...53%
-	...54%
-	...55%
-	...56%
-	...57%
-	...58%
-	...59%
-	...60%
-	...61%
-	...62%
-	...63%
-	...64%
-	...65%
-	...66%
-	...67%
-	...68%
-	...69%
-	...70%
-	...71%
-	...72%
-	...73%
-	...74%
-	...75%
-	...76%
-	...77%
-	...78%
-	...79%
-	...80%
-	...81%
-	...82%
-	...83%
-	...84%
-	...85%
-	...86%
-	...87%
-	...88%
-	...89%
-	...90%
-	...91%
-	...92%
-	...93%
-	...94%
-	...95%
-	...96%
-	...97%
-	...98%
-	...99%
-	...100%
-Calling post-update helper scripts
-Successfully installed 2 bundles
-Host: aa537d369d79
-Perl: /usr/bin/perl
-Test-File: benchmarks/app/podhtml.b
-Test-Name: Run pod2html on perlfunc
-Test-Result: perlbench-results/aa537d369d79/perls/c9e1d9ac616a8c789c8cff9d354d2c67/tests/20190828T091637.pb
-Host: aa537d369d79
-Perl: /usr/bin/perl
-Test-File: benchmarks/startup/noprog.b
-Test-Name: How long does it take to start the interpreter
-Test-Result: perlbench-results/aa537d369d79/perls/c9e1d9ac616a8c789c8cff9d354d2c67/tests/20190828T091803.pb
-Date: 2019-08-28 09:16:37 (09:18:02)
-PerlBench-Version: 0.93
-Test: benchmarks/app/podhtml.b md5:ee2f3b4f2eecc05245ef158f263d3f24
-Perl: /usr/bin/perl 5.028002
-Hostname: aa537d369d79
-System-Uptime: 09:18:02 up 9 days 5:15, 0 users, load average: 0.92, 0.67, 0.53
-Cycles: 5
-Loop-Overhead: 1.7%
-Samples: 56
-Min: 0.202290033333333
-Med: 0.222893033333333
-Max: 0.241002783333333
-Avg: 0.221539520238095
-Std-Dev: 0.00793983433646716
-Date: 2019-08-28 09:18:03 (09:18:57)
-PerlBench-Version: 0.93
-Test: benchmarks/startup/noprog.b md5:e983ca4f46f3a89d56c58b494ea0a96f
-Perl: /usr/bin/perl 5.028002
-Hostname: aa537d369d79
-System-Uptime: 09:18:57 up 9 days 5:16, 0 users, load average: 0.64, 0.64, 0.53
-Cycles: 196
-Loop-Overhead: 0.7%
-Samples: 56
-Min: 0.00447450510204082
-Med: 0.00472750765306122
-Max: 0.00509045408163265
-Avg: 0.00475662454446064
-Std-Dev: 0.00013402283559927

@@ -1,6 +1,5 @@
 import threading
 import contextlib
-import time
 from queue import Queue
 
 

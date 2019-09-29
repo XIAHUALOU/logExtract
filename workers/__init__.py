@@ -20,5 +20,6 @@ from . import Ruby
 from . import Flink
 from . import Cassandra
 from . import Rabbitmq
-
+from . import Wordpress
+from . import Tensorflow_serving
 task_status = {}
